@@ -8,6 +8,6 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('wmfCtrl', function ($scope) {
+  .controller('loginCtrl', function ($scope) {
     	$scope.aa="123"
   });

@@ -13,6 +13,17 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/addCar.css">
+    <link rel="stylesheet" href="styles/bossHomepage.css">
+    <link rel="stylesheet" href="styles/carDetails.css">
+    <link rel="stylesheet" href="styles/carList.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/noticeDetails.css">
+    <link rel="stylesheet" href="styles/noticeList.css">
+    <link rel="stylesheet" href="styles/personal.css">
+    <link rel="stylesheet" href="styles/release.css">
+    <link rel="stylesheet" href="styles/staffHomepage.css">
+    <link rel="stylesheet" href="styles/staffList.css">
     <!-- endbuild -->
   </head>
   <body ng-app="appApp">
@@ -22,7 +33,10 @@
 
     <!-- Add your site or application content here -->
     <ui-view>
-    	<a ui-sref="wmf">sss</a>
+    	
+    		<img src="images/cover.jpg">
+    		<button ui-sref="login" style="width: 100px;height: 30px;background-color: red;color: white;">登录</button>
+    
 		</ui-view>	
 
 
@@ -49,7 +63,17 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/wmf.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/addCar.js"></script>
+        <script src="scripts/controllers/bossHomepage.js"></script>
+        <script src="scripts/controllers/carDetails.js"></script>
+        <script src="scripts/controllers/carList.js"></script>
+        <script src="scripts/controllers/noticeDetails.js"></script>
+        <script src="scripts/controllers/noticeList.js"></script>
+        <script src="scripts/controllers/personal.js"></script>
+        <script src="scripts/controllers/release.js"></script>
+        <script src="scripts/controllers/staffHomepage.js"></script>
+        <script src="scripts/controllers/staffList.js"></script>
         <!-- endbuild -->
 </body>
 </html>
