@@ -1,0 +1,13 @@
+.indexwra {
+	width: 100vw;height: 100vh;
+	background: url(../images/cover.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.indexwidth {
+	width: 4rem;position: fixed;bottom: 1rem;left: calc(50% - 2rem);
+	animation: 2s show 1s linear both;
+}
+@keyframes show{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
