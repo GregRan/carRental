@@ -1,0 +1,104 @@
+.r_main{
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid white;
+	font-family: "微软雅黑";
+}
+.r_header{
+	width: 100%;
+	height: 1rem;
+	margin-top: 0.5rem;
+	
+}
+
+.r_header>a{
+	width: 0.675rem;
+	height: 1rem;
+	position: relative;
+	top:0.5rem;
+	left: 0.3rem;
+}
+.r_header>a:before{
+	width: 0.5rem;
+	height: 0.08rem;
+	background: #000000;
+	content: "";
+	position: absolute;
+	top:0rem;
+	left: 0rem;
+	transform-origin: left;
+	transform: rotate(-45deg);
+}
+.r_header>a:after{
+	width: 0.5rem;
+	height: 0.08rem;
+	background: #000;
+	content: "";
+	position: absolute;
+	top:0rem;
+	left:0rem;
+	transform-origin: left;
+	transform: rotate(45deg);
+}
+.r_header>p{
+	float: left;
+	margin-left: 1rem;
+	color: #000;
+	font-size: 0.8rem;
+}
+.r_center{
+	width: 100%;
+	clear: both;
+	margin-top: 1rem;
+}
+.r_center_left{
+	width: 30%;
+	height: 6rem;
+	border: 1px solid black;
+	float: left;
+	background: red;
+	margin-left: 8%;
+	margin-top: 1rem;
+	
+}
+.r_center_left>img{
+	width: 100%;
+	height: 100%;
+}
+.r_center_right{
+	width: 50%;
+	height: 8rem;
+	float: right;
+	font-size: 1rem;
+}
+.r_center_right_user{
+	margin-top: 1rem;
+}
+.r_center_right_sex{
+	margin-top: 1rem;
+}
+.r_center_right_sex{
+	margin-top: 1rem;
+}
+.r_center_bottom{
+	width: 100%;
+	height: 8rem;
+	clear: both;
+	font-size: 0.8rem;
+	padding-top: 1rem;
+}
+.r_center_bottom>div{
+	margin-left: 1rem;
+}
+.r_center_bottom_phone{
+	margin-top: 1rem;
+}
+.r_center_bottom_phone_jin{
+	margin-top: 1rem;
+}
+.r_footer>button{
+	width: 5rem;
+	height: 1.2rem;
+	margin-top: 2rem;
+	margin-left: calc(50% - 2.5rem);
+}
