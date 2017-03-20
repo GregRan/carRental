@@ -1,0 +1,16 @@
+.Mdetail{
+	width: 100%;
+	padding: 0 2%;
+}
+.Mcont{
+	width: 100%;
+}
+.Mtxt{
+	width: 100%;
+}
+.Mtxt p{
+	font-size: .8rem;
+	line-height: 1.2rem;
+	font-family: "微软雅黑";
+	text-indent: 1rem;
+}

@@ -1,0 +1,25 @@
+
+任建新
+	个人信息：personal 
+	员工信息：staffList
+马明
+	发布公告：release
+	公告列表：noticeList
+	公告详情：noticeDetails
+高波
+	车辆列表：carList
+	添加车辆：addCar
+郭然
+	封面：index
+	登录：login
+	
+吴梦凡
+	员工首页：staffHomepage
+	老板首页：bossHomepage
+	车辆详情：carDetails
+
+接口地址
+	47.88.16.225:407/users/login  (post)登陆
+	47.88.16.225:407/users/uid (get)获取用户信息
+	47.88.16.225:407/car       (get/post)车辆 
+	47.88.16.225:407/gonggao    (get/post)公告 
