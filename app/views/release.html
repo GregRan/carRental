@@ -1,0 +1,24 @@
+<div ng-controller="releaseCtrl" class="Mwarp">
+	<div class="Mhead">
+		<div class="glyphicon glyphicon-chevron-left return"></div>
+		<div class="Mhead-text">发布公告</div>
+	</div>
+	<textarea class="Mtextarea" ng-model='Mtext'></textarea>
+	<button class="Mbutton" ng-click="btn()" data-target="#layer">发布</button>
+	<!--<div class="Mpopup">发布成功</div>-->
+	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">发布成功</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-danger btn-sm">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

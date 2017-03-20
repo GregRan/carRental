@@ -18,6 +18,10 @@ html,body{
 	text-indent: 1rem;
 	font-size: 0.8rem;
 	font-family: "微软雅黑";
+	color: #3c4547;
+}
+.boss_homepage_wra>div:hover{
+	color: antiquewhite;
 }
 .boss_homepage_wra>div:nth-child(1){
 	margin-top: 0;
