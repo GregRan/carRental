@@ -1,0 +1,35 @@
+*{margin: 0;padding: 0;}
+.Mwarp{
+	overflow: hidden;
+}
+.Mcontent{
+	width: 100%;
+	height: 3rem;
+	border: 1px solid;
+	margin: 0 auto;
+}
+.Mtext{
+	width: 100%;
+	height: 1.5rem;
+	float: left;
+}
+.Mtext p{
+	width: 100%;
+	height: 100%;
+	line-height: 1.5rem;
+	font-size: .7rem;
+	font-family: "微软雅黑";
+	text-indent: 1rem;
+	overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    width: 20em;/*不允许出现半汉字截断*/
+}
+.Mtime{
+	width: 30%;
+	height: 1.5rem;
+	float: right;
+	line-height: 1.5rem;
+	text-align: center;
+	font-size: 0.6rem;
+}

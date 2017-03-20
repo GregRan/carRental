@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.Mhead{
+	width: 100%;
+	height: 2.5rem;
+	background: red;
+	line-height: 2.5rem;
+	text-align: center;
+	font-size: .9rem;
+	font-family: "微软雅黑";
+}
+.return{
+	float: left;
+	margin-top: .7rem;
+	margin-left: 1rem;
+}
+.Mhead-text{
+	float: left;
+	margin-left: 4.5rem;
+}
+.Mtextarea{
+	width: 90%;
+	height: 20rem;
+	margin-top: 2rem;
+	margin-left: 5%;
+	border: 1px solid;
+	resize: none;
+	line-height: 1.4rem;
+	font-size: 1.2rem;
+	text-indent: 1rem;
+	padding-top: 0.4rem;
+}
+.Mbutton{
+	width: 4rem;
+	height: 2rem;
+	text-align: center;
+	line-height: 2rem;
+	font-size: 1rem;
+	border-radius: .5rem;
+	outline: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+}
