@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/release.css">
     <link rel="stylesheet" href="styles/staffHomepage.css">
     <link rel="stylesheet" href="styles/staffList.css">
+    <link rel="stylesheet" href="styles/index.css">
     <!-- endbuild -->
   </head>
   <body ng-app="appApp">
@@ -33,8 +34,9 @@
 
     <!-- Add your site or application content here -->
     <ui-view>
-    		<img src="images/cover.jpg">
-    		<button ui-sref="login" style="width: 100px;height: 30px;background-color: red;color: white;">登录</button>
+    		<div class="indexwra">
+    			<button ui-sref="login"class="btn btn-group-lg btn-primary btn-lg active indexwidth">登录</button>
+    		</div>
 		</ui-view>
 		
 	
