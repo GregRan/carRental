@@ -18,7 +18,6 @@ angular.module('appApp')
   	});
   	
   	$scope.fan=function(){
-  		alert(1)
 		$state.go('noticeList')
   	}
   }]);
