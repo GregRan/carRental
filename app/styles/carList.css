@@ -69,6 +69,8 @@
 	height: 7rem;
 	color:black;
 	background: #EEEEEE;
+	margin-top: 0.6rem;
+	padding-top: 0.3rem;
 }
 .carList_List>li>div:nth-child(1){
 	width: 7rem;
