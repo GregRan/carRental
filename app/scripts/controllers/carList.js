@@ -20,5 +20,6 @@ angular.module('appApp')
     	$scope.details = function(car){
     		console.log(car.id)
     		localStorage.setItem('id',car.id);
+    		$state.go('carDetails');
     	}
   }]);
