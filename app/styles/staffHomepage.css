@@ -1,16 +1,6 @@
-html,body{width: 100%;height: 100%;}
 .staffHomepage_wra{
 	width: 100%;
-<<<<<<< HEAD
-	height: 100%;
-=======
-<<<<<<< HEAD
-	height: 100%;
-=======
 	height: 100vh;
->>>>>>> origin/master
-	/*background: pink;*/
->>>>>>> origin/master
 	background: linear-gradient(to bottom,#08a3bf,#1dd5f6,#08a3bf);
 	position: relative;
 }
