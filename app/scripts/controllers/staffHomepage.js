@@ -7,7 +7,17 @@
  * # MainCtrl
  * Controller of the appApp
  */
-angular.module('appApp')
-  .controller('staffCtrl', function ($scope) {
-    	
-  });
+angular.module('appApp').controller('staffHomepageCtrl',["$scope","$state",function($scope,$state){
+  	$scope.SH_details=function(){
+		$state.go("carList");
+  	}
+  	$scope.SH_my=function(){
+		$state.go("personal");
+  	}
+  	$scope.SH_release=function(){
+		$state.go("release");
+  	}
+  	$scope.SH_cancel=function(){
+		$state.go("login");
+  	}
+ }]);

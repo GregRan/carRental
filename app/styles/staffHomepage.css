@@ -1,9 +1,14 @@
+html,body{width: 100%;height: 100%;}
 .staffHomepage_wra{
 	width: 100%;
 <<<<<<< HEAD
 	height: 100%;
 =======
+<<<<<<< HEAD
+	height: 100%;
+=======
 	height: 100vh;
+>>>>>>> origin/master
 	/*background: pink;*/
 >>>>>>> origin/master
 	background: linear-gradient(to bottom,#08a3bf,#1dd5f6,#08a3bf);
@@ -22,7 +27,7 @@
 .staffHomepage_wra>.car_details{
 	width: 5.6rem;
 	height: 5.6rem;
-	top: 12rem;
+	top: 10rem;
 	left: 2.5rem;
 	line-height: 5.6rem;
 	font-size: 1rem;
@@ -30,21 +35,21 @@
 .staffHomepage_wra>.release{
 	width: 4.2rem;
 	height: 4.2rem;
-	top: 10.6rem;
+	top: 8.6rem;
 	left: 9.3rem;
 	line-height:4.2rem;
 }
 .staffHomepage_wra>.my{
 	width: 4.6rem;
 	height: 4.6rem;
-	top: 6.2rem;
+	top: 4.2rem;
 	left:3rem;
 	line-height: 4.8rem;
 }
 .staffHomepage_wra>.cancel{
 	width: 4.2rem;
 	height: 4.2rem;
-	top: 17rem;
+	top: 15rem;
 	left: 8.2rem;
 	line-height: 4.2rem;
 }
@@ -54,37 +59,37 @@
 }
 .staffHomepage_wra>img:nth-child(5){
 	width: 5rem;
-	top: 5.6rem;
+	top: 3.6rem;
 	left: 7rem;
 	transform: rotate(60deg);
 }
 .staffHomepage_wra>img:nth-child(6){
 	width: 5rem;
-	top: 19.5rem;
+	top: 17.5rem;
 	left: 2.5rem;
 	transform: rotate(-60deg);
 }
 .staffHomepage_wra>img:nth-child(7){
 	width: 3rem;
-	top: 14rem;
+	top: 12rem;
 	left: 0.6rem;
 	transform: rotate(-30deg);
 }
 .staffHomepage_wra>img:nth-child(8){
 	width: 3rem;
-	top: 14rem;
+	top: 12rem;
 	left: 11rem;
 	transform: rotate(20deg);
 }
 .staffHomepage_wra>img:nth-child(9){
 	width: 2rem;
-	top:22.6rem;
+	top:20.6rem;
 	left: 7.2rem;
 	transform: rotate(20deg);
 }
 .staffHomepage_wra>img:nth-child(10){
 	width: 2rem;
-	top:3rem;
+	top:2rem;
 	left: 10rem;
 	transform: rotate(20deg);
 }
