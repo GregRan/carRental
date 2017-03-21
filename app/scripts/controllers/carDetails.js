@@ -8,7 +8,6 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",function($scope,$http,$state){
-	console.log(localStorage.level)
   	$scope.CD_back=function(){
   		$state.go("carList");
   	}
@@ -27,6 +26,7 @@ angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",
 	  		method:"delete"
 	  	}).then(function(e){
 	  		$state.go("carList");
+//			console.log(e)
 	  	})
   	}
   	$scope.a=true;
