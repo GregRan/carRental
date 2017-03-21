@@ -13,12 +13,12 @@ angular.module('appApp')
     		method:'get',
     		url:'http://47.88.16.225:407/car',
     	}).then(function(e){
-    		console.log(e)
+//  		console.log(e)
     		$scope.data = e.data
-    		console.log($scope.data)
+//  		console.log($scope.data)
     	})
     	$scope.details = function(car){
-    		console.log(car.id)
+//  		console.log(car.id)
     		localStorage.setItem('id',car.id);
     		$state.go('carDetails');
     	}
