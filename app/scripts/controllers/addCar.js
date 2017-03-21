@@ -11,11 +11,7 @@ angular.module('appApp').controller('addCtrl', ["$scope","$http","$state"],funct
   	
   });
 angular.module('appApp')
-<<<<<<< HEAD
-  .controller('addCtrl', function(){
-  	
-  });
-=======
+
   .controller('addCtrl',['$scope','$http','$state', function ($scope,$http,$state) {
   	$scope.obj = {};
     	$scope.add = function(){
@@ -28,4 +24,4 @@ angular.module('appApp')
     		})
     	}
   }]);
->>>>>>> origin/master
+
