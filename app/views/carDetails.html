@@ -1,10 +1,10 @@
 <div class="carDetails_wra" ng-controller="carDetailsCtrl">
 	<div class="header">
-		<span></span>添加车辆
+		<span ng-click="CD_back()"></span>车辆详情
 	</div>
 	<div class="car_img"><img src="../images/icon-car2.gif"/></div>
-	<div class="car_name"><img src="../images/car_details_icon1.jpg"/>这是一辆非常炫酷的红色小车</div>
-	<div class="car_price"><img src="../images/car_details_icon2.jpg"/><span>￥56000</span>/<span><del>￥86000</del></span></div>
+	<div class="car_name"><img src="../images/car_details_icon1.jpg"/>{{data.name}}</div>
+	<div class="car_price"><img src="../images/car_details_icon2.jpg"/><span>￥{{data.jiage}}</span>/<span><del>￥{{data.xinchejia}}</del></span></div>
 	<div class="car_serve">
 		<div class="car_serve_header"><img src="../images/carDetails_icon3.gif"/> 服务保障</div>
 		<div class="car_serve_content">
@@ -28,32 +28,32 @@
 	</div>
 	<div class="car_title"><img src="../images/carDetails_icon3.gif"/> 车辆档案</div>
 	<div class="car_msg">
-		<p>车身颜色：</p>
-		<p>表显里程：</p>
-		<p>上牌时间：</p>
-		<p>排&#x3000;量：</p>
-		<p>年检到期时间：</p>
-		<p>交强险到期时间：</p>
-		<p>商业险到期时间：</p>
+		<p>车身颜色：{{data.cheshenyanse}}</p>
+		<p>表显里程：{{data.licheng}}</p>
+		<p>上牌时间：{{data.shangpaishijian}}</p>
+		<p>排&#x3000;量：{{data.pailiang}}</p>
+		<p>年检到期时间：{{data.nianjiandaoqishijian}}</p>
+		<p>交强险到期时间：{{data.jiaoqiangxiandaoqishijian}}</p>
+		<p>商业险到期时间：{{data.shangyexiandaoqishijian}}</p>
 	</div>
 	<div class="car_title"><img src="../images/carDetails_icon3.gif"/> 基本参数</div>
 	<div class="car_msg">
-		<p>厂&#x3000;商：</p>
-		<p>长宽高：</p>
-		<p>行李箱容积(L)：</p>
-		<p>燃料类型：</p>
+		<p>厂&#x3000;商：{{data.changshang}}</p>
+		<p>长宽高：{{data.changkuangao}}</p>
+		<p>行李箱容积(L)：{{data.xinglixiangrongji}}</p>
+		<p>燃料类型：{{data.ranliaoleixing}}</p>
 	</div>
 	<div class="car_title"><img src="../images/carDetails_icon3.gif"/> 基本配置</div>
 	<div class="car_msg">
-		<p>天&#x3000;窗：</p>
-		<p>前后电动车窗：</p>
-		<p>感应雨刷：</p>
-		<p>后视镜电动调节：</p>
-		<p>多功能方向盘：</p>
-		<p>空&#x3000;调：</p>
-		<p>GPS导航：</p>
-		<p>倒车影像系统：</p>
-		<p>真皮座椅：</p>
+		<p>天&#x3000;窗：{{data.tianchuang}}</p>
+		<p>前后电动车窗：{{data.qianhoudiandongchechuang}}</p>
+		<p>感应雨刷：{{data.ganyingyushua}}</p>
+		<p>后视镜电动调节：{{data.houshijingdiandongtiaojie}}</p>
+		<p>多功能方向盘：{{data.duogongnengfangxiangpan}}</p>
+		<p>空&#x3000;调：{{data.kongtiao}}</p>
+		<p>GPS导航：{{data.gpsdaohang}}</p>
+		<p>倒车影像系统：{{data.daocheyingxiang}}</p>
+		<p>真皮座椅：{{data.zhenpizuoyi}}</p>
 	</div>
-	<div class="xiajia"><button class="btn btn-danger">下架</button></div>
+	<div class="xiajia" ng-hide="{{a}}"><button class="btn btn-danger" ng-click="del()">下架</button></div>
 </div>

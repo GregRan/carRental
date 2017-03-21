@@ -37,6 +37,7 @@ angular.module('appApp').controller('loginCtrl',["$scope","$http","$state",funct
 			    	url:"http://47.88.16.225:407/users/"+localStorage.uid,
 			    	method:"get",
 			    }).then(function(event){
+			    	localStorage.setItem("level",event.data.level);
 					if(event.data.level=="0"){
 						$state.go("staffHomepage");
 					}else{
