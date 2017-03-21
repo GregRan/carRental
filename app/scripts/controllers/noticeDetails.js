@@ -13,8 +13,8 @@ angular.module('appApp')
   		method:"get",
 		url:"http://47.88.16.225:407/gonggao"
   	}).then(function(){
-  		$scope.name=localStorage.name;
-  		$scope.time=localStorage.time;
+  		$scope.name=localStorage.noticeList_name;
+  		$scope.time=localStorage.noticeList_time;
   	});
   	
   	$scope.fan=function(){
