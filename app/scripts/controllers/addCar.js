@@ -31,4 +31,7 @@ angular.module('appApp')
     		}
     		$('.addCar_add').hide();
     	},false);
+    	$scope.addCar_back = function(){
+    		$state.go('bossHomepage')
+    	}
   }]);
