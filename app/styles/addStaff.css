@@ -1,4 +1,8 @@
-
+.r_addStaff{
+	width: 100vw;
+	height: 100vh;
+	background: white;
+}
 .r_addStaff_main{
 	width: 100%;
 	height: 100%;
@@ -8,8 +12,6 @@
 .r_addStaff_header{
 	width: 100%;
 	height: 1rem;
-	margin-top: 0.5rem;
-	
 }
 
 .r_addStaff_header>a{
@@ -123,11 +125,58 @@
 .r_addStaff_center_bottom>div{
 	margin-left: 1rem;
 }
+.r_addStaff_center_bottom_time{
+	float: left;
+}
+.r_addStaff_center_bottom_time>span{
+	display: block;
+	float: left;
+}
+.r_addStaff_center_bottom_time>input:nth-child(2){
+	width: 7rem;
+	padding-bottom: 0.1rem;
+	padding-top: 0.1rem;
+	font-size: 0.8rem;
+	text-align: center;
+	border: 0;
+	outline: none;
+	border-bottom: 1px solid black;
+}
 .r_addStaff_center_bottom_phone{
 	margin-top: 1rem;
+	float: left;
+}
+.r_addStaff_center_bottom_phone>span{
+	display: block;
+	float: left;
+}
+.r_addStaff_center_bottom_phone>input{
+	float: left;
+	width: 8rem;
+	padding-bottom: 0.1rem;
+	padding-top: 0.1rem;
+	font-size: 0.8rem;
+	border: 0;
+	outline: none;
+	border-bottom: 1px solid black;
 }
 .r_addStaff_center_bottom_phone_jin{
 	margin-top: 1rem;
+	float: left;
+}
+.r_addStaff_center_bottom_phone_jin>span{
+	display: block;
+	float: left;
+}
+.r_addStaff_center_bottom_phone_jin>input{
+	float: left;
+	width: 8rem;
+	padding-bottom: 0.1rem;
+	padding-top: 0.1rem;
+	font-size: 0.8rem;
+	border: 0;
+	outline: none;
+	border-bottom: 1px solid black;
 }
 .r_addStaff_footer>button{
 	width: 5rem;
