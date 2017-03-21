@@ -7,6 +7,6 @@
  * # MainCtrl
  * Controller of the appApp
  */
-angular.module('appApp')
-  .controller('carDetailsCtrl', function () {
-  });
+angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",function($scope,$http,$state){
+  	
+}]);
