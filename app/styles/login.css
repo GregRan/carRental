@@ -4,11 +4,13 @@
 	padding-top: 9rem;
 }
 .loginwra>.logo{
-	width: 2rem;
-	height: 2rem;
-	background:#08A3BF;
-	border-radius: 50%;
+	width: 2.2rem;
+	height: 2.2rem;
+	background:url(../images/logo.gif) no-repeat;
+	background-size: 100% 100%;
 	margin: auto;
+	transform: scale(0);
+	animation: 1s 0.5s aaa linear both;
 }
 .loginwra>.login_msg>input{
 	outline: none;
@@ -25,7 +27,7 @@
 	margin-top: 0.7rem;
 	text-indent: 0.6rem;
 	transform: scale(0);
-	animation: 1s 0.5s aaa linear both;
+	animation: 1s 1s bbb linear both;
 }
 .loginwra>.login_msg>button{
 	display: block;
@@ -39,7 +41,7 @@
 	margin: 1rem auto 0;
 	border-radius: 0.2rem;
 	transform: scale(0);
-	animation: 1s 0.5s aaa linear both;
+	animation: 1s 1s bbb linear both;
 }
 .loginwra>.login_msg>input::placeholder{
 	color: white;
@@ -52,4 +54,17 @@
 @keyframes aaa{
 	from{transform: scale(0);}
 	to{transform: scale(1);}
+}
+@keyframes bbb{
+	0%{transform: scale(0);}
+	10%{transform: scale(0.2);}
+	20%{transform: scale(0.3);}
+	30%{transform: scale(0.5);}
+	40%{transform: scale(0.6);}
+	50%{transform: scale(0.7);}
+	60%{transform: scale(0.8);}
+	70%{transform: scale(0.9);}
+	80%{transform: scale(1);}
+	90%{transform: scale(1.1);}
+	100%{transform: scale(1);}
 }
