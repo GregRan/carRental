@@ -1,12 +1,12 @@
-<div ng-controller='noticeListCtrl' class="Mwarp">
+<li ng-controller='noticeListCtrl' class="Mwarp">
 	<div class="Mhead">
 		<div class="glyphicon glyphicon-chevron-left return"></div>
 		 <div class="Mhead-text">公&#x3000;&#x3000;告</div>
 	</div>
-	<div class="Mcontent">
-		<div class="Mtext">
-			<p>啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪啪</p>
-		</div>
-		<div class="Mtime">2017/03/18</div>
-	</div>
+	<ul class="Mcontent">
+		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'"ng-click="sub(t)">
+			<p>{{t.name}}</p>
+			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
+		</li>
+	</ul>
 </div>
