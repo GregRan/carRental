@@ -18,7 +18,11 @@ angular.module('appApp')
     		$scope.aa = e.data;
     	})	
     	$scope.btn=function (){
-			$state.go("staffList")
+			if(localStorage.level==1){
+				$state.go("staffList")
+			}else{
+				$state.go("staffHomepage")
+			}
 			
     	}
     	$scope.btn1=function (){
