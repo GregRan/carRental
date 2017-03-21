@@ -14,6 +14,6 @@ angular.module('appApp')
 		url:"http://47.88.16.225:407/gonggao"
   	}).then(function(){
   		$scope.name=localStorage.name;
-  		$scope.time=localStorage.time
+  		$scope.time=localStorage.time;
   	})
   }]);

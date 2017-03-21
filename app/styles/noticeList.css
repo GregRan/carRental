@@ -1,16 +1,15 @@
-*{margin: 0;padding: 0;list-style: none;}
-.Mwarp{
-	overflow: hidden;
-}
+/**{margin: 0;padding: 0;list-style: none;}*/
+
 .Mcontent{
 	width: 100%;
-	margin: 0 auto;
+	border-top: 1px solid white;
+	margin-top: 2.5rem;
 }
-
 .Mtext{
 	width: 100%;
 	height: 3.5rem;
-	border-bottom: .1rem solid beige;
+	background: #999999;
+	margin-top: 0.2rem;
 }
 .Mtext p{
 	width: 100%;
