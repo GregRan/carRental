@@ -22,4 +22,4 @@
 	47.88.16.225:407/users/login  (post)登陆
 	47.88.16.225:407/users/uid (get)获取用户信息
 	47.88.16.225:407/car       (get/post)车辆 
-	47.88.16.225:407/gonggao    (get/post)公告 
+	47.88.16.225:407/gonggao    (get/post)公告 5

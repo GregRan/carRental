@@ -1,3 +1,55 @@
 .loginwra {
-	width: 100vw;height: 100vh;background: red;
+	width: 100vw;height: 100vh;background:url(../images/login-bg.jpg) no-repeat;
+	background-size: 100% 100%;
+	padding-top: 9rem;
+}
+.loginwra>.logo{
+	width: 2rem;
+	height: 2rem;
+	background:#08A3BF;
+	border-radius: 50%;
+	margin: auto;
+}
+.loginwra>.login_msg>input{
+	outline: none;
+	display: block;
+	width: 9.4rem;
+	height: 0.8rem;
+	padding: 0.8rem 0;
+	border-radius:0.3rem;
+	border: 0.1rem solid white;
+	background: rgba(0,0,0,0);
+	margin:0 auto;
+	color: white;
+	font-size: 0.8rem;
+	margin-top: 0.7rem;
+	text-indent: 0.6rem;
+	transform: scale(0);
+	animation: 1s 0.5s aaa linear both;
+}
+.loginwra>.login_msg>button{
+	display: block;
+	width: 4.6rem;
+	height:1.8rem;
+	background: #08A3BF;
+	border: 0;
+	font-size: 0.8rem;
+	color: white;
+	text-align: center;
+	margin: 1rem auto 0;
+	border-radius: 0.2rem;
+	transform: scale(0);
+	animation: 1s 0.5s aaa linear both;
+}
+.loginwra>.login_msg>input::placeholder{
+	color: white;
+	text-indent: 0.6rem;
+}
+.gheight{
+	height: 2rem;line-height: 2rem;font-size: 0.8rem;
+	text-align: center;
+}
+@keyframes aaa{
+	from{transform: scale(0);}
+	to{transform: scale(1);}
 }
