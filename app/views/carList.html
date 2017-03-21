@@ -17,15 +17,15 @@
 		<li>车  龄</li>
 	</ul>
 	<ul class="carList_List">
-		<li>
-			<div>
+		<li ng-repeat='car in data'>
+			<div ng-click='details(car)'>
 				<img src="../images/111.png">
 			</div>
 			<div>
-				<p>车&#x3000;名：<span>大众捷达</span></p>
-				<p>价&#x3000;格：<span>￥1.50万 </span></p>
-				<p>行驶里程：<span>13.97万公里</span></p>
-				<p>车&#x3000;龄：<span>12年</span></p>
+				<p>车&#x3000;名：<span>{{car.name}}</span></p>
+				<p>价&#x3000;格：<span>{{car.jiage}}</span></p>
+				<p>行驶里程：<span>{{car.licheng}}</span></p>
+				<p>车&#x3000;龄：<span>{{car.cheling}}</span></p>
 			</div>
 		</li>
 		

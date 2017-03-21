@@ -11,7 +11,6 @@ angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",
   	$scope.CD_back=function(){
   		$state.go("carList");
   	}
-  	console.log(localStorage.level)
   	$http({
   		url:"http://47.88.16.225:407/car",
   		method:"post",
