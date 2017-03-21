@@ -23,5 +23,14 @@ angular.module('appApp')
     			$state.go('carList')
     		})
     	}
+    	$('.b')[0].addEventListener('change',function(){
+    		var file = this.files[0];
+    		var reader = new FileReader();
+    		reader.readAsDataURL(file);
+    		reader.onload = function(){
+    			$('.a').html('<img src="'+this.result+'">')
+    		}
+    		$('.addCar_add').hide();
+    	},false);
   }]);
 

@@ -1,29 +1,29 @@
 <div ng-controller='staffListCtrl'>
 	<div class="r_head">
-		<div class="glyphicon glyphicon-chevron-left hehe"></div>
-		<div class="r_head_text">员工信息</div>
+		<a ng-click="btn()"></a>员工信息
 	</div>
 	<div class="r_content">
-		<div class="r_content_main">
-			<div class="r_content_main_pictuer"></div>
+		<div class="r_content_main" ng-repeat='i in data'>
+			<div class="r_content_main_pictuer" ng-click='btn2(i)'></div>
 			<div class="r_content_main_content">
 				<div class="r_content_main_content_user">
 					<p>姓名：</p>
-					<p>任建新</p>
+					<p>{{i.name}}</p>
 				</div>
 				<div class="r_content_main_content_sex">
 					<p>姓别：</p>
-					<p>男</p>
+					<p>{{i.sex}}</p>
 				</div>
 				<div class="r_content_main_content_gong">
 					<p>工号：</p>
-					<p>123456</p>
+					<p>{{i.gonghao}}</p>
 				</div>
 				<div class="r_content_main_content_phont">
 					<p>电话：</p>
-					<p>17600022910</p>
+					<p>{{i.dianhua}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="r_content_foot" ng-click="btn1()">+添加员工</div>
 </div>
