@@ -16,8 +16,8 @@ angular.module('appApp')
 			$scope.data=e.data
 			$scope.sub=function(t){
 				console.log(t.time)
-				localStorage.setItem("name",t.name)
-				localStorage.setItem("time",t.time)
+				localStorage.setItem("noticeList_name",t.name)
+				localStorage.setItem("noticeList_time",t.time)
 				$state.go('noticeDetails')
 				
 			}
