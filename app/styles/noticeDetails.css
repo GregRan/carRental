@@ -5,11 +5,12 @@
 }
 .Mcont{
 	width: 100%;
+	min-height: 10rem;
 	position: relative;
+	background: #31B0D5;
 }
 .Mtxt{
 	width: 100%;
-	min-height: 10rem;
 	margin-bottom: 2rem;
 	background: #31B0D5;
 }
@@ -19,4 +20,8 @@
 	font-family: "微软雅黑";
 	text-indent: 1rem;
 }
-
+.Mtime{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

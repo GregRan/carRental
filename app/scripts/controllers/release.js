@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-	.controller('releaseCtrl', ['$scope', '$http', function($scope, $http) {
+	.controller('releaseCtrl', ['$scope', '$http', '$state',function($scope, $http,$state) {
 		$scope.Mtext = "";
 		$scope.btn = function() {
 			if($scope.Mtext != "") {
@@ -27,5 +27,8 @@ angular.module('appApp')
 			} else {
 				$("#layer").modal('hide')
 			}
+		}
+		$scope.fan = function(){
+			$state.go('bossHomepage')
 		}
 	}]);
