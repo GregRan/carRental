@@ -11,6 +11,7 @@ angular.module('appApp').controller('addCtrl', ["$scope","$http","$state"],funct
   	
   });
 angular.module('appApp')
+
   .controller('addCtrl',['$scope','$http','$state', function ($scope,$http,$state) {
   	$scope.obj = {};
     	$scope.add = function(){
@@ -35,3 +36,4 @@ angular.module('appApp')
     		$state.go('bossHomepage')
     	}
   }]);
+
