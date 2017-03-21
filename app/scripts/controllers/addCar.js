@@ -8,6 +8,6 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('addCtrl', function ($scope) {
-    	
+  .controller('addCtrl', function(){
+  	
   });
