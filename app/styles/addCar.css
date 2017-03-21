@@ -5,11 +5,22 @@
 	width: 100%;
 	height: 2rem;
 	background: dodgerblue;
-	text-align: center;
-	line-height: 2rem;
 	color: white;
 	font-size: 1rem;
 }
+
+.addCar_header>div{
+	float: left;
+	margin-left: 0.7rem;
+	line-height: 2rem;
+}
+
+.addCar_header>p{
+	float: left;
+	margin-left: 3rem;
+	line-height: 2rem;
+}
+
 
 .addCar_push{
 	width: 100%;
