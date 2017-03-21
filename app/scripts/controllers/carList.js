@@ -10,4 +10,5 @@
 angular.module('appApp')
   .controller('listCtrl', function ($scope) {
     	
+  	console.log(localStorage.level)
   });
