@@ -1,34 +1,42 @@
 <div ng-controller="addStaffCtrl" class="r_addStaff">
 	<div class="r_addStaff_header">
-		<a></a>
-		<p>个人信息</p>
+		<a ng-click="btn()"></a>+添加员工
 	</div>
 	<div class="r_addStaff_center">
 		<div class="r_addStaff_center_left"></div>
 		<div class="r_addStaff_center_right">
 			<div class="r_addStaff_center_right_user">
-				<span>姓名：</span><input type="text"/>
+				<span>姓名：</span><input type="text" ng-model='obj.name'/>
 			</div>
 			<div class="r_addStaff_center_right_sex">
-				<span>性别：</span><input type="radio" name="sex"/>男&#x3000;<input type="radio" name="sex"/>女
+				<span>性别：</span><input type="text" ng-model="obj.sex"/>
 			</div>
 			<div class="r_addStaff_center_right_staff">
-				<span>工号：</span><input type="text"/>
+				<span>工号：</span><input type="text" ng-model='obj.gonghao'/>
 			</div>
 		</div>
 		<div class="r_addStaff_center_bottom">
 			<div class="r_addStaff_center_bottom_time">
-				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="date"/>
+				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="text" ng-model='obj.ruzhishijian'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone">
-				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="text"/>
+				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="text" ng-model='obj.dianhua'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>紧急联系人：</span><input type="text" />
+				<span>紧急联系人：</span><input type="text" ng-model='obj.jinjilianxiren'/>
+			</div>
+			<div class="r_addStaff_center_bottom_phone_jin">
+				<span>用&#x3000;户&#x3000;名：</span><input type="text" ng-model="obj.username"/>
+			</div>
+			<div class="r_addStaff_center_bottom_phone_jin">
+				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password"/>
+			</div>
+			<div class="r_addStaff_center_bottom_phone_ji">
+				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="text" ng-model="obj.level"/>
 			</div>
 		</div>
 	</div>
-	<div class="r_footer">
-		<button>添加员工</button>
+	<div class="r_addStaff_footer">
+		<button ng-click="btn1()">确认添加</button>
 	</div>
 </div>

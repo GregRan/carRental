@@ -1,34 +1,31 @@
 <div ng-controller="personalCtrl" class="r_main">
 	<div class="r_header">
-		<a></a>
-		<p>个人信息</p>
+		<a ng-click='btn()'></a>个人信息
 	</div>
 	<div class="r_center">
 		<div class="r_center_left"></div>
 		<div class="r_center_right">
 			<div class="r_center_right_user">
-				<span>姓名：</span><span>任建新</span>
+				<span>姓名：</span><span>{{aa.name}}</span>
 			</div>
 			<div class="r_center_right_sex">
-				<span>性别：</span><span>男</span>
+				<span>性别：</span><span>{{aa.sex}}</span>
 			</div>
 			<div class="r_center_right_staff">
-				<span>工号：</span><span>123456</span>
+				<span>工号：</span><span>{{aa.gonghao}}</span>
 			</div>
 		</div>
 		<div class="r_center_bottom">
 			<div class="r_center_bottom_time">
-				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><span>2017年3月20日</span>
+				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><span>{{aa.ruzhishijian}}</span>
 			</div>
 			<div class="r_center_bottom_phone">
-				<span>电&#x3000;&#x3000;&#x3000;话：</span><span>17600022910</span>
+				<span>电&#x3000;&#x3000;&#x3000;话：</span><span>{{aa.dianhua}}</span>
 			</div>
 			<div class="r_center_bottom_phone_jin">
-				<span>紧急联系人：</span><span>15598615027</span>	
+				<span>紧急联系人：</span><span>{{aa.jinjilianxiren}}</span>	
 			</div>
 		</div>
 	</div>
-	<div class="r_footer">
-		<button>退出登录</button>
-	</div>
+	<div class="r_footer" ng-click="btn1()">退出登录</div>
 </div>
