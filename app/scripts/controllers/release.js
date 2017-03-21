@@ -17,7 +17,7 @@ angular.module('appApp')
 					url: 'http://47.88.16.225:407/gonggao',
 					data: {
 						"name": $scope.Mtext,
-						"time": new Date()
+						"time": (new Date()).valueOf()
 					}
 				}).then(function(e) {
 					console.log(e.data)
