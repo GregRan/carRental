@@ -15,7 +15,7 @@ angular.module('appApp').controller('staffHomepageCtrl',["$scope","$state",funct
 		$state.go("personal");
   	}
   	$scope.SH_release=function(){
-		$state.go("release");
+		$state.go("noticeList");
   	}
   	$scope.SH_cancel=function(){
 		$state.go("login");

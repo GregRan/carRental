@@ -7,6 +7,9 @@
  * # MainCtrl
  * Controller of the appApp
  */
+angular.module('appApp').controller('addCtrl', ["$scope","$http","$state"],function($scope,$http,$state){
+  	
+  });
 angular.module('appApp')
   .controller('addCtrl',['$scope','$http','$state', function ($scope,$http,$state) {
   	$scope.obj = {};
