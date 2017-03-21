@@ -1,14 +1,12 @@
 <div ng-controller='noticeDetailsCtrl' class="Mwarp">
 	<div class="Mhead">
-		<div class="glyphicon glyphicon-chevron-left return"></div>
+		<div class="return" ng-click="fan()"></div>
 		 <div class="Mhead-text">公&#x3000;&#x3000;告</div>
 	</div>
 	<div class="Mdetail">
 		<div class="Mcont">
-		<div class="Mtxt">
-			<p>{{name}}</p>
+			<div class="Mtxt"><p>{{name}}</p></div>
+			<div class="Mtime">{{time|date:'yyyy-MM-dd'}}</div>
 		</div>
-		<div class="Mtime">{{time|date:'yyyy-MM-dd'}}</div>
-	</div>
 	</div>
 </div>
