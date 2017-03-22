@@ -69,7 +69,7 @@
 }
 .addCar_content{
 	float: left;
-	width: calc(100% - 1.4rem);
+	width: 100%;
 	height: auto;
 	background: white;
 	padding-top: 1rem;
@@ -176,7 +176,7 @@
 	color: dodgerblue;
 }
 .addCar_content>.addCar_time>p>input{
-	width: 10rem;
+	width: 8rem;
 	color: black;
 	background: none;
 	outline: none;
@@ -360,7 +360,7 @@
 	color: dodgerblue;
 }
 .addCar_content>.addCar_whg>p>input{
-	width: 10rem;
+	width: 8rem;
 	color: black;
 	background: none;
 	outline: none;
