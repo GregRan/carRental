@@ -52,7 +52,7 @@
 .carList_nav>li{
 	float: left;
 	width: 25%;
-	height: 3rem;
+	height: 2.2rem;
 	font-size: 0.8rem;
 	text-align: center;
 	line-height: 2.2rem;
@@ -73,8 +73,8 @@
 	padding-top: 0.3rem;
 }
 .carList_List>li>div:nth-child(1){
-	width: 7rem;
-	height: 6.5rem;
+	width: 5rem;
+	height: 6rem;
 	float: left;
 }
 .carList_List>li>div:nth-child(1)>img{
@@ -83,7 +83,7 @@
 }
 .carList_List>li>div:nth-child(2){
 	float: left;
-	margin-left:1rem;
+	margin-left:0.5rem;
 	font-size: 0.6rem;
 	line-height: 1rem;
 }
@@ -94,6 +94,5 @@
 .carList_List>li>div:nth-child(2)>p:nth-child(1){
 	margin-top: 0.6rem;
 }
-
 
 

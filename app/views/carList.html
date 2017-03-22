@@ -12,14 +12,14 @@
 	</div>
 	<ul class="carList_nav">
 		<li>最新上架</li>
-		<li ng-click='shengjiang()'>价  格</li>
+		<li>价  格</li>
 		<li>里  程</li>
 		<li>车  龄</li>
 	</ul>
 	<ul class="carList_List">
 		<li ng-repeat='car in data'>
 			<div ng-click='details(car)'>
-				<img src="../images/111.png">
+				<img src={{car.pic}}>
 			</div>
 			<div>
 				<p>车&#x3000;名：<span>{{car.name}}</span></p>
