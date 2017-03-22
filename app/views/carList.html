@@ -19,7 +19,7 @@
 	<ul class="carList_List">
 		<li ng-repeat='car in data'>
 			<div ng-click='details(car)'>
-				<img src="../images/111.png">
+				<img src={{car.pic}}>
 			</div>
 			<div>
 				<p>车&#x3000;名：<span>{{car.name}}</span></p>
