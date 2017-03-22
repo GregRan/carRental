@@ -17,15 +17,27 @@ angular.module('appApp')
     		$scope.data = e.data
     		console.log($scope.data)
     		$scope.shengjiang = function(){
-    			$scope.price=[];
-    			for(var i = 0;i<$scope.data.length;i++){
-    				$scope.price.push($scope.data[i].jiage) 
-    			}
-    			console.log($scope.price)
-    			$scope.price.sort(function(a,b){
-    				return -(a - b);
-    			})
-    		}
+                $scope.sortIsAsc = !$scope.sortIsAsc;
+                $scope.data.sort(function(a, b){
+                    if($scope.sortIsAsc){
+                    	
+                        if (a.id < b.id) {
+                            return -1;
+                        }
+                        if (a.id === b.id) {
+                            return 0;
+                        }
+                        return 1;
+                    }
+                    if (a.id > b.id) {
+                        return -1;
+                    }
+                    if (a.id === b.id) {
+                        return 0;
+                    }
+                    return 1;
+                });
+            };
     	})
     	$scope.details = function(car){
 //  		console.log(car.id)
