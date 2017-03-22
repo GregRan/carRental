@@ -16,19 +16,8 @@ angular.module('appApp')
     		console.log(e)
     		$scope.data = e.data
     		console.log($scope.data)
-    		$scope.shengjiang = function(){
-    			$scope.price=[];
-    			for(var i = 0;i<$scope.data.length;i++){
-    				$scope.price.push($scope.data[i].jiage) 
-    			}
-    			console.log($scope.price)
-    			$scope.price.sort(function(a,b){
-    				return -(a - b);
-    			})
-    		}
     	})
     	$scope.details = function(car){
-//  		console.log(car.id)
     		localStorage.setItem('id',car.id);
     		$state.go('carDetails');
     	}

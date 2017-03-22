@@ -28,6 +28,7 @@ angular.module('appApp')
     		var reader = new FileReader();
     		reader.readAsDataURL(file);
     		reader.onload = function(){
+    			$scope.obj.pic=this.result
     			$('.a').html('<img src="'+this.result+'">')
     		}
     		$('.addCar_add').hide();

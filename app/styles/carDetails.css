@@ -46,12 +46,13 @@
 }
 .carDetails_wra>.car_img{
 	width: 15rem;
-	height: 9rem;
+	height: 11rem;
 	margin:0.6rem auto;
 	/*background: pink;*/
 }
 .carDetails_wra>.car_img>img{
-	width: 100%;
+	width: 15rem;
+	height: 11rem;
 }
 .carDetails_wra>.car_name{
 	width: 90%;
@@ -167,6 +168,10 @@
 	font-size: 0.7rem;
 	color: #333333;
 	border-bottom: 1px solid #bbbbbb;
+}
+.carDetails_wra>.car_msg>p>span{
+	float: right;
+	margin-right: 0.5rem;
 }
 .carDetails_wra>.xiajia{
 	width: 100%;
