@@ -19,7 +19,12 @@ angular.module('appApp')
     			url:"http://47.88.16.225:407/users",
     			data:$scope.obj
     		}).then(function(e){
-    			$state.go('staffList')
+    			console.log(e.data)
+    			if(e.data.dianhua&&e.data.gonghao&&e.data.id&&e.data.jinjilianxiren&&e.data.level&&e.data.name&&e.data.sex&&e.data.username&&e.data.ruzhishijian){
+    				$state.go('staffList')
+    			}else {
+    				console.log(1)
+    			}
     		})	
     	}
     	$('.bb')[0].addEventListener('change',function(){
