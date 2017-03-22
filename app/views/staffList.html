@@ -4,7 +4,9 @@
 	</div>
 	<div class="r_content">
 		<div class="r_content_main" ng-repeat='i in data'>
-			<div class="r_content_main_pictuer" ng-click='btn2(i)'></div>
+			<div class="r_content_main_pictuer" ng-click='btn2(i)'>
+				<img ng-src={{i.touxiang}}>
+			</div>
 			<div class="r_content_main_content">
 				<div class="r_content_main_content_user">
 					<p>姓名：</p>
