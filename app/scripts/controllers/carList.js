@@ -16,31 +16,8 @@ angular.module('appApp')
     		console.log(e)
     		$scope.data = e.data
     		console.log($scope.data)
-    		$scope.shengjiang = function(){
-                $scope.sortIsAsc = !$scope.sortIsAsc;
-                $scope.data.sort(function(a, b){
-                    if($scope.sortIsAsc){
-                    	
-                        if (a.id < b.id) {
-                            return -1;
-                        }
-                        if (a.id === b.id) {
-                            return 0;
-                        }
-                        return 1;
-                    }
-                    if (a.id > b.id) {
-                        return -1;
-                    }
-                    if (a.id === b.id) {
-                        return 0;
-                    }
-                    return 1;
-                });
-            };
     	})
     	$scope.details = function(car){
-//  		console.log(car.id)
     		localStorage.setItem('id',car.id);
     		$state.go('carDetails');
     	}
