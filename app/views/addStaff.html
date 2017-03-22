@@ -3,7 +3,13 @@
 		<a ng-click="btn()"></a>+添加员工
 	</div>
 	<div class="r_addStaff_center">
-		<div class="r_addStaff_center_left"></div>
+		<div class="r_addStaff_center_left">
+			<div class="addimg"></div>
+			<div class="aa" ng-hide={{cang}}>
+				+
+				<input type="file" class="bb">
+			</div>
+		</div>
 		<div class="r_addStaff_center_right">
 			<div class="r_addStaff_center_right_user">
 				<span>姓名：</span><input type="text" ng-model='obj.name'/>

@@ -22,4 +22,14 @@ angular.module('appApp')
     			$state.go('staffList')
     		})	
     	}
+    	$('.bb')[0].addEventListener('change',function(){
+    		var file = this.files[0];
+    		var reader = new FileReader();
+    		reader.readAsDataURL(file);
+    		reader.onload = function(){
+    			$scope.obj.touxiang=this.result
+    			$('.addimg').html('<img src="'+this.result+'">')
+    		}
+    		$('.aa').hide();
+    	},false);
   }]);
