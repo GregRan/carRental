@@ -24,9 +24,5 @@ angular.module('appApp')
 				$state.go("staffHomepage")
 			}
 			
-    	}
-    	$scope.btn1=function (){
-			$state.go("login")
-			
-    	}
+    }
   }]);
