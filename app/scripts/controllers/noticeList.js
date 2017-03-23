@@ -53,9 +53,9 @@ angular.module('appApp')
 						})
 						element.on("touchend",function(e){
 							scope.c=scope.b[scope.b.length-1]-scope.a;
-							if(scope.c<0){
+							if(scope.c<0&&scope.c<-100){
 								element.css("transition","0.5s").css("right","3rem")
-							}else{
+							}else if(scope.c>0&&scope.c>100){
 								element.css("transition","0.5s").css("right",0)
 							}
 						})
