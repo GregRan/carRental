@@ -9,8 +9,8 @@
  */
 angular.module('appApp')
   .controller('staffListCtrl',['$scope','$state', '$http',function ($scope,$state,$http) {
-  		
-  		$http({
+  		if(sessionStorage.user){
+  			$http({
     		method:"get",
     		url:"http://47.88.16.225:407/users"
     	}).then(function(e){
@@ -25,7 +25,9 @@ angular.module('appApp')
     	}
     	$scope.btn2=function (i){
 			$state.go("personal")
-			localStorage.setItem('staffId',i.id)
+			sessionStorage.setItem('staffId',i.id)
     	}
-    	
+  		}else{
+  			$state.go("login");
+  		}
   }]);

@@ -8,21 +8,22 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",function($scope,$http,$state){
-  	$scope.CD_back=function(){
+  if(sessionStorage.user){
+  		$scope.CD_back=function(){
   		$state.go("carList");
   	}
-  	console.log(localStorage.id)
+  	console.log(sessionStorage.id)
   	$http({
   		url:"http://47.88.16.225:407/car",
   		method:"post",
-  		data:{id:localStorage.id}
+  		data:{id:sessionStorage.id}
   	}).then(function(e){
   		$scope.data=e.data;
   		console.log($scope.data)
   	})
   	$scope.del=function(){
   		$http({
-	  		url:"http://47.88.16.225:407/car/"+localStorage.id,
+	  		url:"http://47.88.16.225:407/car/"+sessionStorage.id,
 	  		method:"delete"
 	  	}).then(function(e){
 	  		$state.go("carList");
@@ -30,10 +31,13 @@ angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",
 	  	})
   	}
   	$scope.a=true;
-  	if(localStorage.level==0){
+  	if(sessionStorage.level==0){
   		$scope.a=true;
   	}else{
   		$scope.a=false;
   	}
   	console.log($scope.a)
+  }else{
+  	$state.go("login");
+  }
 }]);

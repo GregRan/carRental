@@ -9,7 +9,8 @@
  */
 angular.module('appApp')
   .controller('addStaffCtrl',['$scope','$state','$http',function ($scope,$state,$http) {
-    	$scope.btn=function(){
+    	if(sessionStorage.user&&sessionStorage.level==1){
+    		$scope.btn=function(){
     		$state.go('staffList')
     	}
     	$scope.obj={};
@@ -37,4 +38,7 @@ angular.module('appApp')
     		}
     		$('.aa').hide();
     	},false);
+    	}else{
+    		$state.go("login");
+    	}
   }]);
