@@ -20,6 +20,10 @@ angular.module('appApp')
     	$scope.play(0,3)
     	$scope.shuai=0;
     	$scope.ss=0;
+<<<<<<< HEAD
+=======
+    	$scope.aaa=localStorage.count
+>>>>>>> origin/master
     	$scope.next=function(){
     		$scope.shuai+=3;
     		$scope.ss++;
