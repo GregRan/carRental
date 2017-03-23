@@ -20,6 +20,7 @@ angular.module('appApp')
     	$scope.play(0,3)
     	$scope.shuai=0;
     	$scope.ss=0;
+    	$scope.a=0;
     	$scope.next=function(){
     		$scope.shuai+=3;
     		$scope.ss++;
@@ -29,7 +30,9 @@ angular.module('appApp')
     			document.querySelector(".next").setAttribute("disabled","disabled")
     		}
     		$scope.play($scope.shuai,3)
+    		$scope.a = $scope.ss
     	}
+    	
     	$scope.prev=function(){
     		$scope.shuai-=3;
     		document.querySelector(".next").removeAttribute("disabled")
