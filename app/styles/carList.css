@@ -97,6 +97,9 @@
 	text-indent: 1rem;
 	border-radius: 0.2rem;
 }
+
+
+
 .carList_List>li>div:nth-child(2)>p:nth-child(1){
 	margin-top: 0.6rem;
 }
