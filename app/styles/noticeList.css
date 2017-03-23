@@ -13,7 +13,7 @@
 	margin-top: 0.2rem;
 	position: relative;
 }
-.Mtext p{
+.Mtext p:nth-child(1){
 	width: 100%;
 	height: 1.5rem;
 	line-height: 1.5rem;
@@ -24,6 +24,18 @@
     text-overflow: ellipsis;/*文字隐藏后添加省略号*/
     white-space: nowrap;/*强制不换行*/
     width: 20em;/*不允许出现半汉字截断*/
+}
+.Mtext p:nth-child(3){
+	width: 3rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	background: red;
+	color: white;
+	line-height: 3.5rem;
+	text-align: center;
+	font-size:0.9rem;
 }
 .Mtime{
 	width: 40%;
