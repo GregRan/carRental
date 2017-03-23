@@ -8,6 +8,15 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",function($scope,$state){
+		$scope.b=false;
+	$scope.show=function(){
+		if($scope.b==true){
+			$scope.b=false;
+		}else{
+			$scope.b=true;
+		}
+		console.log($scope.b)
+	}
   	$scope.BH_details=function(){
 		$state.go("carList");//车辆信息
   	}
@@ -22,5 +31,8 @@ angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",functi
   	}
   	$scope.BH_addcar=function(){
 		$state.go("addCar");//退出登录
+  	}
+  	$scope.BH_releaseList=function(){
+		$state.go("noticeList");//退出登录
   	}
  }]);

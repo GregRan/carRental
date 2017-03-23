@@ -1,7 +1,13 @@
 <div class="boss_homepage_wra" ng-controller="bossHomepageCtrl">
 		<div ng-click="BH_details()"><img src="../images/icon-car1.gif"> 车辆信息</div>
 		<div ng-click="BH_staff()"><img src="../images/icon-car2.gif"> 员工信息</div>
-		<div ng-click="BH_release()"><img src="../images/icon-car3.gif"> 发布公告</div>
+		<div ng-click="show()"><img src="../images/icon-car3.gif"> 
+		发布公告
+		<ul ng-if="b">
+			<li ng-click="BH_releaseList()">查看</li>
+			<li ng-click="BH_release()">发布</li>
+		</ul>
+		</div>
 		<div ng-click="BH_addcar()"><img src="../images/icon-car4.gif"> 添加车辆</div>
 		<div ng-click="BH_cancel()"><img src="../images/icon-car5.gif"> 退出登录</div>
 </div>
