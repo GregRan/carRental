@@ -40,6 +40,11 @@
 	right: -3.6rem;
 	top: -2rem;
 	transition: all 1s;
+	animation: 1s 0.2s chuxian linear both;
+}
+@keyframes chuxian{
+	from{opacity: 0;}
+	to{opacity: 1;}
 }
 .boss_homepage_wra>.boss_homepage_wra2>div:nth-child(3)>ul>li{
 	width: 3rem;
