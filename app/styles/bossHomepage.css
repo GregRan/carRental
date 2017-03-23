@@ -6,18 +6,15 @@
 	background: linear-gradient(to bottom,#08a3bf,#1dd5f6,#08a3bf);
 }
 .boss_homepage_wra>div{
-	width: 8rem;
+	width: 6.6rem;
 	height: 2rem;
 	margin-top: 2rem;
 	border-bottom: 2px solid #959682;
 	line-height: 2.5rem;
-	text-indent: 1rem;
+	text-indent: 0.6rem;
 	font-size: 0.8rem;
 	font-family: "微软雅黑";
 	color: #3c4547;
-}
-.boss_homepage_wra>div:hover{
-	color: antiquewhite;
 }
 .boss_homepage_wra>div:nth-child(1){
 	margin-top: 0;
@@ -28,6 +25,22 @@
 }
 .boss_homepage_wra>div:nth-child(3){
 	margin-left: 4rem;
+	position: relative;
+}
+.boss_homepage_wra>div:nth-child(3)>ul{
+	width: 3rem;
+	height: 5rem;
+	position: absolute;
+	right: -3.6rem;
+	top: -2rem;
+	transition: all 1s;
+}
+.boss_homepage_wra>div:nth-child(3)>ul>li{
+	width: 3rem;
+	height: 2.5rem;
+	line-height: 3rem;
+	text-align: left;
+	border-bottom: 2px solid #959682;
 }
 .boss_homepage_wra>div:nth-child(4){
 	margin-left: 5rem;

@@ -1,12 +1,13 @@
-<li ng-controller='noticeListCtrl' class="Mwarp">
+<li ng-controller='noticeListCtrl' class="Mwarp" ng-touch="aa()">
 	<div class="Mhead">
 		<div class="return" ng-click="fan()"></div>
 		 <div class="Mhead-text">公&#x3000;&#x3000;告</div>
 	</div>
 	<ul class="Mcontent">
-		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'"ng-click="sub(t)">
+		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}}>
 			<p>{{t.name}}</p>
 			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
+			<p ng-click="n_delete($index,$event)">删除</p>
 		</li>
 	</ul>
 </div>
