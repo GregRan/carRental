@@ -9,7 +9,8 @@
  */
 angular.module('appApp')
 	.controller('releaseCtrl', ['$scope', '$http', '$state',function($scope, $http,$state) {
-		$scope.Mtext = "";
+		if(sessionStorage.user){
+			$scope.Mtext = "";
 		$scope.btn = function() {
 			if($scope.Mtext != "") {
 				$http({
@@ -30,5 +31,8 @@ angular.module('appApp')
 		}
 		$scope.fan = function(){
 			$state.go('bossHomepage')
+		}
+		}else{
+			$state.go("login");
 		}
 	}]);

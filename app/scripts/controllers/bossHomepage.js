@@ -8,6 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",function($scope,$state){
+	if(sessionStorage.user&&sessionStorage.level==1){
 		$scope.b=false;
 	$scope.show=function(){
 		if($scope.b==true){
@@ -35,4 +36,7 @@ angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",functi
   	$scope.BH_releaseList=function(){
 		$state.go("noticeList");//退出登录
   	}
+	}else{
+		$state.go("login");
+	}
  }]);

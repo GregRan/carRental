@@ -32,14 +32,15 @@ angular.module('appApp').controller('loginCtrl',["$scope","$http","$state",funct
 		    	method:"post",
 		    	data:{"username":$scope.updata.userName,"password":$scope.updata.passWord}
 		    }).then(function(e){
-		    	localStorage.setItem("uid",e.data.uid);
+		    	sessionStorage.setItem("uid",e.data.uid);
 		    	$http({
-			    	url:"http://47.88.16.225:407/users/"+localStorage.uid,
+			    	url:"http://47.88.16.225:407/users/"+sessionStorage.uid,
 			    	method:"get",
 			    }).then(function(event){
-			    	localStorage.setItem("staffId",event.data.id);
+			    	sessionStorage.setItem("staffId",event.data.id);
 			    	console.log(event)
-			    	localStorage.setItem("level",event.data.level);
+			    	sessionStorage.setItem("level",event.data.level);
+			    	sessionStorage.setItem("user",event.data.username);
 					if(event.data.level=="0"){
 						$state.go("staffHomepage");
 					}else{

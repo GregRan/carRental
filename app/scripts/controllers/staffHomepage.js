@@ -8,7 +8,8 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('staffHomepageCtrl',["$scope","$state",function($scope,$state){
-  	$scope.SH_details=function(){
+ 	if(sessionStorage.user){
+ 		 	$scope.SH_details=function(){
 		$state.go("carList");
   	}
   	$scope.SH_my=function(){
@@ -20,4 +21,7 @@ angular.module('appApp').controller('staffHomepageCtrl',["$scope","$state",funct
   	$scope.SH_cancel=function(){
 		$state.go("login");
   	}
+ 	}else{
+ 		$state.go("login");
+ 	}
  }]);
