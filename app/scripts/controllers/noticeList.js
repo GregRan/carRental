@@ -14,9 +14,9 @@ angular.module('appApp')
 			method:"get",
 			url:"http://47.88.16.225:407/gonggao"
 		}).then(function(e){
+			console.log(e.data)
 			$scope.data=e.data;
 			$scope.sub=function(t){
-				console.log(t)
 				sessionStorage.setItem("noticeList_id",t.id)
 				$state.go('noticeDetails')
 			}

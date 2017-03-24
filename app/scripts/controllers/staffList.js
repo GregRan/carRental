@@ -15,7 +15,14 @@ angular.module('appApp')
     		url:"http://47.88.16.225:407/users"
     	}).then(function(e){
     		$scope.data=e.data;
+    		console.log(e.data)
     	})	
+    	if(sessionStorage.level=="0"){
+				$scope.mmShow = false
+			}else{
+				$scope.mmShow = true
+			}
+    	
     	$scope.btn=function (){
 			$state.go("bossHomepage")
 			
