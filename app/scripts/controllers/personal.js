@@ -9,20 +9,23 @@
  */
 angular.module('appApp')
   .controller('personalCtrl',['$scope','$http','$state',function ($scope,$http,$state) {
-  	console.log(localStorage.staffId)
+  	if(sessionStorage.user){
+  		console.log(sessionStorage.level)
     	$http({
-    		url:"http://47.88.16.225:407/users/"+localStorage.staffId,
+    		url:"http://47.88.16.225:407/users/"+sessionStorage.staffId,
     		method:"get"
     	}).then(function(e){
     		console.log(e)
     		$scope.aa = e.data;
     	})	
     	$scope.btn=function (){
-			if(localStorage.level==1){
+			if(sessionStorage.level==1){
 				$state.go("staffList")
 			}else{
 				$state.go("staffHomepage")
 			}
-			
-    }
+   	 	}
+  	}else{
+  		$state.go("login");
+  	}
   }]);

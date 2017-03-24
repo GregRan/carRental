@@ -1,9 +1,18 @@
 .loginwra {
-	width: 100vw;height: 100vh;background:url(../images/login-bg.jpg) no-repeat;
-	background-size: 100% 100%;
+	width: 100vw;height: 100vh;background:url(../images/login-bg.jpg) no-repeat center center;
+	background-size: cover;
 	padding-top: 9rem;
+	position: relative;
 }
-.loginwra>.logo{
+.loginwra>.loginwra2{
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	/*background: rgba(0,0,212,0.5);*/
+	top: calc(50% - 5rem);
+	left: calc(50% - 5rem);
+}
+.loginwra>.loginwra2>.logo{
 	width: 2.2rem;
 	height: 2.2rem;
 	background:url(../images/logo.gif) no-repeat;
@@ -12,7 +21,7 @@
 	transform: scale(0);
 	animation: 1s 0.5s aaa linear both;
 }
-.loginwra>.login_msg>input{
+.loginwra>.loginwra2>.login_msg>input{
 	outline: none;
 	display: block;
 	width: 9.4rem;
@@ -29,7 +38,7 @@
 	transform: scale(0);
 	animation: 1s 1s bbb linear both;
 }
-.loginwra>.login_msg>button{
+.loginwra>.loginwra2>.login_msg>button{
 	display: block;
 	width: 4.6rem;
 	height:1.8rem;
@@ -43,7 +52,7 @@
 	transform: scale(0);
 	animation: 1s 1s bbb linear both;
 }
-.loginwra>.login_msg>input::placeholder{
+.loginwra>.loginwra2>.login_msg>input::placeholder{
 	color: white;
 	text-indent: 0.6rem;
 }

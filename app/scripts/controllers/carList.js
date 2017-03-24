@@ -9,11 +9,12 @@
  */
 angular.module('appApp')
   .controller('listCtrl',['$scope','$http','$state','$filter', function ($scope,$http,$state,$filter) {
-  		$http({
+  		if(sessionStorage.user){
+  			$http({
 	    	method:'get',
 	    	url:'http://47.88.16.225:407/car?{"id":"count"}'
 	    }).then(function(e){
-	    	localStorage.count=e.data.count;
+	    	sessionStorage.count=e.data.count;
 	    })
     	$scope.play=function(num,step){
     		$http({
@@ -26,13 +27,13 @@ angular.module('appApp')
     	$scope.play(0,3)
     	$scope.shuai=0;
     	$scope.ss=0;
-    	$scope.aaa=localStorage.count
+    	$scope.aaa=sessionStorage.count
     	$scope.next=function(){
      		$scope.shuai+=3;
      		$scope.ss++;
      		document.querySelector(".prev").removeAttribute("disabled")
-    		console.log(localStorage.count-($scope.ss*3))
-    		if(localStorage.count-(($scope.ss-1)*3)<=3){
+    		console.log(sessionStorage.count-($scope.ss*3))
+    		if(sessionStorage.count-(($scope.ss-1)*3)<=3){
      			$scope.shuai=($scope.ss-1)*3;
     			$scope.ss=$scope.ss-1
      			document.querySelector(".next").setAttribute("disabled","disabled")
@@ -55,15 +56,18 @@ angular.module('appApp')
     		
     	}
     	$scope.details = function(car){
-    		localStorage.setItem('id',car.id);
+    		sessionStorage.setItem('id',car.id);
     		$state.go('carDetails');
     	}
     	$scope.back = function(){
-    		if(localStorage.level==0){
+    		if(sessionStorage.level==0){
     			$state.go('staffHomepage')
     		}else{
     			$state.go('bossHomepage')
     		}
     	}
+  		}else{
+  			$state.go("login");
+  		}
     	
   }]);

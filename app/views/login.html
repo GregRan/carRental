@@ -1,15 +1,17 @@
 <div ng-controller="loginCtrl" class="loginwra">
-	<div class="logo"></div>
-	<div class="login_msg">
-		<input type="text" placeholder="账号：" ng-model="updata.userName" ng-blur="blur()">
-		<input type="password" placeholder="密码：" ng-model="updata.passWord" ng-blur="blur2()">
-		<button ng-click="login()" data-target=".bs-example-modal-lg">登&#x3000;录</button>
+	<div class="loginwra2">
+		<div class="logo"></div>
+			<div class="login_msg">
+				<input type="text" placeholder="账号：" ng-model="updata.userName" ng-blur="blur()">
+				<input type="password" placeholder="密码：" ng-model="updata.passWord" ng-blur="blur2()">
+				<button ng-click="login()" data-target=".bs-example-modal-lg">登&#x3000;录</button>
+			</div>
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content gheight">
+				账户或密码输入不正确！
+		    </div>
+		  </div>
+		</div>
 	</div>
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content gheight">
-		账户或密码输入不正确！
-    </div>
-  </div>
-</div>
 </div>

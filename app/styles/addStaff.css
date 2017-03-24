@@ -1,7 +1,7 @@
 .r_addStaff{
 	width: 100vw;
 	height: 100vh;
-	background: white;
+	background: #e3f7f8;
 	padding-bottom: 2rem;
 }
 .r_addStaff_main{
@@ -100,6 +100,7 @@
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	font-size: 0.8rem;
+	background: #e3f7f8;
 }
 .r_addStaff_center_right_sex{
 	margin-top: 1rem;
@@ -110,6 +111,7 @@
 	float: left;
 }
 .r_addStaff_center_right_sex>input{
+	background: #e3f7f8;
 	float: left;
 	width: 4rem;
 	outline: none;
@@ -136,6 +138,7 @@
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	font-size: 0.8rem;
+	background: #e3f7f8;
 }
 .r_addStaff_center_bottom{
 	width: 100%;
@@ -162,6 +165,7 @@
 	border: 0;
 	outline: none;
 	border-bottom: 1px solid black;
+	background: #e3f7f8;
 }
 .r_addStaff_center_bottom_phone{
 	margin-top: 1rem;
@@ -177,6 +181,7 @@
 	padding-bottom: 0.1rem;
 	padding-top: 0.1rem;
 	font-size: 0.8rem;
+	background: #e3f7f8;
 	border: 0;
 	outline: none;
 	border-bottom: 1px solid black;
@@ -191,6 +196,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_phone_jin>input{
+	background: #e3f7f8;
 	float: left;
 	width: 8rem;
 	padding-bottom: 0.1rem;
@@ -209,6 +215,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_phone_ji>input{
+	background: #e3f7f8;
 	float: left;
 	width: 8rem;
 	padding-bottom: 0.1rem;
