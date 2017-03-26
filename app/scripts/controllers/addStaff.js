@@ -41,4 +41,26 @@ angular.module('appApp')
     	}else{
     		$state.go("login");
     	}
+    	$scope.myreg = /^1[34578]\d{9}$/;
+    	$scope.passwordReg = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9{6,}$]/;
+	    $scope.phone=function(){
+	  		if(!$scope.myreg.test($scope.obj.dianhua)){
+	  			console.log(1)
+	  		}
+	  	}
+//	    $scope.jinji = function(){
+//	    	if(!$scope.myreg.test($scope.obj.jinjilianxiren)){
+//	  			alert(1)
+//	  		}
+//	    }
+//	    $scope.username = function(){
+//	    	if(!$scope.myreg.test($scope.obj.username)){
+//	  			alert(1)
+//	  		}
+//	    }
+//	    $scope.password = function(){
+//	    	if(!$scope.passwordReg.test($scope.obj.password)){
+//	  			alert(1)
+//	  		}
+//	    }
   }]);
