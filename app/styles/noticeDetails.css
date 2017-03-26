@@ -21,9 +21,11 @@
 	line-height: 1.5rem;
 	font-family: "微软雅黑";
 	text-indent: 1rem;
+	word-wrap: break-word;
 }
 .Mtime{
 	position: absolute;
 	bottom: 0;
 	right: 0;
 }
+
