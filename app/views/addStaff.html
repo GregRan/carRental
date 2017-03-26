@@ -38,14 +38,17 @@
 				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password" ng-blur="password()"/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_ji">
-				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="text" ng-model="obj.level"/>
+				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="text" ng-model="obj.level" ng-blur="level()"/>
 			</div>
 		</div>
 	</div>
 	<div class="r_addStaff_footer">
 		<button ng-click="btn1()">确认添加</button>
 	</div>
-	<div class="zhezhao">
-		<div class="zhezhao_center"></div>
+	<div class="zhezhao" ng-show="rjxShow">
+		<div class="zhezhao_center">
+			<p>{{aa}}</p>
+			<button ng-click = 'btn2()'>确定</button>
+		</div>
 	</div>
 </div>

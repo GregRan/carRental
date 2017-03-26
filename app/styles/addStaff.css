@@ -264,14 +264,31 @@
 	background: rgba(0,0,0,.2);
 	position: absolute;
 	top: 0;
-	
 }
 .zhezhao_center{
-	width: 15rem;
-	height: 7rem;
-	background: red;
+	width: 80%;
+	height: 8rem;
+	background: wheat;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+	border-radius: 0.3rem;
+	font-weight:bold ;
+}
+.zhezhao_center>p{
+	line-height: 4rem;
+	text-align: center;
+	font-size: 1rem;
+}
+.zhezhao_center>button{
+	float: right;
+	width: 4rem;
+	height: 2rem;
+	margin-right: 1rem;
+	margin-top: 0.8rem;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	font-weight: bold;
+	border-radius: 0.3rem;
 }
