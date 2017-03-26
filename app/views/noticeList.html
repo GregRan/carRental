@@ -4,10 +4,10 @@
 		 <div class="Mhead-text">公&#x3000;&#x3000;告</div>
 	</div>
 	<ul class="Mcontent">
-		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}}>
+		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}} ng-class="{'unread':t.read=='0'}">
 			<p>{{t.name}}</p>
 			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
-			<p ng-click="n_delete($index,$event)">删除</p>
+			<div class="del" ng-click="n_delete($index,$event)">删除</div>
 		</li>
 	</ul>
 </div>

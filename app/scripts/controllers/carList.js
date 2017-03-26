@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('listCtrl',['$scope','$http','$state','$filter', function ($scope,$http,$state,$filter) {
+  .controller('listCtrl',['$scope','$http','$state','$filter','$location', function ($scope,$http,$state,$filter,$location) {
   		if(sessionStorage.user){
   			$http({
 	    	method:'get',
@@ -70,4 +70,19 @@ angular.module('appApp')
   			$state.go("login");
   		}
     	
+    	
+    	$scope.carList_search = function(){
+    		if($scope.search){
+    			$http({
+	    			method:'get',
+	    					url:'http://47.88.16.225:407/car/?pinpai='+$scope.search,
+	    		}).then(function(e){
+	    			console.log(e.data)
+	    			$scope.data = e.data
+	    		})
+//  			$location.path('/carList/search')
+    		}else{
+    			alert('内容不能为空')
+    		}	
+    	}
   }]);

@@ -1,0 +1,20 @@
+<ul class="carList_nav">
+	<li>
+		<button class="btn btn-success carListbutton prev" ng-click="prev()">上一页</button>
+		<button class="btn btn-success carListbutton next" ng-click="next()">下一页</button>
+	</li>
+</ul>
+<ul class="carList_List">
+	<li ng-repeat='car in data'>
+		<div ng-click='details(car)'>
+			<img ng-src={{car.pic}}>
+		</div>
+		<div>
+			<p>车&#x3000;名：<span>{{car.name}}</span></p>
+			<p>价&#x3000;格：<span>{{car.jiage}}</span></p>
+			<p>行驶里程：<span>{{car.licheng}}</span></p>
+			<p>车&#x3000;龄：<span>{{car.cheling}}</span></p>
+			<p>品&#x3000;牌：<span>{{car.pinpai}}</span></p>
+		</div>
+	</li>
+</ul>
