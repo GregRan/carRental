@@ -26,23 +26,29 @@
 				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="text" ng-model='obj.ruzhishijian'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone">
-				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="text" ng-model='obj.dianhua'/>
+				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="text" ng-model='obj.dianhua' ng-blur='phone()'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>紧急联系人：</span><input type="text" ng-model='obj.jinjilianxiren'/>
+				<span>紧急联系人：</span><input type="text" ng-model='obj.jinjilianxiren' ng-blur="jinji()"/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>用&#x3000;户&#x3000;名：</span><input type="text" ng-model="obj.username"/>
+				<span>用&#x3000;户&#x3000;名：</span><input type="text" ng-model="obj.username" ng-blur='username()'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password"/>
+				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password" ng-blur="password()"/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_ji">
-				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="text" ng-model="obj.level"/>
+				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="text" ng-model="obj.level" ng-blur="level()"/>
 			</div>
 		</div>
 	</div>
 	<div class="r_addStaff_footer">
 		<button ng-click="btn1()">确认添加</button>
+	</div>
+	<div class="zhezhao" ng-show="rjxShow">
+		<div class="zhezhao_center">
+			<p>{{aa}}</p>
+			<button ng-click = 'btn2()'>确定</button>
+		</div>
 	</div>
 </div>
