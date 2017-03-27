@@ -75,7 +75,8 @@ angular.module('appApp')
 				}
 			}
 			//***************************
-			$scope.pppp=false	
+			$scope.pppp=false;
+			$scope.erro=false;
 			$scope.carList_search = function() {
 				if($scope.search) {
 					$http({
@@ -91,7 +92,10 @@ angular.module('appApp')
 						}
 					})
 				} else {
-					alert(1)
+					$scope.erro=true;
+				}
+				$scope.hide = function(){
+					$scope.erro=false;
 				}
 			}
 			//*****************************
