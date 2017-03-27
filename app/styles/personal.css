@@ -95,13 +95,40 @@
 		float: left;
 		
 	}
+	.r_center_right_user>span{
+		display: block;
+		float: left;
+	}
+	.r_center_right_user>span:nth-child(2){
+		display: block;
+		float: left;
+		width: 4.5rem;
+	}
 	.r_center_right_sex{
 		margin-top: 1rem;
 		float: left;
 	}
+	.r_center_right_sex>span{
+		display: block;
+		float: left;
+	}
+	.r_center_right_sex>span:nth-child(2){
+		display: block;
+		float: left;
+		width: 4.5rem;
+	}
 	.r_center_right_staff{
 		margin-top: 1rem;
 		float: left;
+	}
+	.r_center_right_staff>span{
+		display: block;
+		float: left;
+	}
+	.r_center_right_staff>span:nth-child(2){
+		display: block;
+		float: left;
+		width: 4.5rem;
 	}
 	.r_center_bottom{
 		width: 100%;
