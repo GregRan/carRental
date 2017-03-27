@@ -11,6 +11,27 @@
 	z-index: 1;
 }
 
+.addcar_alert{
+	width: 10rem;
+	height: 5rem;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	border-radius: 0.2rem;
+	bottom: -35rem;
+	left: calc(50% - 5rem);
+	padding-top: 1rem;
+}
+.addcar_alert>p{
+	width: 100%;
+	font-size: 0.8rem;
+	color: #3C3C3C;
+	text-align: center;s
+}
+.addcar_alert>button{
+	float: right;
+	margin-right: 1.5rem;
+	margin-top:0.5rem;
+}
 .addCar_header>div{
 	float: left;
 	margin-left: 0.7rem;
@@ -646,7 +667,6 @@
 	bottom: 0;
 	left: 0;
 }
-
 
 
 

@@ -6,12 +6,12 @@
 }
 .carDetails_wra>.header{
 	height: 2.3rem;
-	background: white;
+	background: #08a3bf;
 	border-bottom: 2px ssolid #BBBBBB;
 	text-align: center;
 	font-size: 1rem;
 	line-height: 2.3rem;
-	color: #08a3bf;
+	color: white;
 	letter-spacing: 0.2rem;
 	position: relative;
 }
@@ -25,7 +25,7 @@
 .carDetails_wra>.header>span:before{
 	width: 0.1rem;
 	height: 0.7rem;
-	background: #08a3bf;
+	background: white;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -36,7 +36,7 @@
 .carDetails_wra>.header>span:after{
 	width: 0.1rem;
 	height: 0.7rem;
-	background: #08a3bf;
+	background: white;
 	position: absolute;
 	top: -0.04rem;
 	left: 0;

@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * @ngdoc function
  * @name appApp.controller:MainCtrl
  * @description

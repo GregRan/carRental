@@ -28,6 +28,7 @@
 	</div>
 	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
 	<div class="car_msg">
+		<p>品&#x3000;牌：<span>{{data.pinpai}}</span></p>
 		<p>车身颜色：<span>{{data.cheshenyanse}}</span></p>
 		<p>表显里程：<span>{{data.licheng}}</span></p>
 		<p>上牌时间：<span>{{data.shangpaishijian}}</span></p>
@@ -55,5 +56,5 @@
 		<p>倒车影像系统：<span>{{data.daocheyingxiang}}</span></p>
 		<p>真皮座椅：<span>{{data.zhenpizuoyi}}</span></p>
 	</div>
-	<div class="xiajia" ng-hide="{{a}}"><button class="btn btn-danger" ng-click="del()">下架</button></div>
+	<div class="xiajia" ng-hide="a"><button class="btn btn-danger" ng-click="del()">下架</button><button class="btn btn-primary" ng-click="revise()">编辑</button></div>
 </div>
