@@ -10,13 +10,14 @@
 			<div class="glyphicon glyphicon-search"></div>
 		</div>
 	</div>
-	<div ui-view="content">
+	<!--<div ui-view="content">-->
 		<ul class="carList_nav">
 			<li>
 				<button class="btn btn-success carListbutton prev" ng-click="prev()">上一页</button>
 				<button class="btn btn-success carListbutton next" ng-click="next()">下一页</button>
 			</li>
 		</ul>
+		<div ng-show="pppp">暂无搜索结果...</div>
 		<ul class="carList_List">
 			<li ng-repeat='car in data'>
 				<div ng-click='details(car)'>
@@ -31,6 +32,6 @@
 				</div>
 			</li>
 		</ul>
-	</div>
+	<!--</div>-->
 	
 </div>

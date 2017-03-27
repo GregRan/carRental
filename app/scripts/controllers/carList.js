@@ -8,81 +8,95 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('listCtrl',['$scope','$http','$state','$filter','$location', function ($scope,$http,$state,$filter,$location) {
-  		if(sessionStorage.user){
-  			$http({
-	    	method:'get',
-	    	url:'http://47.88.16.225:407/car?{"id":"count"}'
-	    }).then(function(e){
-	    	sessionStorage.count=e.data.count;
-	    })
-    	$scope.play=function(num,step){
-    		$http({
-	    		method:'get',
-	    		url:'http://47.88.16.225:407/car?{"$skip":'+num+',"$limit":'+step+'}',
-	    	}).then(function(e){
-	    		$scope.data = e.data
-	    	})
-    	}
-    	$scope.play(0,3)
-    	$scope.shuai=0;
-    	$scope.ss=0;
-    	$scope.aaa=sessionStorage.count
-    	$scope.next=function(){
-     		$scope.shuai+=3;
-     		$scope.ss++;
-     		document.querySelector(".prev").removeAttribute("disabled")
-    		console.log(sessionStorage.count-($scope.ss*3))
-    		if(sessionStorage.count-(($scope.ss-1)*3)<=3){
-     			$scope.shuai=($scope.ss-1)*3;
-    			$scope.ss=$scope.ss-1
-     			document.querySelector(".next").setAttribute("disabled","disabled")
-     		}
-     		$scope.play($scope.shuai,3)
-     	}
-    	
-    	$scope.prev=function(){
-    		$scope.shuai-=3;
-    		if($scope.ss>0){
-    			$scope.ss--;
-    		}
-    		document.querySelector(".next").removeAttribute("disabled")
-    		if($scope.shuai<0){
-    			$scope.shuai=0;
-    			document.querySelector(".prev").setAttribute("disabled","disabled")
-    		}else{
-    			$scope.play($scope.shuai,-3)
-    		}
-    		
-    	}
-    	$scope.details = function(car){
-    		sessionStorage.setItem('id',car.id);
-    		$state.go('carDetails');
-    	}
-    	$scope.back = function(){
-    		if(sessionStorage.level==0){
-    			$state.go('staffHomepage')
-    		}else{
-    			$state.go('bossHomepage')
-    		}
-    	}
-  		}else{
-  			$state.go("login");
-  		}
-    	
-    	
-    	$scope.carList_search = function(){
-    		if($scope.search){
-    			$http({
-	    			method:'get',
-	    					url:'http://47.88.16.225:407/car/?pinpai='+$scope.search,
-	    		}).then(function(e){
-	    			console.log(e.data)
-	    			$scope.data = e.data
-	    		})
-//  			$location.path('/carList/search')
-    		}else{
-    			alert('内容不能为空')
-    		}	
-    	}
-  }]);
+	.controller('listCtrl', ['$scope', '$http', '$state', '$filter', '$location', function($scope, $http, $state, $filter, $location) {
+		if(sessionStorage.user) {
+			$http({
+				method: 'get',
+				url: 'http://47.88.16.225:407/car?{"id":"count"}'
+			}).then(function(e) {
+				sessionStorage.count = e.data.count;
+			})
+			$scope.play = function(num,step) {
+				$http({
+					method: 'get',
+					url: 'http://47.88.16.225:407/car?{"$skip":' + num + ',"$limit":' + step + '}',
+				}).then(function(e) {
+					$scope.data = e.data
+				})
+			}
+			$scope.play(0, 3)
+			$scope.shuai = 0;
+			$scope.ss = 0;
+			$scope.aaa = sessionStorage.count
+			if($scope.ss==0){
+				document.querySelector(".prev").setAttribute("disabled", "disabled")
+			}
+			$scope.next = function() {
+				if(sessionStorage.count - (($scope.ss+1) * 3)==3||sessionStorage.count - (($scope.ss+1) * 3)<3){
+						document.querySelector(".next").setAttribute("disabled", "disabled")
+					}
+				$scope.shuai += 3;
+				$scope.ss++;
+				document.querySelector(".prev").removeAttribute("disabled")
+				if(sessionStorage.count - (($scope.ss - 1) * 3) <= 3) {
+					$scope.shuai = ($scope.ss - 1) * 3;
+					$scope.ss = $scope.ss - 1
+					document.querySelector(".next").setAttribute("disabled", "disabled")
+				}
+				$scope.play($scope.shuai, 3)
+			}
+
+			$scope.prev = function() {
+				$scope.shuai -= 3;
+				if($scope.ss > 0) {
+					$scope.ss--;
+				}
+				if($scope.ss==0){
+					document.querySelector(".prev").setAttribute("disabled", "disabled")
+				}
+				document.querySelector(".next").removeAttribute("disabled")
+				if($scope.shuai < 0) {
+					$scope.shuai = 0;
+					document.querySelector(".prev").setAttribute("disabled", "disabled")
+				} else {
+					$scope.play($scope.shuai, -3)
+				}
+
+			}
+			$scope.details = function(car) {
+				sessionStorage.setItem('id', car.id);
+				$state.go('carDetails');
+			}
+			$scope.back = function() {
+				if(sessionStorage.level == 0) {
+					$state.go('staffHomepage')
+				} else {
+					$state.go('bossHomepage')
+				}
+			}
+			//***************************
+			$scope.pppp=false	
+			$scope.carList_search = function() {
+				if($scope.search) {
+					$http({
+						method: 'get',
+						url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.search
+					}).then(function(e) {
+						console.log(e.data.length)
+						$scope.data = e.data
+						if(e.data.length==0){
+							$scope.pppp=true
+						}else {
+							$scope.pppp=false
+						}
+					})
+				} else {
+					alert(1)
+				}
+			}
+			//*****************************
+		} else {
+			$state.go("login");
+		}
+
+	}]);

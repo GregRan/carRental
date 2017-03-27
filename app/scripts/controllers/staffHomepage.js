@@ -19,6 +19,7 @@ angular.module('appApp').controller('staffHomepageCtrl', ["$scope", "$state", fu
 			$state.go("noticeList");
 		}
 		$scope.SH_cancel = function() {
+			sessionStorage.clear()
 			$state.go("login");
 		}
 	} else {
