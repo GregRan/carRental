@@ -24,8 +24,11 @@ angular.module('appApp')
 			}
     	
     	$scope.btn=function (){
-			$state.go("bossHomepage")
-			
+    		if(sessionStorage.level==0){
+    			$state.go("staffHomepage")
+    		}else {
+    			$state.go("bossHomepage")
+    		}
     	}
     	$scope.btn1=function (){
 			$state.go("addStaff")

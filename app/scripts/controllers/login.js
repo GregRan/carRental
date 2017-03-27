@@ -41,6 +41,7 @@ angular.module('appApp').controller('loginCtrl',["$scope","$http","$state",funct
 			    	console.log(event)
 			    	sessionStorage.setItem("level",event.data.level);
 			    	sessionStorage.setItem("user",event.data.username);
+			    	sessionStorage.setItem("gonghao",event.data.gonghao);
 					if(event.data.level=="0"){
 						$state.go("staffHomepage");
 					}else{
