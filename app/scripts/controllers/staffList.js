@@ -36,6 +36,7 @@ angular.module('appApp')
     	$scope.btn2=function (i){
 			$state.go("personal")
 			sessionStorage.setItem('staffId',i.id)
+			sessionStorage.setItem('click_gh',i.gonghao)
     	}
   		}else{
   			$state.go("login");
