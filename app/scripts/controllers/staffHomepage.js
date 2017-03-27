@@ -7,21 +7,22 @@
  * # MainCtrl
  * Controller of the appApp
  */
-angular.module('appApp').controller('staffHomepageCtrl',["$scope","$state",function($scope,$state){
- 	if(sessionStorage.user){
- 		 	$scope.SH_details=function(){
-		$state.go("carList");
-  	}
-  	$scope.SH_my=function(){
-		$state.go("personal");
-  	}
-  	$scope.SH_release=function(){
-		$state.go("noticeList");
-  	}
-  	$scope.SH_cancel=function(){
+angular.module('appApp').controller('staffHomepageCtrl', ["$scope", "$state", function($scope, $state) {
+	if(sessionStorage.user) {
+		$scope.SH_details = function() {
+			$state.go("carList");
+		}
+		$scope.SH_my = function() {
+			$state.go("staffList");
+		}
+		$scope.SH_release = function() {
+			$state.go("noticeList");
+		}
+		$scope.SH_cancel = function() {
+			sessionStorage.clear()
+			$state.go("login");
+		}
+	} else {
 		$state.go("login");
-  	}
- 	}else{
- 		$state.go("login");
- 	}
- }]);
+	}
+}]);

@@ -28,7 +28,7 @@
     white-space: nowrap;/*强制不换行*/
     width: 20em;/*不允许出现半汉字截断*/
 }
-.Mtext p:nth-child(3){
+.del{
 	width: 3rem;
 	height: 100%;
 	position: absolute;
@@ -50,4 +50,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+.unread{
+font-weight: bold;
 }

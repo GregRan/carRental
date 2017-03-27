@@ -28,13 +28,14 @@ angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",functi
 		$state.go("release");//发布公告
   	}
   	$scope.BH_cancel=function(){
+  		sessionStorage.clear()
 		$state.go("login");//退出登录
   	}
   	$scope.BH_addcar=function(){
-		$state.go("addCar");//退出登录
+		$state.go("addCar");//添加车辆
   	}
   	$scope.BH_releaseList=function(){
-		$state.go("noticeList");//退出登录
+		$state.go("noticeList");//查看公告
   	}
 	}else{
 		$state.go("login");
