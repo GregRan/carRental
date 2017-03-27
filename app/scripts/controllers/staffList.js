@@ -45,7 +45,6 @@ angular.module('appApp')
 		$scope.staffList_search = function(){
 			var str = /^[A-Z]\d{5}/;
 			var str2 = /^[\u4e00-\u9fa5]{1,}$/;
-			
 			if($scope.input_search){
 				if($('select').val()=="姓名"){
 					if(str2.test($scope.input_search)){
