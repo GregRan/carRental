@@ -5,7 +5,7 @@
 }
 .listCtrl_wra{
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	background: #e3f7f8;
 }
 .carList_header{
