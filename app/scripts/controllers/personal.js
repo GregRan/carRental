@@ -19,11 +19,7 @@ angular.module('appApp')
     		$scope.aa = e.data;
     	})	
     	$scope.btn=function (){
-			if(sessionStorage.level==1){
-				$state.go("staffList")
-			}else{
-				$state.go("staffHomepage")
-			}
+			$state.go("staffList")
    	 	}
   	}else{
   		$state.go("login");
