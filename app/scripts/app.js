@@ -62,6 +62,10 @@ angular
   			url:"/addStaff",
   			templateUrl:"views/addStaff.html"
   		})
+  		$stateProvider.state("revise-car",{
+  			url:"/revise-car",
+  			templateUrl:"views/revise-car.html"
+  		})
 //		$stateProvider.state("carList.search",{
 //			url:"/search",
 //			views:{

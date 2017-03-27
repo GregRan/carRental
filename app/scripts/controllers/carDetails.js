@@ -19,7 +19,6 @@ angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",
   		data:{id:sessionStorage.id}
   	}).then(function(e){
   		$scope.data=e.data;
-  		console.log($scope.data)
   	})
   	$scope.del=function(){
   		$http({
@@ -29,6 +28,9 @@ angular.module('appApp').controller('carDetailsCtrl',["$scope","$http","$state",
 	  		$state.go("carList");
 //			console.log(e)
 	  	})
+  	}
+  	$scope.revise=function(){
+  		$state.go("revise-car");
   	}
   	$scope.a=true;
   	if(sessionStorage.level==0){

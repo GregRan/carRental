@@ -1,0 +1,128 @@
+<div ng-controller="revisecarCtrl" class="revisecar_wra">
+	<div class="header">
+		<p></p>修改车辆详情
+	</div>
+	<div class="car_img"><img src="{{data.pic}}"></div>
+	<button class="add_img btn btn-primary">
+		上传图片
+		<input type="file">
+	</button>
+	<div class="car_msg">
+		<p>车&#x3000;名：</p>
+		<input type="text" placeholder="{{data.name}}" style="width: 75%;" ng-model="obj.name">
+	</div>
+	<div class="car_msg">
+		<p>品&#x3000;牌：</p>
+		<input type="text" placeholder="{{data.pinpai}}" ng-model="obj.pinpai">
+	</div>
+	<div class="car_msg">
+		<p>价&#x3000;格：</p>
+		<input type="text" placeholder="{{data.jiage}}" ng-model="obj.jiage">
+	</div>
+	<div class="car_msg">
+		<p>新车价：</p>
+		<input type="text" placeholder="{{data.xinchejia}}" ng-model="obj.xinchejia">
+	</div>
+	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
+	<div class="car_msg">
+		<p>车身颜色：</p>
+		<input type="text" placeholder="{{data.cheshenyanse}}" ng-model="obj.cheshenyanse">
+	</div>
+	<div class="car_msg">
+		<p>表显里程：</p>
+		<input type="text" placeholder="{{data.licheng}}" ng-model="obj.licheng">
+	</div>
+	<div class="car_msg">
+		<p>上牌时间：</p>
+		<input type="text" placeholder="{{data.shangpaishijian}}" ng-model="obj.shangpaishijian">
+	</div>
+	<div class="car_msg">
+		<p>排&#x3000;量：</p>
+		<input type="text" placeholder="{{data.pailiang}}" ng-model="obj.pailiang">
+	</div>
+	<div class="car_msg">
+		<p>年检到期时间：</p>
+		<input type="text" placeholder="{{data.nianjiandaoqishijian}}" ng-model="obj.nianjiandaoqishijian">
+	</div>
+	<div class="car_msg">
+		<p>交强险到期时间：</p>
+		<input type="text" placeholder="{{data.jiaoqiangxiandaoqishijian}}" ng-model="obj.jiaoqiangxiandaoqishijian">
+	</div>
+	<div class="car_msg">
+		<p>商业险到期时间：</p>
+		<input type="text" placeholder="{{data.shangyexiandaoqishijian}}" ng-model="obj.shangyexiandaoqishijian">
+	</div>
+	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
+	<div class="car_msg">
+		<p>厂&#x3000;商：</p>
+		<input type="text" placeholder="{{data.changshang}}" ng-model="obj.changshang">
+	</div>
+	<div class="car_msg">
+		<p>长宽高：</p>
+		<input type="text" placeholder="{{data.changkuangao}}" ng-model="obj.changkuangao">
+	</div>
+	<div class="car_msg">
+		<p>行李箱容积（L）：</p>
+		<input type="text" placeholder="{{data.xinglixiangrongji}}" ng-model="obj.xinglixiangrongji">
+	</div>
+	<div class="car_msg">
+		<p>燃料类型：</p>
+		<input type="text" placeholder="{{data.ranliaoleixing}}" ng-model="obj.ranliaoleixing">
+	</div>
+	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本配置</div>
+	<div class="car_msg">
+		<p>天&#x3000;窗：</p>
+		<input type="text" placeholder="{{data.tianchuang}}" ng-model="obj.tianchuang">
+	</div>
+	<div class="car_msg">
+		<p>前后电动车窗：</p>
+		<input type="text" placeholder="{{data.qianhoudiandongchechuang}}" ng-model="obj.qianhoudiandongchechuang">
+	</div>
+	<div class="car_msg">
+		<p>感应雨刷：</p>
+		<input type="text" placeholder="{{data.ganyingyushua}}" ng-model="obj.ganyingyushua">
+	</div>
+	<div class="car_msg">
+		<p>后视镜电动调节：</p>
+		<input type="text" placeholder="{{data.houshijingdiandongtiaojie}}" ng-model="obj.houshijingdiandongtiaojie">
+	</div>
+	<div class="car_msg">
+		<p>多功能方向盘：</p>
+		<input type="text" placeholder="{{data.duogongnengfangxiangpan}}" ng-model="obj.duogongnengfangxiangpan">
+	</div>
+	<div class="car_msg">
+		<p>空&#x3000;调：</p>
+		<input type="text" placeholder="{{data.kongtiao}}" ng-model="obj.kongtiao">
+	</div>
+	<div class="car_msg">
+		<p>GPS导航：</p>
+		<input type="text" placeholder="{{data.gpsdaohang}}" ng-model="obj.gpsdaohang">
+	</div>
+	<div class="car_msg">
+		<p>倒车影像系统：</p>
+		<input type="text" placeholder="{{data.daocheyingxiang}}" ng-model="obj.daocheyingxiang">
+	</div>
+	<div class="car_msg">
+		<p>真皮座椅：</p>
+		<input type="text" placeholder="{{data.zhenpizuoyi}}" ng-model="obj.zhenpizuoyi">
+	</div>
+	<div class="footer">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#layer">保存</button>
+	</div>
+	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认添加吗?</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm"  ng-click="baocun()">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

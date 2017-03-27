@@ -4,12 +4,20 @@
 	</div>
 	<div class="r_search">
 		<select name="" class="r_search_grounds">
-			<option value="">姓名</option>
-			<option value="">工号</option>
+			<option value="姓名" >姓名</option>
+			<option value="工号" >工号</option>
 		</select>
-		<input type="text" class="r_search_value"/>
-		<button class="r_search_search">搜索</button>
+		<input type="text" class="r_search_value" ng-model='input_search' />
+		<button class="r_search_search" ng-click='staffList_search()'>搜索</button>
 	</div>
+	<div ng-show="po" class="staffList_ppp">暂无搜索结果...</div>
+	<div ng-show='staff_erro' class="staffList_alert">
+			<div class="staffList_div">
+				请 输 入 正 确 格 式 !
+				<button class="btn btn-success" ng-click='staffList_hide()'>确定</button>
+			</div>
+			
+		</div>
 	<div class="r_content">
 		<div class="r_content_main" ng-repeat='i in data'>
 			<div class="r_content_main_pictuer" ng-click='btn2(i)'>
