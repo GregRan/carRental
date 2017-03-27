@@ -8,6 +8,9 @@
  * Controller of the appApp
  */
 angular.module('appApp').controller('revisecarCtrl',["$scope","$state","$http",function($scope,$state,$http){
+	$scope.reviseCar_back=function(){
+		$state.go("carDetails")
+	}
 	$http({
   		url:"http://47.88.16.225:407/car",
   		method:"post",

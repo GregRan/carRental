@@ -24,7 +24,7 @@ angular.module('appApp')
 					$scope.jslength++;
 				}
 				console.log($scope.jslength)
-				if($scope.jslength!=28){
+				if($scope.jslength!=27){
 					$scope.ddd=false;
 				}else{
 					$scope.ddd=true;
