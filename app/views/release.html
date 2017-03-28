@@ -4,28 +4,42 @@
 		发布公告
 	</div>
 		<textarea class="Mtextarea" ng-model='Mtext'></textarea>
-		<button class="Mbutton" ng-click="btn()" data-target="#layer">发布</button>
+		<button class="Mbutton" ng-click="btn()" data-toggle="modal" data-target="#layer">发布</button>
 	
-	<div class="Mnull_warp" ng-show='kong' >
-		<div class="Mnull">
-			内容不能为空!
-			<button class="Mbutton" ng-click='kong1()'>确定</button>
+	
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+		<div class="modal-dialog" ng-hide="release_offon1">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">请输入内容！</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-danger btn-sm">确认</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-dialog" ng-hide="release_offon2">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认发布吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="release_add()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	
-	<div class="Mnull_warp" ng-show='send'>
-		<div class="Mnull">
-			是否发送?
-			<button class="Mbutton" ng-click='no()'>取消</button>
-			<button class="Mbutton" ng-click='ok()'>确定</button>
-		</div>
-	</div>
-	<div class="Mnull_warp" ng-show='_success'>
-		<div class="Mnull">
-			发送成功!
-			<button class="Mbutton" ng-click='ok1()'>确定</button>
-		</div>
-	</div>
-	
+
+
+
 
 </div>

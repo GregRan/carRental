@@ -37,24 +37,24 @@
 		<input type="text" placeholder="{{data.licheng}}" ng-model="obj.licheng">
 	</div>
 	<div class="car_msg">
-		<p>上牌时间：</p>
-		<input type="text" placeholder="{{data.shangpaishijian}}" ng-model="obj.shangpaishijian">
-	</div>
-	<div class="car_msg">
 		<p>排&#x3000;量：</p>
 		<input type="text" placeholder="{{data.pailiang}}" ng-model="obj.pailiang">
 	</div>
 	<div class="car_msg">
+		<p>上牌时间：</p>
+		<input type="text" placeholder="{{data.shangpaishijian | date:'yyyy-MM-dd'}}" ng-model="obj.shangpaishijian">
+	</div>
+	<div class="car_msg">
 		<p>年检到期时间：</p>
-		<input type="text" placeholder="{{data.nianjiandaoqishijian}}" ng-model="obj.nianjiandaoqishijian">
+		<input type="text" placeholder="{{data.nianjiandaoqishijian | date:'yyyy-MM-dd'}}" ng-model="obj.nianjiandaoqishijian">
 	</div>
 	<div class="car_msg">
 		<p>交强险到期时间：</p>
-		<input type="text" placeholder="{{data.jiaoqiangxiandaoqishijian}}" ng-model="obj.jiaoqiangxiandaoqishijian">
+		<input type="text" placeholder="{{data.jiaoqiangxiandaoqishijian | date:'yyyy-MM-dd'}}" ng-model="obj.jiaoqiangxiandaoqishijian">
 	</div>
 	<div class="car_msg">
 		<p>商业险到期时间：</p>
-		<input type="text" placeholder="{{data.shangyexiandaoqishijian}}" ng-model="obj.shangyexiandaoqishijian">
+		<input type="text" placeholder="{{data.shangyexiandaoqishijian | date:'yyyy-MM-dd'}}" ng-model="obj.shangyexiandaoqishijian">
 	</div>
 	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
 	<div class="car_msg">
@@ -121,7 +121,7 @@
 					<button type="button" class="close" data-dismiss="modal">
 	                            <span>&times;</span>
 	                        </button>
-					<h4 class="modal-title">确认添加吗?</h4>
+					<h4 class="modal-title">确认修改吗?</h4>
 				</div>
 				<div class="modal-body text-right">
 					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>

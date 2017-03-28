@@ -3,14 +3,14 @@
 		<span ng-click="CD_back()"></span>车辆详情
 	</div>
 	<div class="staffList_jiazai" ng-show='staffList_jiazai'>
-		<img src="images/loading.gif" />
+		<img src="../images/loading.gif" />
 	</div>
-	<div class="carDetails_con" ng-show='staffList_content'>
-		<div class="car_img"><img src="{{data.pic}}" /></div>
-		<div class="car_name"><img src="images/car_details_icon1.jpg" />{{data.name}}</div>
-		<div class="car_price"><img src="images/car_details_icon2.jpg" /><span>￥{{data.jiage}}</span>/<span><del>￥{{data.xinchejia}}</del></span></div>
+	<div class="carDetails_con">
+		<div class="car_img"><img src="{{data.pic}}"/></div>
+		<div class="car_name"><img src="images/car_details_icon1.jpg"/>{{data.name}}</div>
+		<div class="car_price"><img src="images/car_details_icon2.jpg"/><span>￥{{data.jiage}}</span>/<span><del>￥{{data.xinchejia}}</del></span></div>
 		<div class="car_serve">
-			<div class="car_serve_header"><img src="images/carDetails_icon3.gif" /> 服务保障</div>
+			<div class="car_serve_header"><img src="images/carDetails_icon3.gif"/> 服务保障</div>
 			<div class="car_serve_content">
 				<p>
 					<span></span>
@@ -30,25 +30,26 @@
 				</p>
 			</div>
 		</div>
-		<div class="car_title"><img src="images/carDetails_icon3.gif" /> 车辆档案</div>
+		<div class="car_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
 		<div class="car_msg">
 			<p>品&#x3000;牌：<span>{{data.pinpai}}</span></p>
 			<p>车身颜色：<span>{{data.cheshenyanse}}</span></p>
 			<p>表显里程：<span>{{data.licheng}}</span></p>
-			<p>上牌时间：<span>{{data.shangpaishijian}}</span></p>
 			<p>排&#x3000;量：<span>{{data.pailiang}}</span></p>
-			<p>年检到期时间：<span>{{data.nianjiandaoqishijian}}</span></p>
-			<p>交强险到期时间：<span>{{data.jiaoqiangxiandaoqishijian}}</span></p>
-			<p>商业险到期时间：<span>{{data.shangyexiandaoqishijian}}</span></p>
+			<p>上牌时间：<span>{{data.shangpaishijian | date:'yyyy-MM-dd'}}</span></p>
+			
+			<p>年检到期时间：<span>{{data.nianjiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
+			<p>交强险到期时间：<span>{{data.jiaoqiangxiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
+			<p>商业险到期时间：<span>{{data.shangyexiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
 		</div>
-		<div class="car_title"><img src="images/carDetails_icon3.gif" /> 基本参数</div>
+		<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
 		<div class="car_msg">
 			<p>厂&#x3000;商：<span>{{data.changshang}}</span></p>
 			<p>长宽高：<span>{{data.changkuangao}}</span></p>
 			<p>行李箱容积(L)：<span>{{data.xinglixiangrongji}}</span></p>
 			<p>燃料类型：<span>{{data.ranliaoleixing}}</span></p>
 		</div>
-		<div class="car_title"><img src="images/carDetails_icon3.gif" /> 基本配置</div>
+		<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本配置</div>
 		<div class="car_msg">
 			<p>天&#x3000;窗：<span>{{data.tianchuang}}</span></p>
 			<p>前后电动车窗：<span>{{data.qianhoudiandongchechuang}}</span></p>
@@ -66,13 +67,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">
-	                            <span>&times;</span>
-	                        </button>
+		                            <span>&times;</span>
+		                        </button>
 						<h4 class="modal-title">确认下架吗?</h4>
 					</div>
 					<div class="modal-body text-right">
 						<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
-						<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="del()">确认</button>
+						<button data-dismiss="modal" class="btn btn-danger btn-sm"  ng-click="del()">确认</button>
 					</div>
 				</div>
 			</div>
