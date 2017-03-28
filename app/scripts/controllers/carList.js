@@ -74,32 +74,9 @@ angular.module('appApp')
 					$state.go('bossHomepage')
 				}
 			}
-			//***************************
-			$scope.pppp=false;
-			$scope.erro=false;
-			$scope.carList_search = function() {
-				if($scope.search) {
-					$http({
-						method: 'get',
-						url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.search
-					}).then(function(e) {
-						document.querySelector(".next").setAttribute("disabled", "disabled")
-//						sessionStorage.count = e.data.length;
-						$scope.data = e.data
-						if(e.data.length==0){
-							$scope.pppp=true
-						}else {
-							$scope.pppp=false
-						}
-					})
-				} else {
-					$scope.erro=true;
-				}
-				$scope.hide = function(){
-					$scope.erro=false;
-				}
+			$scope.carList_search=function(){
+				$state.go('searchCar')
 			}
-			//*****************************
 		} else {
 			$state.go("login");
 		}
