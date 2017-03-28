@@ -24,7 +24,7 @@ angular.module('appApp')
 					$scope.jslength++;
 				}
 				console.log($scope.jslength)
-				if($scope.jslength!=27){
+				if($scope.jslength!=25){
 					$scope.ddd=false;
 				}else{
 					$scope.ddd=true;
@@ -33,6 +33,7 @@ angular.module('appApp')
 		    			url:'http://47.88.16.225:407/car',
 		    			data:$scope.obj
 		    		}).then(function(e){
+		    			console.log(e.data)
 		    			$state.go('carList')
 		    		})
 				}

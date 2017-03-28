@@ -31,11 +31,12 @@
 		<p>品&#x3000;牌：<span>{{data.pinpai}}</span></p>
 		<p>车身颜色：<span>{{data.cheshenyanse}}</span></p>
 		<p>表显里程：<span>{{data.licheng}}</span></p>
-		<p>上牌时间：<span>{{data.shangpaishijian}}</span></p>
 		<p>排&#x3000;量：<span>{{data.pailiang}}</span></p>
-		<p>年检到期时间：<span>{{data.nianjiandaoqishijian}}</span></p>
-		<p>交强险到期时间：<span>{{data.jiaoqiangxiandaoqishijian}}</span></p>
-		<p>商业险到期时间：<span>{{data.shangyexiandaoqishijian}}</span></p>
+		<p>上牌时间：<span>{{data.shangpaishijian | date:'yyyy-MM-dd'}}</span></p>
+		
+		<p>年检到期时间：<span>{{data.nianjiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
+		<p>交强险到期时间：<span>{{data.jiaoqiangxiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
+		<p>商业险到期时间：<span>{{data.shangyexiandaoqishijian | date:'yyyy-MM-dd'}}</span></p>
 	</div>
 	<div class="car_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
 	<div class="car_msg">
