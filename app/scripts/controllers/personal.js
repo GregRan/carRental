@@ -125,5 +125,6 @@ angular.module('appApp')
 
 		} else {
 			$state.go("login");
+			
 		}
 	}]);
