@@ -1,6 +1,6 @@
 .r_addStaff{
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background: #e3f7f8;
 	padding-bottom: 2rem;
 	position: relative;
@@ -111,17 +111,6 @@
 .r_addStaff_center_right_sex>span{
 	display: block;
 	float: left;
-}
-.r_addStaff_center_right_sex>input{
-	background: #e3f7f8;
-	float: left;
-	width: 4rem;
-	outline: none;
-	border: 0;
-	border-bottom: 1px solid black;
-	padding-top: 0.1rem;
-	padding-bottom: 0.1rem;
-	font-size: 0.8rem;
 }
 .r_addStaff_center_right_staff{
 	margin-top: 1rem;

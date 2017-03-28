@@ -17,7 +17,11 @@
 			</li>
 		</ul>
 		<!--<div ng-show="pppp" class="carList_ppp">暂无搜索结果...</div>-->
-		<ul class="carList_List">
+		<div class="staffList_jiazai" ng-show='staffList_jiazai'>
+			<img src="images/loading.gif"/>
+		</div>
+		<ul class="carList_List" ng-show='staffList_content'>
+
 			<li ng-repeat='car in data'>
 				<div ng-click='details(car)'>
 					<img ng-src={{car.pic}}>

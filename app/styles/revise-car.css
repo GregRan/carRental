@@ -41,25 +41,24 @@ html,body{
 	transform-origin: bottom;
 	transform: rotate(135deg);
 }
-.revisecar_wra>.car_img{
+.revisecar_wra>.reviseCar_con>.car_img{
 	width: 15rem;
 	height: 11rem;
 	margin:0.6rem auto;
 	border: 1px solid #777777;
-	/*background: pink;*/
 }
-.revisecar_wra>.car_img>img{
+.revisecar_wra>.reviseCar_con.car_img>img{
 	width: 15rem;
 	height: 11rem;
 }
-.revisecar_wra>.car_msg{
+.revisecar_wra>.reviseCar_con>.car_msg{
 	width: 90%;
 	height: 1.8rem;
 	margin:0 auto 0.2rem;
 	border-bottom: 1px solid #C0C0C0;
 	overflow: hidden;
 }
-.revisecar_wra>.car_msg>p{
+.revisecar_wra>.reviseCar_con>.car_msg>p{
 	/*width: 20%;*/
 	line-height: 1.8rem;
 	font-size: 0.7rem;
@@ -68,7 +67,7 @@ html,body{
 	margin: 0;
 	text-indent: 0.3rem;
 }
-.revisecar_wra>.car_msg>input{
+.revisecar_wra>.reviseCar_con>.car_msg>input{
 	display: block;
 	width: 50%;
 	line-height: 0.8rem;
@@ -77,13 +76,13 @@ html,body{
 	float: right;
 	border: 0;
 	outline: none;
-	padding: 0.5rem 0;
+	padding: 0.35rem 0;
 	text-align: right;
 }
-.revisecar_wra>.car_msg>input::placeholder{
+.revisecar_wra>.reviseCar_con>.car_msg>input::placeholder{
 	color: #333;
 }
-.revisecar_wra>.car_title{
+.revisecar_wra>.reviseCar_con>.car_title{
 	height: 1.8rem;
 	background:#08A3BF;
 	font-size: 0.8rem;
@@ -92,27 +91,28 @@ html,body{
 	color: white;
 	margin: 0.6rem 0;
 }
-.revisecar_wra>.car_title>img{
+.revisecar_wra>.reviseCar_con>.car_title>img{
 	width: 1.2rem;
 }
-.revisecar_wra>.footer{
+.revisecar_wra>.reviseCar_con>.footer{
 	width: 86%;
 	margin: auto;
 }
-.revisecar_wra>.footer>button{
+.revisecar_wra>.reviseCar_con>.footer>button{
 	float: right;
 	margin-bottom: 1rem;
 }
-.revisecar_wra>.add_img{
+.revisecar_wra>.reviseCar_con>.add_img{
 	display: block;
 	width: 60%;
 	height: 1.5rem;
 	position: relative;
 	margin: 0.3rem auto;
 }
-.revisecar_wra>.add_img>input{
+.revisecar_wra>.reviseCar_con>.add_img>input{
 	width: 100%;
-	height: 1.7rem;
+	font-size: 0.5rem;
+	padding: 0.3rem 0;
 	position: absolute;
 	opacity: 0;
 	outline: none;

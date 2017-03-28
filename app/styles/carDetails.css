@@ -44,17 +44,17 @@
 	transform-origin: bottom;
 	transform: rotate(135deg);
 }
-.carDetails_wra>.car_img{
+.carDetails_wra>.carDetails_con>.car_img{
 	width: 15rem;
 	height: 11rem;
 	margin:0.6rem auto;
 	/*background: pink;*/
 }
-.carDetails_wra>.car_img>img{
+.carDetails_wra>.carDetails_con>.car_img>img{
 	width: 15rem;
 	height: 11rem;
 }
-.carDetails_wra>.car_name{
+.carDetails_wra>.carDetails_con>.car_name{
 	width: 90%;
 	margin: auto;
 	background: white;
@@ -63,10 +63,10 @@
 	font-size: 1rem;
 	color: #3C3C3C;
 }
-.carDetails_wra>.car_name>img{
+.carDetails_wra>.carDetails_con>.car_name>img{
 	width: 1.2rem;
 }
-.carDetails_wra>.car_price{
+.carDetails_wra>.carDetails_con>.car_price{
 	width: 90%;
 	margin: auto;
 	background: white;
@@ -75,20 +75,20 @@
 	font-size: 0.8rem;
 	color: #3C3C3C;
 }
-.carDetails_wra>.car_price>img{
+.carDetails_wra>.carDetails_con>.car_price>img{
 	width: 1.2rem;
 }
-.Details_wra>.car_price>span:nth-child(4){
+.carDetails_wra>.carDetails_con>.car_price>span:nth-child(4){
 	color: #C0C0C0;
 	font-size: 0.6rem;
 }
-.carDetails_wra>.car_serve{
+.carDetails_wra>.carDetails_con>.car_serve{
 	width: 100%;
 	background: white;
 	margin: auto;
 	margin-top: 0.6rem;
 }
-.carDetails_wra>.car_serve>.car_serve_header{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_header{
 	height: 1.8rem;
 	background:#08A3BF;
 	font-size: 0.8rem;
@@ -96,7 +96,7 @@
 	line-height: 1.8rem;
 	color: white;
 }
-.carDetails_wra>.car_title{
+.carDetails_wra>.carDetails_con>.car_title{
 	height: 1.8rem;
 	background:#08A3BF;
 	font-size: 0.8rem;
@@ -104,23 +104,23 @@
 	line-height: 1.8rem;
 	color: white;
 }
-.carDetails_wra>.car_title>img{
+.carDetails_wra>.carDetails_con>.car_title>img{
 	width: 1.2rem;
 }
-.carDetails_wra>.car_serve>.car_serve_header>img{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_header>img{
 	width: 1.2rem;
 }
-.carDetails_wra>.car_serve>.car_serve_content{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content{
 	width: 100%;
 	height: auto;
 	overflow: hidden;
 }
-.carDetails_wra>.car_serve>.car_serve_content>p{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content>p{
 	padding-top: 0.6rem;
 	width: 25%;
 	float: left;
 }
-.carDetails_wra>.car_serve>.car_serve_content>p>span{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content>p>span{
 	display:block;
 	margin: auto;
 	color: #3C3C3C;
@@ -129,14 +129,14 @@
 	text-align: center;
 	line-height: 1rem;
 }
-.carDetails_wra>.car_serve>.car_serve_content>p>span:nth-child(1){
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content>p>span:nth-child(1){
 	width: 1rem;
 	height: 1rem;
 	background: #dfdff4;
 	border-radius: 50%;
 	position: relative;
 }
-.carDetails_wra>.car_serve>.car_serve_content>p>span:nth-child(1):before{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content>p>span:nth-child(1):before{
 	width: 0.1rem;
 	height: 0.4rem;
 	background: #08A3BF;
@@ -147,7 +147,7 @@
 	transform-origin: bottom;
 	transform: rotate(-45deg);
 }
-.carDetails_wra>.car_serve>.car_serve_content>p>span:nth-child(1):after{
+.carDetails_wra>.carDetails_con>.car_serve>.car_serve_content>p>span:nth-child(1):after{
 	width: 0.1rem;
 	height: 0.6rem;
 	background: #08A3BF;
@@ -158,31 +158,36 @@
 	transform-origin: bottom;
 	transform: rotate(45deg);
 }
-.carDetails_wra>.car_msg{
+.carDetails_wra>.carDetails_con>.car_msg{
 	width: 90%;
 	margin: auto;
 }
-.carDetails_wra>.car_msg>p{
+.carDetails_wra>.carDetails_con>.car_msg>p{
 	width: 100%;
 	line-height: 1.8rem;
 	font-size: 0.7rem;
 	color: #333333;
 	border-bottom: 1px solid #bbbbbb;
 }
-.carDetails_wra>.car_msg>p>span{
+.carDetails_wra>.carDetails_con>.car_msg>p>span{
 	float: right;
 	margin-right: 0.5rem;
 }
-.carDetails_wra>.xiajia{
+.carDetails_wra>.carDetails_con>.xiajia{
 	width: 100%;
 	height: 3rem;
 	background: white;
 }
-.carDetails_wra>.xiajia>button{
+.carDetails_wra>.carDetails_con>.xiajia>button{
 	float: right;
 	margin-right: 2rem;
 }
-
+/*
+ * .carDetails_wra>.carDetails_con>.xiajia>button{
+	float: right;
+	margin-right: 2rem;
+}
+ */
 
 
 

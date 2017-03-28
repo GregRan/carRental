@@ -10,18 +10,25 @@
 angular.module('appApp')
 	.controller('listCtrl', ['$scope', '$http', '$state', '$filter', '$location', function($scope, $http, $state, $filter, $location) {
 		if(sessionStorage.user) {
+			$scope.staffList_jiazai=true;
 			$http({
 				method: 'get',
-				url: 'http://47.88.16.225:407/car?{"id":"count"}'
+				url: urlId+'/car?{"id":"count"}'
 			}).then(function(e) {
 				sessionStorage.count = e.data.count;
+				$scope.staffList_jiazai=false;
+    			$scope.staffList_content=true;
 			})
 			$scope.play = function(num,step) {
+				$scope.staffList_jiazai=true;
+				$scope.staffList_content=false;
 				$http({
 					method: 'get',
-					url: 'http://47.88.16.225:407/car?{"$skip":' + num + ',"$limit":' + step + '}',
+					url: urlId+'/car?{"$skip":' + num + ',"$limit":' + step + '}',
 				}).then(function(e) {
 					$scope.data = e.data
+					$scope.staffList_jiazai=false;
+					$scope.staffList_content=true;
 				})
 			}
 			$scope.play(0, 3)

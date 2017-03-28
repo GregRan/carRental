@@ -13,18 +13,21 @@ angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$stat
 			$state.go("carList");
 		}
 		console.log(sessionStorage.id)
+		$scope.staffList_jiazai=true;
 		$http({
-			url: "http://47.88.16.225:407/car",
+			url: urlId+"/car",
 			method: "post",
 			data: {
 				id: sessionStorage.id
 			}
 		}).then(function(e) {
 			$scope.data = e.data;
+    		$scope.staffList_jiazai=false;
+    		$scope.staffList_content=true;
 		})
 		$scope.del = function() {
 			$http({
-				url: "http://47.88.16.225:407/car/" + sessionStorage.id,
+				url: urlId+"/car/" + sessionStorage.id,
 				method: "delete"
 			}).then(function(e) {
 				$state.go("carList");
