@@ -3,21 +3,23 @@
 		<div class="glyphicon glyphicon-menu-left" ng-click='addCar_back()'></div>
 		<p>+ 添 加 车 辆</p>
 	</div>
-	
-	
+
 	<div class="addCar_push">
 		<div class="a">
-			
+
 		</div>
 		<div class="addCar_add" ng-hide={{aa}}>+<input type="file" class="b"></div>
 		<p>请选择车辆图片</p>
 	</div>
 	<div class="addCar_content">
 		<div class="addCar_name">
-			<p>车名:<input type="text" ng-model='obj.name'></p>
+			<p>车名:<input type="text" ng-model='obj.name' ng-model="a"></p>
 		</div>
 		<div class="addCar_price">
-			<p>价格:<input type="text" ng-model='obj.jiage'></p>
+			<p>品牌:<input type="text" ng-model='obj.pinpai' ng-model="a"></p>
+		</div>
+		<div class="addCar_price">
+			<p>价格:<input type="text" ng-model='obj.jiage' ng-model="a"></p>
 		</div>
 		<div class="addCar_newprice">
 			<p>新价格:<input type="text" ng-model='obj.xinchejia'></p>
@@ -88,10 +90,27 @@
 		<div class="addCar_seat">
 			<p>真皮座椅:<input type="text" ng-model='obj.zhenpizuoyi'></p>
 		</div>
-		<div class="addCar_seat">
-			<p>状态:<input type="text" ng-model='obj.zhuangtai'></p>
-		</div>
-		
+
 	</div>
-	<button class="btn btn-success addbutton" ng-click='add()'>添加</button>
+	<button class="btn btn-success addbutton" data-toggle="modal" data-target="#layer">添加</button>
+	<div class="addcar_alert" ng-hide="ddd">
+		<p>请输入车辆完整信息！</p>
+		<button class="btn btn-danger" ng-click="dismiss()">确定</button>
+	</div>
+	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认添加吗?</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="add()">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

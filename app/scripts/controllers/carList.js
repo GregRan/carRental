@@ -75,14 +75,16 @@ angular.module('appApp')
 				}
 			}
 			//***************************
-			$scope.pppp=false	
+			$scope.pppp=false;
+			$scope.erro=false;
 			$scope.carList_search = function() {
 				if($scope.search) {
 					$http({
 						method: 'get',
 						url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.search
 					}).then(function(e) {
-						console.log(e.data.length)
+						document.querySelector(".next").setAttribute("disabled", "disabled")
+//						sessionStorage.count = e.data.length;
 						$scope.data = e.data
 						if(e.data.length==0){
 							$scope.pppp=true
@@ -91,7 +93,10 @@ angular.module('appApp')
 						}
 					})
 				} else {
-					alert(1)
+					$scope.erro=true;
+				}
+				$scope.hide = function(){
+					$scope.erro=false;
 				}
 			}
 			//*****************************
