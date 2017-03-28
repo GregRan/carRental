@@ -16,9 +16,11 @@
 				请 输 入 正 确 格 式 !
 				<button class="btn btn-success" ng-click='staffList_hide()'>确定</button>
 			</div>
-			
 		</div>
-	<div class="r_content">
+		<div class="staffList_jiazai" ng-show='staffList_jiazai'>
+			<img src="images/loading.gif"/>
+		</div>
+	<div class="r_content" ng-show='staffList_content'>
 		<div class="r_content_main" ng-repeat='i in data'>
 			<div class="r_content_main_pictuer" ng-click='btn2(i)'>
 				<img ng-src={{i.touxiang}}>
@@ -43,5 +45,6 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="r_content_foot" ng-click="btn1()" ng-show="mmShow">添加员工</div>
 </div>

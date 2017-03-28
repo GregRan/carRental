@@ -9,7 +9,6 @@
  */
 
 angular.module('appApp')
-
   .controller('addCtrl',['$scope','$http','$state', function ($scope,$http,$state) {
   		if(sessionStorage.user&&sessionStorage.level==1){
   			$scope.obj = {};
@@ -30,7 +29,7 @@ angular.module('appApp')
 					$scope.ddd=true;
 					$http({
 		    			method:'post',
-		    			url:'http://47.88.16.225:407/car',
+		    			url:urlId+"/car",
 		    			data:$scope.obj
 		    		}).then(function(e){
 		    			$state.go('carList')

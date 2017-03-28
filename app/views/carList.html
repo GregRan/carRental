@@ -23,9 +23,11 @@
 				请 输 入 车 的 品 牌 !
 				<button class="btn btn-success" ng-click='hide()'>确定</button>
 			</div>
-			
 		</div>
-		<ul class="carList_List">
+		<div class="staffList_jiazai" ng-show='staffList_jiazai'>
+			<img src="images/loading.gif"/>
+		</div>
+		<ul class="carList_List" ng-show='staffList_content'>
 			<li ng-repeat='car in data'>
 				<div ng-click='details(car)'>
 					<img ng-src={{car.pic}}>
