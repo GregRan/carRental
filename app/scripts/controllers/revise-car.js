@@ -11,17 +11,20 @@ angular.module('appApp').controller('revisecarCtrl',["$scope","$state","$http",f
 	$scope.reviseCar_back=function(){
 		$state.go("carDetails")
 	}
+  			$scope.staffList_jiazai=true;
 	$http({
-  		url:"http://47.88.16.225:407/car",
+  		url:urlId+"/car",
   		method:"post",
   		data:{id:sessionStorage.id}
   	}).then(function(e){
   		$scope.data=e.data;
   		console.log(e.data)
+    		$scope.staffList_jiazai=false;
+    		$scope.staffList_content=true;
   	})
   	$scope.baocun=function(){
   		$http({
-	  		url:"http://47.88.16.225:407/car/"+sessionStorage.id,
+	  		url:urlId+"/car/"+sessionStorage.id,
 	  		method:"put",
 	  		data:$scope.obj
 	  	}).then(function(ev){

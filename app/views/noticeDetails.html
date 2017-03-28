@@ -3,7 +3,10 @@
 		<div class="return" ng-click="fan()"></div>
 		 <div class="Mhead-text">公&#x3000;&#x3000;告</div>
 	</div>
-	<div class="Mdetail">
+	<div class="staffList_jiazai" ng-show='staffList_jiazai'>
+			<img src="images/loading.gif"/>
+		</div>
+	<div class="Mdetail" ng-show='staffList_content'>
 		<div class="Mcont">
 			<div class="Mtxt"><p>{{t.name}}</p></div>
 			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>

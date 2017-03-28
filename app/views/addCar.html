@@ -1,98 +1,162 @@
-<div ng-controller="addCtrl">
+<div ng-controller="addCtrl" class="addCar_bg">
 	<div class="addCar_header">
 		<div class="glyphicon glyphicon-menu-left" ng-click='addCar_back()'></div>
 		<p>+ 添 加 车 辆</p>
 	</div>
 
-	<div class="addCar_push">
-		<div class="a">
-
-		</div>
-		<div class="addCar_add" ng-hide={{aa}}>+<input type="file" class="b"></div>
-		<p>请选择车辆图片</p>
+	
+	<div class="addcar_img a"></div>
+	<button class="addcars_img btn btn-primary">
+		上传图片
+		<input type="file" class="b" ng-model='obj.pic'>
+	</button>
+	<div class="addcar_msg">
+		<p>车&#x3000;名：</p>
+		<input type="text" placeholder="" style="width: 75%;" ng-model="obj.name">
 	</div>
-	<div class="addCar_content">
-		<div class="addCar_name">
-			<p>车名:<input type="text" ng-model='obj.name' ng-model="a"></p>
-		</div>
-		<div class="addCar_price">
-			<p>品牌:<input type="text" ng-model='obj.pinpai' ng-model="a"></p>
-		</div>
-		<div class="addCar_price">
-			<p>价格:<input type="text" ng-model='obj.jiage' ng-model="a"></p>
-		</div>
-		<div class="addCar_newprice">
-			<p>新价格:<input type="text" ng-model='obj.xinchejia'></p>
-		</div>
-		<div class="addCar_color">
-			<p>颜色:<input type="text" ng-model='obj.cheshenyanse'></p>
-		</div>
-		<div class="addCar_time">
-			<p>出厂时间:<input type="text" ng-model='obj.time'></p>
-		</div>
-		<div class="addCar_time">
-			<p>车龄:<input type="text" ng-model='obj.cheling'></p>
-		</div>
-		<div class="addCar_mileage">
-			<p>里程:<input type="text" ng-model='obj.licheng'></p>
-		</div>
-		<div class="addCar_number">
-			<p>上牌时间:<input type="text" ng-model='obj.shangpaishijian'></p>
-		</div>
-		<div class="addCar_volume">
-			<p>排量:<input type="text" ng-model='obj.pailiang'></p>
-		</div>
-		<div class="addCar_survey">
-			<p>年检到期时间:<input type="text" ng-model='obj.nianjiandaoqishijian'></p>
-		</div>
-		<div class="addCar_insurance">
-			<p>交强险到期时间:<input type="text" ng-model='obj.jiaoqiangxiandaoqishijian'></p>
-		</div>
-		<div class="addCar_commercial">
-			<p>商业险到期时间:<input type="text" ng-model='obj.shangyexiandaoqishijian'></p>
-		</div>
-		<div class="addCar_firm">
-			<p>厂商:<input type="text" ng-model='obj.changshang'></p>
-		</div>
-		<div class="addCar_whg">
-			<p>长宽高:<input type="text" ng-model='obj.changkuangao'></p>
-		</div>
-		<div class="addCar_bulk">
-			<p>行李箱容积:<input type="text" ng-model='obj.xinglixiangrongji'></p>
-		</div>
-		<div class="addCar_type">
-			<p>燃料类型:<input type="text" ng-model='obj.ranliaoleixing'></p>
-		</div>
-		<div class="addCar_skylight">
-			<p>天窗:<input type="text" ng-model='obj.tianchuang'></p>
-		</div>
-		<div class="addCar_window">
-			<p>前后电动车窗:<input type="text" ng-model='obj.qianhoudiandongchechuang'></p>
-		</div>
-		<div class="addCar_wiper">
-			<p>感应雨刷:<input type="text" ng-model='obj.ganyingyushua'></p>
-		</div>
-		<div class="addCar_mirror">
-			<p>后视镜电动调节:<input type="text" ng-model='obj.houshijingdiandongtiaojie'></p>
-		</div>
-		<div class="addCar_wheel">
-			<p>多功能方向盘:<input type="text" ng-model='obj.duogongnengfangxiangpan'></p>
-		</div>
-		<div class="addCar_kongtiao">
-			<p>空调:<input type="text" ng-model='obj.kongtiao'></p>
-		</div>
-		<div class="addCar_GPS">
-			<p>GPS导航:<input type="text" ng-model='obj.gpsdaohang'></p>
-		</div>
-		<div class="addCar_video">
-			<p>倒车影像系统:<input type="text" ng-model='obj.daocheyingxiang'></p>
-		</div>
-		<div class="addCar_seat">
-			<p>真皮座椅:<input type="text" ng-model='obj.zhenpizuoyi'></p>
-		</div>
-
+	<div class="addcar_msg">
+		<p>品&#x3000;牌：</p>
+		<input type="text" placeholder="" ng-model="obj.pinpai">
 	</div>
 	<button class="btn btn-success addbutton" data-toggle="modal" data-target="#layer" ng-click="yes()">添加</button>
+	<div class="addcar_msg">
+		<p>价&#x3000;格：</p>
+		<input type="number" placeholder="" ng-model="obj.jiage">
+	</div>
+	<div class="addcar_msg">
+		<p>新车价：</p>
+		<input type="number" placeholder="" ng-model="obj.xinchejia">
+	</div>
+	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
+	<div class="addcar_msg">
+		<p>车身颜色：</p>
+		<input type="text" placeholder="" ng-model="obj.cheshenyanse">
+	</div>
+	<div class="addcar_msg">
+		<p>表显里程：</p>
+		<input type="number" placeholder="" ng-model="obj.licheng">
+	</div>
+	<div class="addcar_msg">
+		<p>排&#x3000;量：</p>
+		<input type="text" placeholder="" ng-model="obj.pailiang">
+	</div>
+	<div class="addcar_msg">
+		<p>上牌时间：</p>
+		<input type="date" placeholder="" ng-model="obj.shangpaishijian">
+	</div>
+	<div class="addcar_msg">
+		<p>年检到期时间：</p>
+		<input type="date" placeholder="" ng-model="obj.nianjiandaoqishijian">
+	</div>
+	<div class="addcar_msg">
+		<p>交强险到期时间：</p>
+		<input type="date" placeholder="" ng-model="obj.jiaoqiangxiandaoqishijian">
+	</div>
+	<div class="addcar_msg">
+		<p>商业险到期时间：</p>
+		<input type="date" placeholder="" ng-model="obj.shangyexiandaoqishijian">
+	</div>
+	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
+	<div class="addcar_msg">
+		<p>厂&#x3000;商：</p>
+		<input type="text" placeholder="" ng-model="obj.changshang">
+	</div>
+	<div class="addcar_msg">
+		<p>长宽高：</p>
+		<input type="text" placeholder="" ng-model="obj.changkuangao">
+	</div>
+	<div class="addcar_msg">
+		<p>行李箱容积（L）：</p>
+		<input type="text" placeholder="" ng-model="obj.xinglixiangrongji">
+	</div>
+	<div class="addcar_msg">
+		<p>燃料类型：</p>
+		<input type="text" placeholder="" ng-model="obj.ranliaoleixing">
+	</div>
+	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 基本配置</div>
+	<div class="addcar_msg">
+		<p>天&#x3000;窗：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="tianchuang" class="addCar_bp" ng-model='obj.tianchuang'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="tianchuang" class="addCar_bp" ng-model='obj.tianchuang' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>前后电动车窗：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="chechuang" class="addCar_bp" ng-model='obj.qianhoudiandongchechuang'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="chechuang" class="addCar_bp" ng-model='obj.qianhoudiandongchechuang'/>无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>感应雨刷：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="yushua" class="addCar_bp" ng-model='obj.ganyingyushua'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="yushua" class="addCar_bp" ng-model='obj.ganyingyushua' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>后视镜电动调节：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="houshijing" class="addCar_bp" ng-model='obj.houshijingdiandongtiaojie'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="houshijing" class="addCar_bp" ng-model='obj.houshijingdiandongtiaojie' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>多功能方向盘：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="fangxiangpan" class="addCar_bp" ng-model='obj.duogongnengfangxiangpan'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="fangxiangpan" class="addCar_bp" ng-model='obj.duogongnengfangxiangpan'/>无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>空&#x3000;调：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="kongtiao" class="addCar_bp" ng-model='obj.kongtiao'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="kongtiao" class="addCar_bp" ng-model='obj.kongtiao' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>GPS导航：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="daohang" class="addCar_bp" ng-model='obj.gpsdaohang'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="daohang" class="addCar_bp" ng-model='obj.gpsdaohang' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>倒车影像系统：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="daoche" class="addCar_bp" ng-model='obj.daocheyingxiang'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="daoche" class="addCar_bp" ng-model='obj.daocheyingxiang' />无
+		</label>
+	</div>
+	<div class="addcar_msg">
+		<p>真皮座椅：</p>
+		<label class="radio d">
+			<input type="radio" value="标配" name="zuoyi" class="addCar_bp" ng-model='obj.zhenpizuoyi'/>标配
+		</label>
+		<label class="radio c">
+			<input type="radio" value="无" name="zuoyi" class="addCar_bp" ng-model='obj.zhenpizuoyi' />无
+		</label>
+	</div>
+	
+	<button class="btn btn-success addbutton" data-toggle="modal" data-target="#layer">添加</button>
 	
 	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
 		<div class="modal-dialog" ng-hide="offon_1">

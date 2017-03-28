@@ -19,7 +19,7 @@ angular.module('appApp')
 					$scope.release_add=function(){
 						$http({
 						method: 'post',
-						url: 'http://47.88.16.225:407/gonggao',
+						url: urlId+'/gonggao',
 						data: {
 							"name": $scope.Mtext,
 							"time": (new Date()).valueOf(),

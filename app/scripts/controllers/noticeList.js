@@ -10,11 +10,14 @@
 angular.module('appApp')
 	.controller('noticeListCtrl', ['$scope','$http','$state',function($scope, $http,$state) {
 		if(sessionStorage.user){
+			$scope.staffList_jiazai=true;
 			$http({
 			method:"get",
-			url:"http://47.88.16.225:407/gonggao"
+			url:urlId+"/gonggao"
 		}).then(function(e){
 			console.log(e.data)
+    		$scope.staffList_jiazai=false;
+    		$scope.staffList_content=true;
 			$scope.data=e.data;
 			$scope.sub=function(t){
 				sessionStorage.setItem("noticeList_id",t.id)
@@ -37,7 +40,7 @@ angular.module('appApp')
 		}
 		$scope.n_delete=function(){
 			$http({
-				url:"http://47.88.16.225:407/gonggao/"+sessionStorage.noticeList_id,
+				url:urlId+"/gonggao/"+sessionStorage.noticeList_id,
 				method:"delete"
 			}).then(function(){
 				$(".Mtext").eq($scope.index).remove()

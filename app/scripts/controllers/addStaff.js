@@ -31,15 +31,15 @@ angular.module('appApp')
     	$scope.myreg = /^1[34578]\d{9}$/;
     	$scope.passwordReg = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9{6,}$]/;
     	$scope.levelReg = /0|1/
+    	$scope.gonghaoReg = /^[A-Z]\d{5}$/
     	$scope.rjxShow=false;
-	    
-	   
-	    
 		$scope.btn1 = function(){
+			console.log($scope.obj)
 			$scope.rjx = 0;
 			for(var i in $scope.obj){
 				$scope.rjx++;
 			}
+			console.log($scope.rjx)
 			if($scope.rjx!=9){
 				$(".show1").modal("show");
 			}else{
@@ -68,6 +68,14 @@ angular.module('appApp')
 			    		$state.go("staffList");
 			    	})	
 		  		}
+				$scope.aa = '确认添加！'
+				$scope.rjxShow=true;
+				$scope.btnShow=true;
 			}
 		}
+		$("#pickdate").dateDropper({
+				animate: false,
+				format: 'Y-m-d',
+				maxYear: '2020'
+		});
   }]);
