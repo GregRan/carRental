@@ -1,27 +1,21 @@
-<div ng-controller='listCtrl' class="listCtrl_wra">
+<div ng-controller='searchCarCtrl' class="listCtrl_wra">
 	<div class="carList_header">
 		<div class="carList_header_left">
-			<div class="glyphicon glyphicon-home" ng-click='back()'></div>
+			<div class="glyphicon glyphicon-menu-left search_back" ng-click='back()'></div>
 		</div>
 		<div class="carList_header_center">
-			<input type="text" placeholder="请输入关键字" ng-focus="carList_search()">
+			<input type="text" placeholder="请输入关键字" ng-model="keyword">
 		</div>
-		<div class="carList_header_right">
+		<div class="carList_header_right" ng-click="search_it()">
 			<div class="glyphicon glyphicon-search"></div>
 		</div>
 	</div>
-		<ul class="carList_nav">
-			<li>
-				<button class="btn btn-success carListbutton prev" ng-click="prev()">上一页</button>
-				<button class="btn btn-success carListbutton next" ng-click="next()">下一页</button>
-			</li>
-		</ul>
+	<div class="hot_top">
+	    <img src="images/hot.jpg">
+	    <p>热门搜索</p>
+	</div>
 		<!--<div ng-show="pppp" class="carList_ppp">暂无搜索结果...</div>-->
-		<div class="staffList_jiazai" ng-show='staffList_jiazai'>
-			<img src="images/loading.gif"/>
-		</div>
-		<ul class="carList_List" ng-show='staffList_content'>
-
+		<!--<ul class="carList_List">
 			<li ng-repeat='car in data'>
 				<div ng-click='details(car)'>
 					<img ng-src={{car.pic}}>
@@ -34,5 +28,6 @@
 					<p>品&#x3000;牌：<span>{{car.pinpai}}</span></p>
 				</div>
 			</li>
-		</ul>
+		</ul>-->
 </div>
+
