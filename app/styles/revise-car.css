@@ -47,7 +47,7 @@ html,body{
 	margin:0.6rem auto;
 	border: 1px solid #777777;
 }
-.revisecar_wra>.reviseCar_con.car_img>img{
+.revisecar_wra>.reviseCar_con>.car_img>img{
 	width: 15rem;
 	height: 11rem;
 }
