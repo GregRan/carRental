@@ -108,6 +108,20 @@ angular.module('appApp')
 				$scope.mmm = true;
 				$scope.mmm1 = true;
 			}
+			$scope.nnn=true;
+			if(sessionStorage.level==0){
+				$scope.nnn=true;
+			}else{
+				$scope.nnn=false;
+			}
+			$scope.personal_del=function(){
+				$http({
+					url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+					method: 'delete'
+				}).then(function(e) {
+					$state.go("staffList");
+				})
+			}
 
 		} else {
 			$state.go("login");

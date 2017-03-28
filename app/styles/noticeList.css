@@ -28,7 +28,7 @@
     white-space: nowrap;/*强制不换行*/
     width: 20em;/*不允许出现半汉字截断*/
 }
-.del{
+.Mcontent>.Mtext>.del{
 	width: 3rem;
 	height: 100%;
 	position: absolute;

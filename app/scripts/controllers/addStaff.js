@@ -92,6 +92,9 @@ angular.module('appApp')
 				$scope.rjxShow=false;
 			}
 		}
+		$scope.btn3=function(){
+    		$scope.rjxShow=false;
+    	}
 		$scope.btn4=function(){
     		$state.go('staffList')
     	}
