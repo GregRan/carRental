@@ -99,7 +99,6 @@
 .addCar_content>.addCar_name{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
 .addCar_content>.addCar_name>p{
@@ -108,6 +107,7 @@
 }
 .addCar_content>.addCar_name>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -119,7 +119,6 @@
 .addCar_content>.addCar_price{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -129,6 +128,7 @@
 }
 .addCar_content>.addCar_price>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -141,7 +141,6 @@
 .addCar_content>.addCar_newprice{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -150,7 +149,8 @@
 	color: dodgerblue;
 }
 .addCar_content>.addCar_newprice>p>input{
-	width: qrem;
+	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -165,7 +165,6 @@
 .addCar_content>.addCar_color{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -175,6 +174,7 @@
 }
 .addCar_content>.addCar_color>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -187,7 +187,6 @@
 .addCar_content>.addCar_time{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -197,6 +196,7 @@
 }
 .addCar_content>.addCar_time>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -210,7 +210,6 @@
 .addCar_content>.addCar_mileage{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -220,6 +219,7 @@
 }
 .addCar_content>.addCar_mileage>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -232,7 +232,6 @@
 .addCar_content>.addCar_number{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -242,6 +241,7 @@
 }
 .addCar_content>.addCar_number>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -256,7 +256,6 @@
 .addCar_content>.addCar_volume{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -266,6 +265,7 @@
 }
 .addCar_content>.addCar_volume>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -280,7 +280,6 @@
 .addCar_content>.addCar_survey{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -290,6 +289,7 @@
 }
 .addCar_content>.addCar_survey>p>input{
 	width: 7rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -302,7 +302,6 @@
 .addCar_content>.addCar_insurance{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -312,6 +311,7 @@
 }
 .addCar_content>.addCar_insurance>p>input{
 	width: 6rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -325,7 +325,6 @@
 .addCar_content>.addCar_commercial{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -335,6 +334,7 @@
 }
 .addCar_content>.addCar_commercial>p>input{
 	width: 6rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -347,7 +347,6 @@
 .addCar_content>.addCar_firm{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -357,6 +356,7 @@
 }
 .addCar_content>.addCar_firm>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -371,7 +371,6 @@
 .addCar_content>.addCar_whg{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -382,6 +381,7 @@
 .addCar_content>.addCar_whg>p>input{
 	width: 8rem;
 	color: black;
+	padding:0.1rem 0 ;
 	background: none;
 	outline: none;
 	border: none;
@@ -395,7 +395,6 @@
 .addCar_content>.addCar_bulk{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -405,6 +404,7 @@
 }
 .addCar_content>.addCar_bulk>p>input{
 	width: 7rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -425,7 +425,6 @@
 .addCar_content>.addCar_type{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -435,6 +434,7 @@
 }
 .addCar_content>.addCar_type>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -448,7 +448,6 @@
 .addCar_content>.addCar_skylight{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -458,6 +457,7 @@
 }
 .addCar_content>.addCar_skylight>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -472,7 +472,6 @@
 .addCar_content>.addCar_window{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -482,6 +481,7 @@
 }
 .addCar_content>.addCar_window>p>input{
 	width: 7rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -494,7 +494,6 @@
 .addCar_content>.addCar_wiper{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -504,6 +503,7 @@
 }
 .addCar_content>.addCar_wiper>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -517,7 +517,6 @@
 .addCar_content>.addCar_mirror{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -527,6 +526,7 @@
 }
 .addCar_content>.addCar_mirror>p>input{
 	width: 6rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -542,7 +542,6 @@
 .addCar_content>.addCar_wheel{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -552,6 +551,7 @@
 }
 .addCar_content>.addCar_wheel>p>input{
 	width: 6rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -567,7 +567,6 @@
 .addCar_content>.addCar_kongtiao{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -577,6 +576,7 @@
 }
 .addCar_content>.addCar_kongtiao>p>input{
 	width: 10rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -592,7 +592,6 @@
 .addCar_content>.addCar_GPS{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -602,6 +601,7 @@
 }
 .addCar_content>.addCar_GPS>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -614,7 +614,6 @@
 .addCar_content>.addCar_video{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -624,6 +623,7 @@
 }
 .addCar_content>.addCar_video>p>input{
 	width: 6rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
@@ -639,7 +639,6 @@
 .addCar_content>.addCar_seat{
 	width: 100%;
 	height: 1.5rem;
-	padding-top: 0.2rem;
 	margin-top: 0.5rem;
 	border-bottom: 0.07rem solid #EEEEEE;
 }
@@ -649,6 +648,7 @@
 }
 .addCar_content>.addCar_seat>p>input{
 	width: 8rem;
+	padding:0.1rem 0 ;
 	color: black;
 	background: none;
 	outline: none;
