@@ -281,7 +281,18 @@
 	text-align: center;
 	font-size: 1rem;
 }
-.zhezhao_center>button{
+.zhezhao_center>button:nth-child(2){
+	float: left;
+	width: 4rem;
+	height: 2rem;
+	margin-left: 1rem;
+	margin-top: 0.8rem;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	font-weight: bold;
+	border-radius: 0.3rem;
+}
+.zhezhao_center>button:nth-child(3){
 	float: right;
 	width: 4rem;
 	height: 2rem;
