@@ -4,30 +4,63 @@
 			<div class="glyphicon glyphicon-menu-left search_back" ng-click='back()'></div>
 		</div>
 		<div class="carList_header_center">
-			<input type="text" placeholder="请输入关键字" ng-model="keyword">
+			<input type="text" placeholder="请输入汽车品牌" ng-model="keyword">
 		</div>
 		<div class="carList_header_right" ng-click="search_it()">
 			<div class="glyphicon glyphicon-search"></div>
 		</div>
 	</div>
-	<div class="hot_top">
-	    <img src="images/hot.jpg">
-	    <p>热门搜索</p>
+	<div class="hot_wra">
+		<div class="hot_top">
+		    <img src="images/hot.jpg">
+		    <p>热门搜索</p>
+		</div>
+		<div class="hot_list">
+			<button class="btn btn-warning" ng-click="dazhong()">大众</button>
+			<button class="btn btn-warning" ng-click="aodi()">奥迪</button>
+			<button class="btn btn-warning" ng-click="fengtian()">丰田</button>
+			<button class="btn btn-warning" ng-click="bentian()">本田</button>
+			<button class="btn btn-warning" ng-click="biaozhi()">标志</button>
+			<button class="btn btn-warning" ng-click="qiya()">起亚</button>
+			<button class="btn btn-warning" ng-click="bieke()">别克</button>
+			<button class="btn btn-warning" ng-click="fute()">福特</button>
+			<button class="btn btn-warning" ng-click="xiandai()">现代</button>
+			<button class="btn btn-warning" ng-click="hongqi()">红旗</button>
+		</div>
 	</div>
-		<!--<div ng-show="pppp" class="carList_ppp">暂无搜索结果...</div>-->
-		<!--<ul class="carList_List">
-			<li ng-repeat='car in data'>
-				<div ng-click='details(car)'>
-					<img ng-src={{car.pic}}>
+	<div class="staffList_jiazai" ng-show='staffList_jiazai'>
+		<img src="images/loading.gif"/>
+	</div>
+	<div class="carList_ppp" ng-hide="noresult">暂无搜索结果...</div>
+	<ul class="carList_List">
+		<li ng-repeat='car in data'>
+			<div ng-click='details(car)'>
+				<img ng-src={{car.pic}}>
+			</div>
+			<div>
+				<p>车&#x3000;名：<span>{{car.name}}</span></p>
+				<p>价&#x3000;格：<span>{{car.jiage}}</span></p>
+				<p>行驶里程：<span>{{car.licheng}}</span></p>
+				<p>车&#x3000;龄：<span>{{car.cheling}}</span></p>
+				<p>品&#x3000;牌：<span>{{car.pinpai}}</span></p>
+			</div>
+		</li>
+	</ul>
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm nokeyword" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">请输入搜索车辆品牌！</h4>
 				</div>
-				<div>
-					<p>车&#x3000;名：<span>{{car.name}}</span></p>
-					<p>价&#x3000;格：<span>{{car.jiage}}</span></p>
-					<p>行驶里程：<span>{{car.licheng}}</span></p>
-					<p>车&#x3000;龄：<span>{{car.cheling}}</span></p>
-					<p>品&#x3000;牌：<span>{{car.pinpai}}</span></p>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">确认</button>
 				</div>
-			</li>
-		</ul>-->
+			</div>
+		</div>
+	</div>
 </div>
 

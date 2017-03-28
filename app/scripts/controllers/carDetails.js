@@ -10,7 +10,7 @@
 angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$state", function($scope, $http, $state) {
 	if(sessionStorage.user) {
 		$scope.CD_back = function() {
-			$state.go("carList");
+			history.back()
 		}
 		console.log(sessionStorage.id)
 		$scope.staffList_jiazai=true;
