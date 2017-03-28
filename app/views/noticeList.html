@@ -7,7 +7,23 @@
 		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}} ng-class="{'unread':t.read=='0'}">
 			<p>{{t.name}}</p>
 			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
-			<div class="del" ng-click="n_delete($index,$event)">删除</div>
+			<div class="del" data-target=".bs-example-modal-sm" ng-click="del_notice($event,$index)">删除</div>
 		</li>
 	</ul>
+	<div role="dialog" class="modal fade bs-example-modal-sm" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认删除吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="n_delete()">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

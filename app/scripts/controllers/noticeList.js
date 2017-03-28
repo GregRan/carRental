@@ -29,13 +29,18 @@ angular.module('appApp')
 				$state.go('bossHomepage')
 			}
   		}
-		$scope.n_delete=function(e,ev){
+		$scope.index=0;
+		$scope.del_notice=function(ev,e){
 			ev.stopPropagation();
+			$(".modal").modal('show');
+			$scope.index=e;
+		}
+		$scope.n_delete=function(){
 			$http({
 				url:"http://47.88.16.225:407/gonggao/"+sessionStorage.noticeList_id,
 				method:"delete"
 			}).then(function(){
-				$(".Mtext").eq(e).remove()
+				$(".Mtext").eq($scope.index).remove()
 			})
 		}
 		}else{

@@ -46,17 +46,57 @@
 		<button ng-click="btn1()">确认添加</button>
 	</div>
 	
-	<div class="zhezhao" ng-show="rjxShow">
-		<div class="zhezhao_center">
-			<p>{{aa}}</p>
-			<button ng-click = 'btn3()'>取消</button>
-			<button ng-click = 'btn2()'>确定</button>
+	<div role="dialog" class="modal fade bs-example-modal-sm show1" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">请填写完整个人信息！</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="zhezhao1" ng-show="rShow">
-		<div class="zhezhao_center1">
-			<p>{{bb}}</p>
-			<button ng-click = 'btn4()'>确定</button>
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm show2" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认添加吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
+	
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm show3" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">{{myData}}</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
 </div>

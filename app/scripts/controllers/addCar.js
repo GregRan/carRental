@@ -12,31 +12,32 @@ angular.module('appApp')
 
   .controller('addCtrl',['$scope','$http','$state', function ($scope,$http,$state) {
   		if(sessionStorage.user&&sessionStorage.level==1){
+			$scope.offon_1=true;
+			$scope.offon_2=true;
   			$scope.obj = {};
-  			$scope.ddd=true;
-  			$scope.dismiss=function(){
-  				$scope.ddd=true;
-  				console.log($scope.ddd)
-  			}
-	    	$scope.add = function(){
+	    	$scope.yes=function(){
 	    		$scope.jslength=0;
 				for(var js2 in $scope.obj){
 					$scope.jslength++;
 				}
-				console.log($scope.jslength)
 				if($scope.jslength!=27){
-					$scope.ddd=false;
-				}else{
-					$scope.ddd=true;
-					$http({
-		    			method:'post',
-		    			url:'http://47.88.16.225:407/car',
-		    			data:$scope.obj
-		    		}).then(function(e){
-		    			$state.go('carList')
-		    		})
-				}
-				console.log($scope.jslength)
+						$scope.offon_1=false;
+						$scope.offon_2=true;
+						
+					}else{
+						$scope.offon_1=true;
+						$scope.offon_2=false;
+						
+			    		$scope.add = function(){
+		    				$http({
+				    			method:'post',
+				    			url:'http://47.88.16.225:407/car',
+				    			data:$scope.obj
+				    		}).then(function(e){
+				    			$state.go('carList')
+				    		})
+				    	}
+					}
 	    	}
 	    	$('.b')[0].addEventListener('change',function(){
 	    		var file = this.files[0];
