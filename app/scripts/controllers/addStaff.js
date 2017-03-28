@@ -58,15 +58,20 @@ angular.module('appApp')
 		  		}else if(!$scope.levelReg.test($scope.obj.level)){
 		  			$(".show3").modal("show");
 		  			$scope.myData = '请输入正确的级别号码！（0或1）'
+		  		}else if(!$scope.gonghaoReg.test($scope.obj.gonghao)){
+		  			$(".show3").modal("show");
+		  			$scope.myData = '请输入正确的工号！'
 		  		}else{
 		  			$(".show2").modal("show");
-					$http({
-		    			method:"post",
-		    			url:"http://47.88.16.225:407/users",
-		    			data:$scope.obj
-			    	}).then(function(e){
-			    		$state.go("staffList");
-			    	})	
+					$scope.addStaff_ok=function(){
+						$http({
+			    			method:"post",
+			    			url:"http://47.88.16.225:407/users",
+			    			data:$scope.obj
+				    	}).then(function(e){
+				    		$state.go("staffList");
+				    	})	
+					}
 		  		}
 				$scope.aa = '确认添加！'
 				$scope.rjxShow=true;

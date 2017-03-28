@@ -20,17 +20,21 @@ angular.module('appApp')
 					$scope.jslength++;
 				}
 				if($scope.jslength!=25){
-					$scope.ddd=false;
+					$scope.offon_1=false;
+					$scope.offon_2=true;
 				}else{
-					$scope.ddd=true;
-					$http({
-		    			method:'post',
-		    			url:urlId+"/car",
-		    			data:$scope.obj
-		    		}).then(function(e){
-		    			console.log(e.data)
-		    			$state.go('carList')
-		    		})
+					$scope.offon_2=false;
+					$scope.offon_1=true;
+					$scope.addCar_add=function(){
+						$http({
+			    			method:'post',
+			    			url:urlId+"/car",
+			    			data:$scope.obj
+			    		}).then(function(e){
+			    			console.log(e.data)
+			    			$state.go('carList')
+			    		})
+					}
 				}
 	    	}
 	    	$('.b')[0].addEventListener('change',function(){

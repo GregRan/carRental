@@ -18,7 +18,7 @@
 				<span>性别：</span><input type="radio" name="sex" ng-model='obj.sex' value="男"/>男&#x3000;<input type="radio" name="sex" ng-model='obj.sex' value="女"/>女
 			</div>
 			<div class="r_addStaff_center_right_staff">
-				<span>工号：</span><input type="text" ng-model='obj.gonghao' ng-blur='gonghao()'/>
+				<span>工号：</span><input type="text" ng-model='obj.gonghao'>
 			</div>
 		</div>
 		<div class="r_addStaff_center_bottom">
@@ -26,19 +26,19 @@
 				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="number" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日" class="input" id="pickdate" ng-model='obj.ruzhishijian'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone">
-				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="number" ng-model='obj.dianhua' ng-blur='phone()'/>
+				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="number" ng-model='obj.dianhua'>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>紧急联系人：</span><input type="number" ng-model='obj.jinjilianxiren' ng-blur="jinji()"/>
+				<span>紧急联系人：</span><input type="number" ng-model='obj.jinjilianxiren'>
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>用&#x3000;户&#x3000;名：</span><input type="number" ng-model="obj.username" ng-blur='username()'/>
+				<span>用&#x3000;户&#x3000;名：</span><input type="number" ng-model="obj.username">
 			</div>
 			<div class="r_addStaff_center_bottom_phone_jin">
-				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password" ng-blur="password()"/>
+				<span>密&#x3000;&#x3000;&#x3000;码：</span><input type="password" ng-model="obj.password">
 			</div>
 			<div class="r_addStaff_center_bottom_phone_ji">
-				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="number" ng-model="obj.level" ng-blur="level()"/>
+				<span>级&#x3000;&#x3000;&#x3000;别：</span><input type="number" ng-model="obj.level">
 			</div>
 		</div>
 	</div>
@@ -55,9 +55,11 @@
 					<h4 class="modal-title">请填写完整个人信息！</h4>
 				</div>
 				<div class="modal-body text-right">
-					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm">确认</button>
 				</div>
 			</div>
+		</div>
+	</div>
 	<div role="dialog" class="modal fade bs-example-modal-sm show2" aria-labelledby="myLargeModalLabel">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -69,7 +71,7 @@
 				</div>
 				<div class="modal-body text-right">
 					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
-					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="addStaff_ok()">确认</button>
 				</div>
 			</div>
 		</div>
