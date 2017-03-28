@@ -3,10 +3,18 @@
 		<a ng-click="btn()"></a>员工信息
 	</div>
 	<div class="r_search">
-		<select name="" class="r_search_grounds">
-			<option value="姓名" >姓名</option>
-			<option value="工号" >工号</option>
-		</select>
+		<div class="btn-group staff_xiala">
+		    <button type="button" class="btn btn-default dropdown-toggle staff_xiala_btn"  data-toggle="dropdown" style="">
+		     	<span class="staff_xuanze" ng-bind="pleaseSelect"></span>
+		      	<span class="caret staff_xiala_sanjiao" style=""></span>          
+		    </button>
+		    <ul class="dropdown-menu staff_xiala_content" role="menu">
+		      <li role="presentation" class="staff_name" ng-click="click_name()" ng-bind="bind_name"></li>
+		      <li role="presentation" class="staff_gonghao" ng-click="click_gonghao()" ng-bind="bind_gonghao"></li>
+		    </ul>
+		</div>
+		
+		
 		<input type="text" class="r_search_value" ng-model='input_search' />
 		<button class="r_search_search" ng-click='staffList_search()'>搜索</button>
 	</div>

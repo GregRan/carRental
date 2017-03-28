@@ -112,17 +112,6 @@
 	display: block;
 	float: left;
 }
-.r_addStaff_center_right_sex>input{
-	background: #e3f7f8;
-	float: left;
-	width: 4rem;
-	outline: none;
-	border: 0;
-	border-bottom: 1px solid black;
-	padding-top: 0.1rem;
-	padding-bottom: 0.1rem;
-	font-size: 0.8rem;
-}
 .r_addStaff_center_right_staff{
 	margin-top: 1rem;
 	float: left;

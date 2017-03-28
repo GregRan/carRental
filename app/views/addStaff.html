@@ -15,15 +15,15 @@
 				<span>姓名：</span><input type="text" ng-model='obj.name'/>
 			</div>
 			<div class="r_addStaff_center_right_sex">
-				<span>性别：</span><input type="text" ng-model="obj.sex"/>
+				<span>性别：</span><input type="radio" name="sex" ng-model='obj.sex' value="男"/>男&#x3000;<input type="radio" name="sex" ng-model='obj.sex' value="女"/>女
 			</div>
 			<div class="r_addStaff_center_right_staff">
-				<span>工号：</span><input type="text" ng-model='obj.gonghao'/>
+				<span>工号：</span><input type="text" ng-model='obj.gonghao' ng-blur='gonghao()'/>
 			</div>
 		</div>
 		<div class="r_addStaff_center_bottom">
 			<div class="r_addStaff_center_bottom_time">
-				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="text" ng-model='obj.ruzhishijian'/>
+				<span>入&nbsp;职&nbsp;时&nbsp;间：</span><input type="text" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日" class="input" id="pickdate" ng-model='obj.ruzhishijian'/>
 			</div>
 			<div class="r_addStaff_center_bottom_phone">
 				<span>电&#x3000;&#x3000;&#x3000;话：</span><input type="text" ng-model='obj.dianhua' ng-blur='phone()'/>
@@ -49,7 +49,7 @@
 	<div class="zhezhao" ng-show="rjxShow">
 		<div class="zhezhao_center">
 			<p>{{aa}}</p>
-			<button ng-click = 'btn3()'>取消</button>
+			<button ng-click = 'btn3()' ng-show = 'btnShow'>取消</button>
 			<button ng-click = 'btn2()'>确定</button>
 		</div>
 	</div>
