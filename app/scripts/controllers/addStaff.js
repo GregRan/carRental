@@ -96,7 +96,7 @@ angular.module('appApp')
 			if($scope.aa=='确认添加！'){
 				$http({
 	    			method:"post",
-	    			url:"http://47.88.16.225:407/users",
+	    			url:"http://"+urlId+"/users",
 	    			data:$scope.obj
 	    }).then(function(e){
 	  				$scope.rjxShow=false;

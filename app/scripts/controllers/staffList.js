@@ -10,11 +10,14 @@
 angular.module('appApp')
   .controller('staffListCtrl',['$scope','$state', '$http',function ($scope,$state,$http) {
   		if(sessionStorage.user){
+  			$scope.staffList_jiazai=true;
   			$http({
     		method:"get",
-    		url:"http://47.88.16.225:407/users"
+    		url:urlId+"/users"
     	}).then(function(e){
     		$scope.data=e.data;
+    		$scope.staffList_jiazai=false;
+    		$scope.staffList_content=true;
     		console.log(e.data)
     	})	
     	if(sessionStorage.level=="0"){
@@ -51,7 +54,7 @@ angular.module('appApp')
 					if(str2.test($scope.input_search)){
 						$http({
 							method: 'get',
-							url: 'http://47.88.16.225:407/users/?name=' + $scope.input_search
+							url: urlId+'/users/?name=' + $scope.input_search
 						}).then(function(e){
 							$scope.data = e.data
 							if(e.data.length==0){
@@ -70,7 +73,7 @@ angular.module('appApp')
 					if(str.test($scope.input_search)){
 						$http({
 							method: 'get',
-							url: 'http://47.88.16.225:407/users/?gonghao=' + $scope.input_search
+							url: urlId+'/users/?gonghao=' + $scope.input_search
 						}).then(function(e){
 							$scope.data = e.data
 							if(e.data.length==0){

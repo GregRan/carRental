@@ -28,13 +28,13 @@ angular.module('appApp').controller('loginCtrl',["$scope","$http","$state",funct
   			$('.modal').modal('show')
   		}else {
 	    	$http({
-		    	url:"http://47.88.16.225:407/users/login",
+		    	url:urlId+"/users/login",
 		    	method:"post",
 		    	data:{"username":$scope.updata.userName,"password":$scope.updata.passWord}
 		    }).then(function(e){
 		    	sessionStorage.setItem("uid",e.data.uid);
 		    	$http({
-			    	url:"http://47.88.16.225:407/users/"+sessionStorage.uid,
+			    	url:urlId+"/users/"+sessionStorage.uid,
 			    	method:"get",
 			    }).then(function(event){
 			    	sessionStorage.setItem("staffId",event.data.id);
