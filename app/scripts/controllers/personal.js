@@ -10,7 +10,6 @@
 angular.module('appApp')
 	.controller('personalCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
 			if(sessionStorage.user) {
-				//			console.log(sessionStorage.gonghao, sessionStorage.click_gh)
 				$scope.nameReg = /^1[3,4,5,7,8]\d{9}$/;
 				$scope.re = function() {
 					if(!$scope.nameReg.test($scope.aa.dianhua)) {
@@ -22,12 +21,13 @@ angular.module('appApp')
 						$('.modal').modal('show')
 					}
 				}
-			
+			$scope.staffList_jiazai=true;
 			$http({
-				url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+				url: urlId+"/users/" + sessionStorage.staffId,
 				method: "get"
 			}).then(function(e) {
-				//  		console.log(e)
+				$scope.staffList_jiazai=false;
+				$scope.staffList_content=true
 				$scope.aa = e.data;
 			})
 			$scope.btn = function() {
@@ -55,7 +55,7 @@ angular.module('appApp')
 				}
 				$scope.ok = function() {
 					$http({
-						url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+						url: urlId+"/users/" + sessionStorage.staffId,
 						method: 'put',
 						data: {
 							dianhua: $scope.aa.dianhua
@@ -86,7 +86,7 @@ angular.module('appApp')
 				}
 				$scope.ok1 = function() {
 					$http({
-						url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+						url: urlId+"/users/" + sessionStorage.staffId,
 						method: 'put',
 						data: {
 							jinjilianxiren: $scope.aa.jinjilianxiren
@@ -116,7 +116,7 @@ angular.module('appApp')
 			}
 			$scope.personal_del=function(){
 				$http({
-					url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+					url: urlId+"/users/" + sessionStorage.staffId,
 					method: 'delete'
 				}).then(function(e) {
 					$state.go("staffList");
