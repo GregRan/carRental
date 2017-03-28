@@ -1,6 +1,6 @@
 <div ng-controller="personalCtrl" class="r_main">
 	<div class="r_header">
-		<a ng-click='btn()'></a>个人信息 <span ng-click='bj(sessionStorage.gonghao)' ng-show='tab'>编辑</span>
+		<a ng-click='btn()'></a>个人信息 
 	</div>
 	<div class="r_center">
 		<div class="r_center_left">
@@ -35,6 +35,9 @@
 			</div>
 		</div>
 	</div>
+	<div class="del" ng-hide="nnn">
+		<button class="btn btn-primary btn-group-xs" ng-click="personal_del()">删除员工</button>
+	</div>
 	<div class="Mnull_warp" ng-show='send'>
 		<div class="Mnull">
 			是否确认修改?
@@ -62,10 +65,10 @@
 		</div>
 	</div>
 	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-		  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content gheight">
 				请输入正确手机号
 		    </div>
-		  </div>
 		</div>
+	</div>
 </div>
