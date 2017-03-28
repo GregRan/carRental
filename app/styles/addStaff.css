@@ -1,6 +1,6 @@
 .r_addStaff{
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background: #e3f7f8;
 	padding-bottom: 2rem;
 	position: relative;
