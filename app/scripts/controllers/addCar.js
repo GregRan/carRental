@@ -19,7 +19,7 @@ angular.module('appApp')
 				for(var js2 in $scope.obj){
 					$scope.jslength++;
 				}
-				if($scope.jslength!=25){
+				if($scope.jslength!=26){
 					$scope.offon_1=false;
 					$scope.offon_2=true;
 				}else{
@@ -115,6 +115,12 @@ angular.module('appApp')
 	    	}
 	    	$scope.right_nine = function(){
 	    		$('.add_rl').css('text-align','right');
+	    	}
+	    	$scope.left_ten = function(){
+	    		$('.add_cl').css('text-align','left');
+	    	}
+	    	$scope.right_ten = function(){
+	    		$('.add_cl').css('text-align','right');
 	    	}
 	    	$(".pickdate").dateDropper({
 				animate: false,

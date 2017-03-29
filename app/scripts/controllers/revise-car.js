@@ -101,6 +101,12 @@ angular.module('appApp').controller('revisecarCtrl', ["$scope", "$state", "$http
 	$scope.right_nine = function() {
 		$('.car_rl').css('text-align', 'right');
 	}
+	$scope.left_ten = function(){
+	    $('.car_cl').css('text-align','left');
+	}
+	$scope.right_ten = function(){
+	    $('.car_cl').css('text-align','right');
+	}
 	$(".pickdate").dateDropper({
 		animate: false,
 		format: 'Y-m-d',
