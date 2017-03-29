@@ -54,7 +54,6 @@ angular.module('appApp')
 					$(".Mtext").eq($scope.index).remove()
 				})
 			}
-
 		$scope.index=0;
 		$scope.del_notice=function(ev,index){
 			ev.stopPropagation();
