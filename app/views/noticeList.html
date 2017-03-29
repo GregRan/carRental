@@ -12,6 +12,11 @@
 			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
 			<div class="del" data-target=".bs-example-modal-sm" ng-click="del_notice($event,$index)">删除</div>
 		</li>
+		<li class="Mtext" ng-repeat="t in dataa |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}} ng-class="{'unread':t.read=='0'}">
+			<p>{{t.name}}</p>
+			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
+			<div class="del" data-target=".bs-example-modal-sm" ng-click="del_notice($event,$index)">删除</div>
+		</li>
 	</ul>
 	<div role="dialog" class="modal fade bs-example-modal-sm" aria-labelledby="myLargeModalLabel">
 		<div class="modal-dialog">

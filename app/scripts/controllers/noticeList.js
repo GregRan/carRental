@@ -12,25 +12,49 @@ angular.module('appApp')
 		if(sessionStorage.user){
 			$scope.staffList_jiazai=true;
 			$http({
-			method:"get",
-			url:urlId+"/gonggao"
-		}).then(function(e){
-			console.log(e.data)
-    		$scope.staffList_jiazai=false;
-    		$scope.staffList_content=true;
-			$scope.data=e.data;
+				method:"get",
+				url:urlId+"/gonggao/?read=0"
+			}).then(function(e){
+				console.log(e.data)
+	    		$scope.staffList_jiazai=false;
+	    		$scope.staffList_content=true;
+				$scope.data=e.data;
+			})
+			$http({
+				method:"get",
+				url:urlId+"/gonggao/?read=1"
+			}).then(function(e){
+				console.log(e.data)
+	    		$scope.staffList_jiazai=false;
+	    		$scope.staffList_content=true;
+				$scope.dataa=e.data;
+			})
 			$scope.sub=function(t){
-				sessionStorage.setItem("noticeList_id",t.id)
-				$state.go('noticeDetails')
+					sessionStorage.setItem("noticeList_id",t.id)
+					$state.go('noticeDetails')
+				}
+			$scope.fan=function(){
+				if(sessionStorage.level==0){
+					$state.go('staffHomepage')
+				}else{
+					$state.go('bossHomepage')
+				}
+	  		}
+			$scope.index=0;
+			$scope.del_notice=function(ev,e){
+				ev.stopPropagation();
+				$(".modal").modal('show');
+				$scope.index=e;
 			}
-		})
-		
-		$scope.fan=function(){
-			if(sessionStorage.level==0){
-				$state.go('staffHomepage')
-			}else{
-				$state.go('bossHomepage')
+			$scope.n_delete=function(){
+				$http({
+					url:urlId+"/gonggao/"+sessionStorage.noticeList_id,
+					method:"delete"
+				}).then(function(){
+					$(".Mtext").eq($scope.index).remove()
+				})
 			}
+
   	}
 		$scope.index=0;
 		$scope.del_notice=function(ev,index){
@@ -50,10 +74,33 @@ angular.module('appApp')
 				location.reload();
 			})
 		}
+
 		}else{
 			$state.go("login");
 		}
-		
+
+	}])
+	.directive("setDel",function(){
+		return function(scope,element,attrs){
+			scope.a=0;
+			scope.b=[];
+			scope.c=0;
+			element.on("touchstart",function(e){
+				sessionStorage.setItem("noticeList_id",attrs.setDel)
+				scope.a=e.touches[0].clientX;
+				element.css("transition","0.5s")
+			})
+			element.on("touchmove",function(e){
+				scope.b.push(e.touches[0].clientX);
+				element.css("transition","0.5s")
+			})
+			element.on("touchend",function(e){
+				scope.c=scope.b[scope.b.length-1]-scope.a;
+				if(scope.c<0&&scope.c<-100){
+					element.css("transition","0.5s").css("right","3rem")
+				}else if(scope.c>0&&scope.c>100){
+					element.css("transition","0.5s").css("right",0)
+=======
 	}]).directive("setDel",function(){
 				return function(scope,element,attrs){
 						scope.a=0;
@@ -89,5 +136,8 @@ angular.module('appApp')
 						})
 						
 					
+>>>>>>> origin/master
 				}
-			});
+			})
+		}
+	});
