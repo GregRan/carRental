@@ -99,7 +99,7 @@ angular.module('appApp')
 		
 		
 		//***************************
-		$scope.pleaseSelect="请选择"
+		$scope.pleaseSelect="选择"
 		$scope.bind_name="姓名"
 		$scope.bind_gonghao="工号"
 		$scope.click_name=function(){
