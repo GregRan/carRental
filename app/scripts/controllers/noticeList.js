@@ -54,10 +54,31 @@ angular.module('appApp')
 					$(".Mtext").eq($scope.index).remove()
 				})
 			}
+
+  	}
+		$scope.index=0;
+		$scope.del_notice=function(ev,index){
+			ev.stopPropagation();
+			$(".modal").modal('show');
+			$scope.n_quxiao=function(){
+				for(var i=0;i<$(".Mtext").length;i++){
+					$(".Mtext").eq(i).css("transition","0.5s").css("right","0")
+				}
+			}
+		}
+		$scope.n_delete=function(){
+			$http({
+				url:urlId+"/gonggao/"+sessionStorage.noticeList_id,
+				method:"delete"
+			}).then(function(){
+				location.reload();
+			})
+		}
+
 		}else{
 			$state.go("login");
 		}
-		
+
 	}])
 	.directive("setDel",function(){
 		return function(scope,element,attrs){
@@ -79,6 +100,43 @@ angular.module('appApp')
 					element.css("transition","0.5s").css("right","3rem")
 				}else if(scope.c>0&&scope.c>100){
 					element.css("transition","0.5s").css("right",0)
+=======
+	}]).directive("setDel",function(){
+				return function(scope,element,attrs){
+						scope.a=0;
+						scope.b=[];
+						scope.c=0;
+						
+						for(var i=0;i<$(".Mtext").length;i++){
+							$(".Mtext").eq(i).css("transition","0.5s").css("right","0")
+						}
+						element.on("touchstart",function(e){
+							console.log($(".Mtext").length);
+							sessionStorage.setItem("noticeList_id",attrs.setDel)
+							scope.a=e.touches[0].clientX;
+							element.css("transition","0.5s")
+						})
+						element.on("touchmove",function(e){
+							for(var i=0;i<$(".Mtext").length;i++){
+								$(".Mtext").eq(i).css("transition","0.5s").css("right","0")
+							}
+							scope.b.push(e.touches[0].clientX);
+							element.css("transition","0.5s")
+						})
+						element.on("touchend",function(e){
+							for(var i=0;i<$(".Mtext").length;i++){
+								$(".Mtext").eq(i).css("transition","0.5s").css("right","0")
+							}
+							scope.c=scope.b[scope.b.length-1]-scope.a;
+							if(scope.c<0&&scope.c<-100){
+								element.css("transition","0.5s").css("right","3rem")
+							}else if(scope.c>0&&scope.c>100){
+								element.css("transition","0.5s").css("right",0)
+							}
+						})
+						
+					
+>>>>>>> origin/master
 				}
 			})
 		}
