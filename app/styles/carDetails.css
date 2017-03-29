@@ -6,7 +6,7 @@
 }
 .carDetails_wra>.header{
 	height: 2.3rem;
-	background: #08a3bf;
+	background: #68cefb;
 	border-bottom: 2px ssolid #BBBBBB;
 	text-align: center;
 	font-size: 1rem;
@@ -90,7 +90,7 @@
 }
 .carDetails_wra>.carDetails_con>.car_serve>.car_serve_header{
 	height: 1.8rem;
-	background:#08A3BF;
+	background: #68cefb;
 	font-size: 0.8rem;
 	text-indent: 0.6rem;
 	line-height: 1.8rem;
@@ -98,7 +98,7 @@
 }
 .carDetails_wra>.carDetails_con>.car_title{
 	height: 1.8rem;
-	background:#08A3BF;
+	background: #68cefb;
 	font-size: 0.8rem;
 	text-indent: 0.6rem;
 	line-height: 1.8rem;

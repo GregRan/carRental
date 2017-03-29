@@ -54,6 +54,11 @@ angular.module('appApp')
 					$(".Mtext").eq($scope.index).remove()
 				})
 			}
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> origin/master
 		$scope.index=0;
 		$scope.del_notice=function(ev,index){
 			ev.stopPropagation();
@@ -78,7 +83,10 @@ angular.module('appApp')
 		}
 
 	}])
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 .directive("setDel",function(){
 				return function(scope,element,attrs){
 						scope.a=0;
@@ -112,5 +120,13 @@ angular.module('appApp')
 								element.css("transition","0.5s").css("right",0)
 							}
 						})
+<<<<<<< HEAD
 				}
 			})
+=======
+						
+					
+
+		}
+	});
+>>>>>>> origin/master
