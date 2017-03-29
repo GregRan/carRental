@@ -157,6 +157,8 @@
 		border-radius: .2rem;
 		border: none;
 		outline: none;
+		background-color: #D58512;
+		color: white;
 	}
 	.r_center_bottom_phone_jin{
 		height: 1.4rem;
@@ -182,6 +184,8 @@
 		border-radius: .2rem;
 		border: none;
 		outline: none;
+		background-color: #D58512;
+		color: white;
 	}
 	.r_main>.r_btn_del{
 		width: 4rem;

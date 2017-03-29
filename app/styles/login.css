@@ -54,6 +54,7 @@
 }
 .loginwra>.loginwra2>.login_msg>input::placeholder{
 	color: white;
+	line-height: 0.8rem;
 	text-indent: 0.6rem;
 }
 .gheight{

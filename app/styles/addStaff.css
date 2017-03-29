@@ -14,7 +14,7 @@
 }
 .r_addStaff_header{
 	height: 2.3rem;
-	background: #08a3bf;
+	background: #68cefb;
 	border-bottom: 1px solid #BBBBBB;
 	text-align: center;
 	font-size: 1rem;
@@ -102,6 +102,7 @@
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	font-size: 0.8rem;
+	line-height: 0.8rem;
 	background: #e3f7f8;
 }
 .r_addStaff_center_right_sex{
@@ -129,6 +130,7 @@
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	font-size: 0.8rem;
+	line-height: 0.8rem;
 	background: #e3f7f8;
 }
 .r_addStaff_center_bottom{
@@ -153,6 +155,7 @@
 	padding-bottom: 0.1rem;
 	padding-top: 0.1rem;
 	font-size: 0.8rem;
+	line-height: 0.8rem;
 	border: 0;
 	outline: none;
 	border-bottom: 1px solid black;
@@ -171,6 +174,7 @@
 	width: 8rem;
 	padding-bottom: 0.1rem;
 	padding-top: 0.1rem;
+	line-height: 0.8rem;
 	font-size: 0.8rem;
 	background: #e3f7f8;
 	border: 0;
@@ -191,6 +195,7 @@
 	float: left;
 	width: 8rem;
 	padding-bottom: 0.1rem;
+	line-height: 0.8rem;
 	padding-top: 0.1rem;
 	font-size: 0.8rem;
 	border: 0;
@@ -210,6 +215,7 @@
 	float: left;
 	width: 8rem;
 	padding-bottom: 0.1rem;
+	line-height: 0.8rem;
 	padding-top: 0.1rem;
 	font-size: 0.8rem;
 	border: 0;
@@ -225,7 +231,7 @@
 .r_addStaff_footer>button{
 	width: 100%;
 	height: 100%;
-	background: #5cb85c;
+	background: #68cefb;
 	border: 0;
 	font-size: 1rem;
 	letter-spacing: 0.3rem;
@@ -247,83 +253,4 @@
 }
 .addimg img {
 	width: 100%;height: 100%;
-}
-.zhezhao{
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,.2);
-	position: absolute;
-	top: 0;
-}
-.zhezhao_center{
-	width: 80%;
-	height: 8rem;
-	background: wheat;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	border-radius: 0.3rem;
-	font-weight:bold ;
-}
-.zhezhao_center>p{
-	line-height: 4rem;
-	text-align: center;
-	font-size: 1rem;
-}
-.zhezhao_center>button:nth-child(2){
-	float: left;
-	width: 4rem;
-	height: 2rem;
-	margin-left: 1rem;
-	margin-top: 0.8rem;
-	font-size: 0.8rem;
-	line-height: 1.5rem;
-	font-weight: bold;
-	border-radius: 0.3rem;
-}
-.zhezhao_center>button:nth-child(3){
-	float: right;
-	width: 4rem;
-	height: 2rem;
-	margin-right: 1rem;
-	margin-top: 0.8rem;
-	font-size: 0.8rem;
-	line-height: 1.5rem;
-	font-weight: bold;
-	border-radius: 0.3rem;
-}
-.zhezhao1{
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,.2);
-	position: absolute;
-	top: 0;
-}
-.zhezhao_center1{
-	width: 80%;
-	height: 8rem;
-	background: wheat;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	border-radius: 0.3rem;
-	font-weight:bold ;
-}
-.zhezhao_center1>p{
-	line-height: 4rem;
-	text-align: center;
-	font-size: 1rem;
-}
-.zhezhao_center1>button{
-	float: right;
-	width: 4rem;
-	height: 2rem;
-	margin-right: 1rem;
-	margin-top: 0.8rem;
-	font-size: 0.8rem;
-	line-height: 1.5rem;
-	font-weight: bold;
-	border-radius: 0.3rem;
 }
