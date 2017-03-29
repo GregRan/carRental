@@ -13,7 +13,7 @@
 	position: fixed;
 	top: 0;left: 0;
 	color: white;
-	z-index: 99999;
+	z-index: 1;
 }
 .return{
 	width: 0.6rem;
