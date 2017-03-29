@@ -55,7 +55,6 @@ angular.module('appApp')
 				})
 			}
 
-  	}
 		$scope.index=0;
 		$scope.del_notice=function(ev,index){
 			ev.stopPropagation();
@@ -80,28 +79,29 @@ angular.module('appApp')
 		}
 
 	}])
-	.directive("setDel",function(){
-		return function(scope,element,attrs){
-			scope.a=0;
-			scope.b=[];
-			scope.c=0;
-			element.on("touchstart",function(e){
-				sessionStorage.setItem("noticeList_id",attrs.setDel)
-				scope.a=e.touches[0].clientX;
-				element.css("transition","0.5s")
-			})
-			element.on("touchmove",function(e){
-				scope.b.push(e.touches[0].clientX);
-				element.css("transition","0.5s")
-			})
-			element.on("touchend",function(e){
-				scope.c=scope.b[scope.b.length-1]-scope.a;
-				if(scope.c<0&&scope.c<-100){
-					element.css("transition","0.5s").css("right","3rem")
-				}else if(scope.c>0&&scope.c>100){
-					element.css("transition","0.5s").css("right",0)
-=======
-	}]).directive("setDel",function(){
+//	.directive("setDel",function(){
+//		return function(scope,element,attrs){
+//			scope.a=0;
+//			scope.b=[];
+//			scope.c=0;
+//			element.on("touchstart",function(e){
+//				sessionStorage.setItem("noticeList_id",attrs.setDel)
+//				scope.a=e.touches[0].clientX;
+//				element.css("transition","0.5s")
+//			})
+//			element.on("touchmove",function(e){
+//				scope.b.push(e.touches[0].clientX);
+//				element.css("transition","0.5s")
+//			})
+//			element.on("touchend",function(e){
+//				scope.c=scope.b[scope.b.length-1]-scope.a;
+//				if(scope.c<0&&scope.c<-100){
+//					element.css("transition","0.5s").css("right","3rem")
+//				}else if(scope.c>0&&scope.c>100){
+//					element.css("transition","0.5s").css("right",0)
+//=======
+//	}])
+.directive("setDel",function(){
 				return function(scope,element,attrs){
 						scope.a=0;
 						scope.b=[];
@@ -134,10 +134,5 @@ angular.module('appApp')
 								element.css("transition","0.5s").css("right",0)
 							}
 						})
-						
-					
->>>>>>> origin/master
 				}
 			})
-		}
-	});
