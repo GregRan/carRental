@@ -1,76 +1,76 @@
 <div ng-controller="addCtrl" class="addCar_bg">
 	<div class="addCar_header">
 		<div class="glyphicon glyphicon-menu-left" ng-click='addCar_back()'></div>
-		<p>+ 添 加 车 辆</p>
+		<p> 添 加 车 辆</p>
 	</div>
 
 	
 	<div class="addcar_img a"></div>
 	<button class="addcars_img btn btn-primary">
-		上传图片
+		请选择车辆图片
 		<input type="file" class="b" ng-model='obj.pic'>
 	</button>
 	<div class="addcar_msg">
 		<p>车&#x3000;名：</p>
-		<input type="text" placeholder="" style="width: 75%;" ng-model="obj.name">
+		<input type="text" placeholder="" class="addcar_width add_cm" ng-model="obj.name" ng-focus='text_align_left()' ng-blur='text_align_right()'>
 	</div>
 	<div class="addcar_msg">
 		<p>品&#x3000;牌：</p>
-		<input type="text" placeholder="" ng-model="obj.pinpai">
+		<input type="text" placeholder="" class="addcar_width add_pp" ng-model="obj.pinpai" ng-focus='left()' ng-blur='right()'>
 	</div>
 	<div class="addcar_msg">
 		<p>价&#x3000;格：</p>
-		<input type="number" placeholder="" ng-model="obj.jiage">
+		<input type="number" placeholder="" class="addcar_width add_jg" ng-model="obj.jiage" ng-focus='left_one()' ng-blur='right_one()'>
 	</div>
 	<div class="addcar_msg">
 		<p>新车价：</p>
-		<input type="number" placeholder="" ng-model="obj.xinchejia">
+		<input type="number" placeholder="" class="addcar_width add_cj" ng-model="obj.xinchejia" ng-focus='left_two()' ng-blur='right_two()'>
 	</div>
 	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
 	<div class="addcar_msg">
 		<p>车身颜色：</p>
-		<input type="text" placeholder="" ng-model="obj.cheshenyanse">
+		<input type="text" placeholder="" class="addcar_width_one add_ys" ng-model="obj.cheshenyanse" ng-focus='left_three()' ng-blur='right_three()'>
 	</div>
 	<div class="addcar_msg">
 		<p>表显里程：</p>
-		<input type="number" placeholder="" ng-model="obj.licheng">
+		<input type="number" placeholder="" class="addcar_width_one add_lc" ng-model="obj.licheng" ng-focus='left_fouth()' ng-blur='right_fouth()'>
 	</div>
 	<div class="addcar_msg">
 		<p>排&#x3000;量：</p>
-		<input type="text" placeholder="" ng-model="obj.pailiang">
+		<input type="text" placeholder="" class="addcar_width add_pl" ng-model="obj.pailiang" ng-focus='left_five()' ng-blur='right_five()'>
 	</div>
 	<div class="addcar_msg">
 		<p>上牌时间：</p>
-		<input type="date" placeholder="" ng-model="obj.shangpaishijian">
+		<input type="text" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日"  class="addcar_width_one pickdate" ng-model="obj.shangpaishijian">
 	</div>
 	<div class="addcar_msg">
 		<p>年检到期时间：</p>
-		<input type="date" placeholder="" ng-model="obj.nianjiandaoqishijian">
+		<input type="text" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日" class="addcar_width_two pickdate" ng-model="obj.nianjiandaoqishijian">
 	</div>
 	<div class="addcar_msg">
 		<p>交强险到期时间：</p>
-		<input type="date" placeholder="" ng-model="obj.jiaoqiangxiandaoqishijian">
+		<input type="text" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日" class="addcar_width_three pickdate" ng-model="obj.jiaoqiangxiandaoqishijian">
 	</div>
 	<div class="addcar_msg">
 		<p>商业险到期时间：</p>
-		<input type="date" placeholder="" ng-model="obj.shangyexiandaoqishijian">
+		<input type="text" placeholder="&#x3000;年&nbsp;/&nbsp;月&nbsp;/&nbsp;日" class="addcar_width_three pickdate" ng-model="obj.shangyexiandaoqishijian">
 	</div>
 	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 基本参数</div>
 	<div class="addcar_msg">
 		<p>厂&#x3000;商：</p>
-		<input type="text" placeholder="" ng-model="obj.changshang">
+		<input type="text" placeholder="" class="addcar_width add_cs" ng-model="obj.changshang" ng-focus='left_six()' ng-blur='right_six()'>
 	</div>
 	<div class="addcar_msg">
 		<p>长宽高：</p>
-		<input type="text" placeholder="" ng-model="obj.changkuangao">
+		<input type="text" placeholder="" class="addcar_width add_ckg" ng-model="obj.changkuangao" ng-focus='left_seven()' ng-blur='right_seven()'>
 	</div>
 	<div class="addcar_msg">
 		<p>行李箱容积（L）：</p>
-		<input type="text" placeholder="" ng-model="obj.xinglixiangrongji">
+		<input type="text" placeholder="" class="addcar_width_three add_rj" ng-model="obj.xinglixiangrongji" ng-focus='left_eight()' ng-blur='right_eight()'>
 	</div>
 	<div class="addcar_msg">
 		<p>燃料类型：</p>
-		<input type="text" placeholder="" ng-model="obj.ranliaoleixing">
+		<input type="text" placeholder="" class="addcar_width_one add_rl" ng-model="obj.ranliaoleixing" ng-focus='left_nine()' ng-blur='right_nine()'>
 	</div>
 	<div class="addcar_title"><img src="images/carDetails_icon3.gif"/> 基本配置</div>
 	<div class="addcar_msg">
@@ -79,7 +79,7 @@
 			<input type="radio" value="标配" name="tianchuang" class="addCar_bp" ng-model='obj.tianchuang'/>标配
 		</label>
 		<label class="radio c">
-			<input type="radio" value="无" name="tianchuang" class="addCar_bp" ng-model='obj.tianchuang' />无
+			<input type="radio" value="无" name="tianchuang" class="addCar_bp" ng-model='obj.tianchuang'/>无
 		</label>
 	</div>
 	<div class="addcar_msg">
