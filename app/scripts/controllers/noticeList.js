@@ -112,13 +112,5 @@ angular.module('appApp')
 								element.css("transition","0.5s").css("right",0)
 							}
 						})
-<<<<<<< HEAD
-				}
-			})
-=======
-						
-					
-
 		}
 	});
->>>>>>> origin/master
