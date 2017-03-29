@@ -55,6 +55,7 @@ angular.module('appApp')
 				})
 			}
 
+
 		$scope.index=0;
 		$scope.del_notice=function(ev,index){
 			ev.stopPropagation();
@@ -79,6 +80,7 @@ angular.module('appApp')
 		}
 
 	}])
+
 .directive("setDel",function(){
 				return function(scope,element,attrs){
 						scope.a=0;
@@ -114,3 +116,4 @@ angular.module('appApp')
 						})
 		}
 	});
+
