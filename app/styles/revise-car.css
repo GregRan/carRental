@@ -5,7 +5,7 @@ html,body{
 }
 .revisecar_wra>.header{
 	height: 2.3rem;
-	background: #08A3BF;
+	background: #68cefb;
 	font-size: 1rem;
 	line-height: 2.3rem;
 	text-align: center;
@@ -96,7 +96,7 @@ html,body{
 }
 .revisecar_wra>.reviseCar_con>.car_title{
 	height: 1.8rem;
-	background:#08A3BF;
+	background: #68cefb;
 	font-size: 0.8rem;
 	text-indent: 0.6rem;
 	line-height: 1.8rem;

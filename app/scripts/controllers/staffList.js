@@ -64,10 +64,7 @@ angular.module('appApp')
 							}
 						})
 					}else{
-						$scope.staff_erro=true;
-						$scope.staffList_hide = function(){
-							$scope.staff_erro=false;
-						}
+						$(".modal").modal("show");
 					}
 				}else if($('.staff_xuanze').text()=="工号"){
 					if(str.test($scope.input_search)){
@@ -83,17 +80,11 @@ angular.module('appApp')
 							}
 						})
 					}else{
-						$scope.staff_erro=true;
-						$scope.staffList_hide = function(){
-							$scope.staff_erro=false;
-						}
+						$(".modal").modal("show");
 					}
 				}
 			}else{
-				$scope.staff_erro=true;
-				$scope.staffList_hide = function(){
-						$scope.staff_erro=false;
-				}
+				$(".modal").modal("show");
 			}
 		}
 		
