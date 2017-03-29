@@ -49,7 +49,7 @@ angular.module('appApp')
 			$scope.staffList_jiazai=true
 			$http({
 				method: 'get',
-				url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.keyword
+				url: urlId+"/car/?pinpai=" + $scope.keyword
 			}).then(function(e) {
 				console.log(e.data.length)
 				$scope.data = e.data
