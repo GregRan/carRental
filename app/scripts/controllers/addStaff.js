@@ -53,6 +53,7 @@ angular.module('appApp')
 					$scope.rjx = 0;
 					for(var i in $scope.obj){
 						$scope.rjx++;
+
 					}
 					if($scope.rjx!=9){
 						$(".show1").modal("show");
