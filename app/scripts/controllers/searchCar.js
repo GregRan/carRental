@@ -35,8 +35,9 @@
 angular.module('appApp')
 	.controller('searchCarCtrl', ['$scope', '$http', '$state',function($scope, $http, $state) {
 	if(sessionStorage.user) {	
-		$scope.details = function(car) {
-			sessionStorage.setItem('id', car.id);
+		$scope.into_details = function(car) {
+			sessionStorage.setItem('id',car.id);
+			sessionStorage.setItem('backwhere','search');
 			$state.go('carDetails');
 		}
 		$scope.back = function() {
@@ -49,7 +50,7 @@ angular.module('appApp')
 			$scope.staffList_jiazai=true
 			$http({
 				method: 'get',
-				url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.keyword
+				url: urlId+"/car/?pinpai=" + $scope.keyword
 			}).then(function(e) {
 				console.log(e.data.length)
 				$scope.data = e.data

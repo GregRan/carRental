@@ -71,6 +71,7 @@ angular.module('appApp')
 
 			}
 			$scope.details = function(car) {
+				sessionStorage.setItem('backwhere','carList');
 				sessionStorage.setItem('id', car.id);
 				$state.go('carDetails');
 			}

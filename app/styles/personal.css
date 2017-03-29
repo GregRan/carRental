@@ -155,7 +155,7 @@
 		position: absolute;
 		top: 0;
 		right: 1rem;
-		border-radius: .3rem;
+		border-radius: .2rem;
 		border: none;
 		outline: none;
 	}
@@ -180,18 +180,17 @@
 		position: absolute;
 		top: 0;
 		right: 1rem;
-		border-radius: .3rem;
+		border-radius: .2rem;
 		border: none;
 		outline: none;
 	}
-	.r_main>.del{
-		width: 100%;
-		height:4rem;
+	.r_main>.r_btn_del{
+		width: 4rem;
+		height:1.5rem;
+		font-size: 0.6rem;
+		border-radius: .2rem;
+		text-align: center;
 		position: absolute;
-		top: 20rem;
-		left: 0;
-	}
-	.r_main>.del>button{
-		float: right;
-		margin-right: 3rem;
+		bottom:3rem;
+		right: 1.1rem;
 	}

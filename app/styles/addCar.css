@@ -43,7 +43,7 @@
 
 .addCar_header>p{
 	float: left;
-	margin-left: 3rem;
+	margin-left: 4rem;
 	line-height: 2rem;
 }
 
@@ -67,6 +67,9 @@
 	height: 1.5rem;
 	position: relative;
 	margin: 0.3rem auto;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	text-align: center;
 }
 
 
@@ -113,6 +116,18 @@
 }
 .addcar_msg>input::placeholder{
 	color: #333;
+}
+.addcar_msg>.addcar_width{
+	width: 75%;
+}
+.addcar_msg>.addcar_width_one{
+	width: 70%;
+}
+.addcar_msg>.addcar_width_two{
+	width: 60%;
+}
+.addcar_msg>.addcar_width_three{
+	width: 55%;
 }
 .addcar_title{
 	height: 1.8rem;

@@ -24,7 +24,8 @@ angular.module('appApp')
 					method: "get"
 				}).then(function(e) {
 					$scope.staffList_jiazai = false;
-					$scope.staffList_content = true
+					$scope.staffList_content = true;
+					$scope.r_btn_del=true;
 					$scope.aa = e.data;
 				})
 
@@ -119,6 +120,9 @@ angular.module('appApp')
 							$state.go("staffList");
 						})
 					}
+				}else{
+					$scope.mmm=true;
+					$scope.mmm1=true;
 				}
 				} else {
 					$state.go("login");
