@@ -19,12 +19,6 @@
 		<button class="r_search_search" ng-click='staffList_search()'>搜索</button>
 	</div>
 	<div ng-show="po" class="staffList_ppp">暂无搜索结果...</div>
-	<div ng-show='staff_erro' class="staffList_alert">
-			<div class="staffList_div">
-				请 输 入 正 确 格 式 !
-				<button class="btn btn-success" ng-click='staffList_hide()'>确定</button>
-			</div>
-		</div>
 		<div class="staffList_jiazai" ng-show='staffList_jiazai'>
 			<img src="images/loading.gif"/>
 		</div>
@@ -54,5 +48,21 @@
 		</div>
 	</div>
 
-	<div class="r_content_foot" ng-click="btn1()" ng-show="mmShow">添加员工</div>
+	<div class="r_content_foot" ng-click="btn1()" ng-show="mmShow" style="background: #68cefb;">添加员工</div>
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">请输入正确内容！</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok2()">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
