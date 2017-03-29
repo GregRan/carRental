@@ -18,7 +18,11 @@ angular.module('appApp')
 			}).then(function(e) {
 				$scope.staffList_jiazai = false;
 				$scope.staffList_content = true;
-				$scope.r_btn_del = true;
+				if(sessionStorage.level=="1"){
+					$scope.r_btn_del = true;
+				}else {
+					$scope.r_btn_del = false;
+				}
 				$scope.aa = e.data;
 			})
 			$scope.btn = function() {//返回信息列表
