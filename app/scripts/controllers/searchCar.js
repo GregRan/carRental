@@ -35,8 +35,9 @@
 angular.module('appApp')
 	.controller('searchCarCtrl', ['$scope', '$http', '$state',function($scope, $http, $state) {
 	if(sessionStorage.user) {	
-		$scope.details = function(car) {
-			sessionStorage.setItem('id', car.id);
+		$scope.into_details = function(car) {
+			sessionStorage.setItem('id',car.id);
+			sessionStorage.setItem('backwhere','search');
 			$state.go('carDetails');
 		}
 		$scope.back = function() {
