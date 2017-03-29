@@ -1,12 +1,25 @@
 <div ng-controller="staffHomepageCtrl" class="staffHomepage_wra">
-	<div class="car_details" ng-click="SH_details()">车辆信息</div>
-	<div class="my" ng-click="SH_my()">员工信息</div>
-	<div class="release" ng-click="SH_release()">公司公告</div>
-	<div class="cancel" ng-click="SH_cancel()">退出登录</div>
-	<img src="images/icon-car1.gif">
-	<img src="images/icon-car2.gif">
-	<img src="images/icon-car3.gif">
-	<img src="images/icon-car4.gif">
-	<img src="images/icon-car5.gif">
-	<img src="images/icon-car6.gif">
+	<div class="logo">
+		<img src="../images/logo2.gif">
+		<img src="../images/logo3.png">
+	</div>
+	<div class="car_img"></div>
+	<div class="details_list">
+		<div class="car_details" ng-click="SH_details()">
+			<img src="../images/carDetails_bg4.jpg">
+			<p>汽车详情</p>
+		</div>
+		<div class="my" ng-click="SH_my()">
+			<img src="../images/carDetails_bg3.jpg">
+			<p>员工详情</p>
+		</div>
+		<div class="release" ng-click="SH_release()">
+			<img src="../images/carDetails_bg2.jpg">
+			<p>公司公告</p>
+		</div>
+		<div class="cancel" ng-click="SH_cancel()">
+			<img src="../images/carDetails_bg1.jpg">
+			<p>退出登录</p>
+		</div>
+	</div>
 </div>

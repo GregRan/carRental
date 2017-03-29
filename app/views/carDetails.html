@@ -5,7 +5,7 @@
 	<div class="staffList_jiazai" ng-show='staffList_jiazai'>
 		<img src="../images/loading.gif" />
 	</div>
-	<div class="carDetails_con">
+	<div class="carDetails_con" ng-show='staffList_content'>
 		<div class="car_img"><img src="{{data.pic}}"/></div>
 		<div class="car_name"><img src="images/car_details_icon1.jpg"/>{{data.name}}</div>
 		<div class="car_price"><img src="images/car_details_icon2.jpg"/><span>￥{{data.jiage}}</span>/<span><del>￥{{data.xinchejia}}</del></span></div>
@@ -33,6 +33,7 @@
 		<div class="car_title"><img src="images/carDetails_icon3.gif"/> 车辆档案</div>
 		<div class="car_msg">
 			<p>品&#x3000;牌：<span>{{data.pinpai}}</span></p>
+			<p>车&#x3000;龄：<span>{{data.cheling}}</span></p>
 			<p>车身颜色：<span>{{data.cheshenyanse}}</span></p>
 			<p>表显里程：<span>{{data.licheng}}</span></p>
 			<p>排&#x3000;量：<span>{{data.pailiang}}</span></p>
@@ -61,7 +62,7 @@
 			<p>倒车影像系统：<span>{{data.daocheyingxiang}}</span></p>
 			<p>真皮座椅：<span>{{data.zhenpizuoyi}}</span></p>
 		</div>
-		<div class="xiajia" ng-hide="a"><button class="btn btn-danger" data-toggle="modal" data-target="#layer">下架</button><button class="btn btn-primary" ng-click="revise()">编辑</button></div>
+		<div class="xiajia" ng-hide="a"><button class="btn btn-danger" data-toggle="modal" data-target="#layer">下架</button><button class="btn btn-primary" ng-click="revise()" style="background: #68cefb;">编辑</button></div>
 		<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
 			<div class="modal-dialog">
 				<div class="modal-content">

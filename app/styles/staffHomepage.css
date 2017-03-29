@@ -1,19 +1,105 @@
 .staffHomepage_wra{
 	width: 100%;
 	height: 100vh;
-	background: url(../images/bg_3.jpg) no-repeat center center;
-	background-size: cover;
 	position: relative;
+	overflow: hidden;
 }
-.staffHomepage_wra>.car_details,.staff_list,.release,.my,.cancel{
-	background: #f2f79a;
-	border-radius: 50%;
-	position: absolute;
-	color: #3c4547;
-	font-size: 0.8rem;
+.staffHomepage_wra>.logo{
+	width: 100%;
+	height: 2.6rem;
+	background: rgba(40,185,250,0.7);
+	line-height: 2.6rem;
+	color: white;
+	font-size: 1rem;
 	text-align: center;
-	font-family: "微软雅黑";
-	font-weight: bold;
+	position: relative;
+	letter-spacing: 0.3rem;
+}
+.staffHomepage_wra>.logo>img:nth-child(1){
+	width: 1.8rem;
+	display: inline-block;
+	position: absolute;
+	left: 1rem;
+	top: calc(50% - 0.6rem);
+}
+.staffHomepage_wra>.logo>img:nth-child(2){
+	width: 4.5rem;
+	display: inline-block;
+	position: absolute;
+	left: 6rem;
+	top: calc(50% - 0.6rem);
+}
+.staffHomepage_wra>.car_img{
+	width: 100%;
+	height: 36%;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.staffHomepage_wra>.details_list{
+	width: 100%;
+	height: 64%;
+	background: white;
+}
+.staffHomepage_wra>.details_list>.car_details,.release,.my,.cancel{
+	padding-top: 0.5rem;
+	width: 50%;
+	height: calc(50% - 0.6rem);
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+}
+.staffHomepage_wra>.details_list>.release,.cancel{
+	padding-top: 0rem;
+}
+.staffHomepage_wra>.details_list>.car_details>img{
+	display: inline-block;
+	width: 4rem;
+}
+.staffHomepage_wra>.details_list>.car_details>p{
+	font-size: 0.8rem;
+	color: #333333;
+	width: 100%;
+	text-align: center;
+	line-height: 2rem;
+}
+.staffHomepage_wra>.details_list>.release>img{
+	display: inline-block;
+	width: 4rem;
+}
+.staffHomepage_wra>.details_list>.release>p{
+	font-size: 0.8rem;
+	color: #333333;
+	width: 100%;
+	text-align: center;
+	line-height: 2rem;
+}
+.staffHomepage_wra>.details_list>.my>img{
+	display: inline-block;
+	width: 4rem;
+}
+.staffHomepage_wra>.details_list>.my>p{
+	font-size: 0.8rem;
+	color: #333333;
+	width: 100%;
+	text-align: center;
+	line-height: 2rem;
+}
+.staffHomepage_wra>.details_list>.cancel>img{
+	display: inline-block;
+	width: 4rem;
+}
+.staffHomepage_wra>.details_list>.cancel>p{
+	font-size: 0.8rem;
+	color: #333333;
+	width: 100%;
+	text-align: center;
+	line-height: 2rem;
+}
+/*.staffHomepage_wra>.details_list>.car_details,.staff_list,.release,.my,.cancel>p{
+	font-size: 1rem;
+	color: #333333;
+	width: 100%;
+	text-align: center;
 }
 .staffHomepage_wra>.car_details{
 	width: 5.6rem;
@@ -83,4 +169,4 @@
 	top:2rem;
 	left: 10rem;
 	transform: rotate(20deg);
-}
+}*/

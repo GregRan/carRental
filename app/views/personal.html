@@ -33,14 +33,14 @@
 			<div class="r_center_bottom_phone_jin">
 				<span>紧急联系人：</span>
 				<span ng-show="mmm1">{{aa.jinjilianxiren}}</span>
-				<input type="text" ng-model='aa.jinjilianxiren' ng-show="mm1" ng-blur="re1()"/>
+				<input type="text" ng-model='aa.jinjilianxiren' ng-show="mm1">
 				<button ng-click='edit1()'>{{txt1}}</button>	
 			</div>
 		</div>
 	</div>
-	<div class="del" ng-hide="nnn">
-		<button class="btn btn-primary btn-group-xs" ng-click="niu()">删除员工</button>
-	</div>
+	<!--<div class="del" >-->
+		<button class="btn btn-primary btn-group-xs r_btn_del" ng-show="r_btn_del" ng-click="niu()" style="background: #68cefb; font-size: 0.7rem;">删除员工</button>
+	<!--</div>-->
 	
 	
 	
