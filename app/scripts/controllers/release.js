@@ -10,10 +10,13 @@
 angular.module('appApp')
 	.controller('releaseCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
 		if(sessionStorage.user) {
+			$scope.release_offon1=true;
+			$scope.release_offon2=true;
 			$scope.btn = function() {
 				if($scope.Mtext) {
-					$scope.send=true;
-					$scope.ok=function(){
+					$scope.release_offon1=true;
+					$scope.release_offon2=false;
+					$scope.release_add=function(){
 						$http({
 						method: 'post',
 						url: urlId+'/gonggao',
@@ -24,13 +27,13 @@ angular.module('appApp')
 						}
 					}).then(function(e) {
 						console.log(e.data)
-						$scope.Mtext = ''
-						$scope.send=false;
-						$scope._success=true;
+						$scope.Mtext = '';
+						$state.go("noticeList");
 					})
 					}
 				} else {
-					$scope.kong = true
+					$scope.release_offon1=false;
+					$scope.release_offon2=true;
 				}
 			}
 			$scope.kong1 = function() {

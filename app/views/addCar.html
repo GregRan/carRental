@@ -154,23 +154,36 @@
 			<input type="radio" value="无" name="zuoyi" class="addCar_bp" ng-model='obj.zhenpizuoyi' />无
 		</label>
 	</div>
-	
-	<button class="btn btn-success addbutton" data-toggle="modal" data-target="#layer">添加</button>
+	<button class="btn btn-success addbutton" data-toggle="modal" data-target="#layer" ng-click="yes()">添加</button>
 	
 	<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
-		<div class="modal-dialog">
+		<div class="modal-dialog" ng-hide="offon_1">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">
 	                            <span>&times;</span>
 	                        </button>
-					<h4 class="modal-title">确认添加吗?</h4>
+					<h4 class="modal-title">请输入车辆完整信息！</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-danger btn-sm">确认</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-dialog" ng-hide="offon_2">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认添加吗？</h4>
 				</div>
 				<div class="modal-body text-right">
 					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
-					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="add()">确认</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="addCar_add()">确认</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 </div>

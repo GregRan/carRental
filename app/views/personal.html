@@ -28,50 +28,83 @@
 				<span>电&#x3000;&#x3000;&#x3000;话：</span>
 				<span ng-show="mmm">{{aa.dianhua}}</span>
 				<input type="text" ng-model='aa.dianhua' ng-show="mm" ng-blur="re()"/>
-				<button ng-click='edit()' ng-show="mmmm">{{txt}}</button>
+				<button ng-click='edit()'>{{txt}}</button>
 			</div>
 			<div class="r_center_bottom_phone_jin">
 				<span>紧急联系人：</span>
 				<span ng-show="mmm1">{{aa.jinjilianxiren}}</span>
 				<input type="text" ng-model='aa.jinjilianxiren' ng-show="mm1" ng-blur="re1()"/>
-				<button ng-click='edit1()' ng-show="mmmm">{{txt1}}</button>	
+				<button ng-click='edit1()'>{{txt1}}</button>	
 			</div>
 		</div>
 	</div>
 	<div class="del" ng-hide="nnn">
-		<button class="btn btn-primary btn-group-xs" ng-click="personal_del()">删除员工</button>
+		<button class="btn btn-primary btn-group-xs" ng-click="niu()">删除员工</button>
 	</div>
-	<div class="Mnull_warp" ng-show='send'>
-		<div class="Mnull">
-			是否确认修改?
-			<button class="Mbutton" ng-click='no()'>取消</button>
-			<button class="Mbutton" ng-click='ok()'>确定</button>
+	
+	
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm shuai4" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                    <span>&times;</span>
+	                </button>
+					<h4 class="modal-title">确认删除吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_del()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="Mnull_warp" ng-show='send1'>
-		<div class="Mnull">
-			是否确认修改?
-			<button class="Mbutton" ng-click='no1()'>取消</button>
-			<button class="Mbutton" ng-click='ok1()'>确定</button>
+	
+	
+	
+	<div role="dialog" class="modal fade bs-example-modal-sm shuai" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认修改吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="Mnull_warp" ng-show='_success'>
-		<div class="Mnull">
-			修改成功!
-			<button class="Mbutton" ng-click='qd()'>确定</button>
+	<div role="dialog" class="modal fade bs-example-modal-sm shuai3" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+	                            <span>&times;</span>
+	                        </button>
+					<h4 class="modal-title">确认修改吗？</h4>
+				</div>
+				<div class="modal-body text-right">
+					<button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+					<button data-dismiss="modal" class="btn btn-danger btn-sm" ng-click="personal_ok2()">确认</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="Mnull_warp" ng-show='_success1'>
-		<div class="Mnull">
-			修改成功!
-			<button class="Mbutton" ng-click='qd1()'>确定</button>
-		</div>
-	</div>
-	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	
+	
+	<div class="modal fade bs-example-modal-lg shuai2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 		<div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content gheight">
 				请输入正确手机号
 		    </div>
 		</div>
 	</div>
+	
+	
+	
 </div>
