@@ -31,7 +31,6 @@ angular.module('appApp')
 			    			url:urlId+"/car",
 			    			data:$scope.obj
 			    		}).then(function(e){
-			    			console.log(e.data)
 			    			$state.go('carList')
 			    		})
 					}

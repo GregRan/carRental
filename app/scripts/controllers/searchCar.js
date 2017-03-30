@@ -18,7 +18,7 @@ angular.module('appApp')
 		$scope.back = function() {
 			$state.go('carList')
 		}
-		//2017-3-28-23:20
+		
 		$scope.noresult=true
 		$scope.staffList_jiazai=false
 		$scope.pubSearch=function(){
@@ -27,7 +27,6 @@ angular.module('appApp')
 				method: 'get',
 				url: urlId+"/car/?pinpai=" + $scope.keyword
 			}).then(function(e) {
-				console.log(e.data.length)
 				$scope.data = e.data
 				$scope.staffList_jiazai=false
 				if(e.data.length==0){

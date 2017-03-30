@@ -81,7 +81,7 @@ angular.module('appApp')
 							$scope.addStaff_ok=function(){
 								$http({
 					    			method:"post",
-					    			url:"http://47.88.16.225:407/users",
+					    			url:urlId+"/users",
 					    			data:$scope.obj
 						    	}).then(function(e){
 						    		$state.go("staffList");

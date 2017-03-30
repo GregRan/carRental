@@ -21,8 +21,6 @@ angular.module('appApp').controller('revisecarCtrl', ["$scope", "$state", "$http
 	}).then(function(e) {
 		$scope.obj=e.data
 		$scope.data = e.data;
-		console.log(e.data)
-		console.log($scope.obj)
 		$scope.staffList_jiazai = false;
 		$scope.staffList_content = true;
 	})

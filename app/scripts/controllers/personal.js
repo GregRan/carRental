@@ -25,37 +25,37 @@ angular.module('appApp')
 				}
 				$scope.aa = e.data;
 			})
-			$scope.btn = function() {//返回信息列表
+			$scope.btn = function() {
 				$state.go("staffList")
 			}
-			$scope.niu = function() {//点击删除，弹框出现
+			$scope.niu = function() {
 				$(".shuai4").modal("show");
 			}
-			if(sessionStorage.gonghao == sessionStorage.click_gh) {//判断是否为自己所登录的号码
-				$scope.mmmm = true;//如果是，修改按钮出现
+			if(sessionStorage.gonghao == sessionStorage.click_gh) {
+				$scope.mmmm = true;
 				$scope.mmm = true;
 				$scope.mmmm1 = true;
 				$scope.mmm1 = true;
 				$scope.txt = '修改';
 				$scope.txt1 = '修改';
-				$scope.edit = function() {//点击修改电话号码
+				$scope.edit = function() {
 					if($scope.txt == '修改') {
 						$scope.txt = '确定';
 						$scope.mmm = false;
 						$scope.mm = true;
-					} else {//点击确定时
-						if(!$scope.nameReg.test($scope.aa.dianhua)) {//判断电话号码格式
-							$('.shuai2').modal('show'); //电话格式不对，提示框出现
+					} else {
+						if(!$scope.nameReg.test($scope.aa.dianhua)) {
+							$('.shuai2').modal('show');
 						} else {
-							$(".shuai").modal("show");//电话号码格式正确时，弹出“确认修改吗”？
-							$scope.personal_ok = function() {//点击确定
+							$(".shuai").modal("show");
+							$scope.personal_ok = function() {
 								$http({
-									url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+									url: urlId+"/users/" + sessionStorage.staffId,
 									method: 'put',
 									data: {
 										dianhua: $scope.aa.dianhua
 									}
-								}).then(function(e) {//修改成功后，完成变为修改
+								}).then(function(e) {
 									$scope.txt = '修改';
 									$scope.mmm = true;
 									$scope.mm = false;
@@ -78,12 +78,12 @@ angular.module('appApp')
 						$('.shuai3').modal('hide');
 						$('.shuai4').modal('hide');
 						if(!$scope.nameReg.test($scope.aa.jinjilianxiren)) {
-							$('.shuai2').modal('show'); //请输入手机号
+							$('.shuai2').modal('show');
 						} else {
 							$(".shuai3").modal("show");
 							$scope.personal_ok2 = function() {
 								$http({
-									url: "http://47.88.16.225:407/users/" + sessionStorage.staffId,
+									url: urlId+"/users/" + sessionStorage.staffId,
 									method: 'put',
 									data: {
 										jinjilianxiren: $scope.aa.jinjilianxiren
@@ -106,7 +106,6 @@ angular.module('appApp')
 			}
 
 			$scope.personal_del = function() {
-				console.log(1)
 				$http({
 					url: urlId + "/users/" + sessionStorage.staffId,
 					method: 'delete'

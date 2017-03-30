@@ -23,7 +23,6 @@
 .boss_homepage_wra>.boss_homepage_wra2>div{
 	width: 6.2rem;
 	height: 2rem;
-	/*margin: auto;*/
 	margin-top: 1.8rem;
 	border-bottom: 2px solid black;
 	line-height: 2.5rem;
@@ -69,7 +68,6 @@
 	text-align: left;
 	border-bottom: 2px solid #51504e;
 }
-
 .boss_homepage_wra>.boss_homepage_wra2>div>img{
 	width: 2rem;
 }

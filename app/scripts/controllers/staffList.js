@@ -18,7 +18,6 @@ angular.module('appApp')
     		$scope.data=e.data;
     		$scope.staffList_jiazai=false;
     		$scope.staffList_content=true;
-    		console.log(e.data)
     	})	
     	if(sessionStorage.level=="0"){
 				$scope.mmShow = false
@@ -88,8 +87,6 @@ angular.module('appApp')
 			}
 		}
 		
-		
-		//***************************
 		$scope.pleaseSelect="选择"
 		$scope.bind_name="姓名"
 		$scope.bind_gonghao="工号"
