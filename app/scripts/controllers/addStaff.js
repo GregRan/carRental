@@ -55,7 +55,7 @@ angular.module('appApp')
 						$scope.rjx++;
 
 					}
-					if($scope.rjx!=9){
+					if($scope.rjx<9){
 						$(".show1").modal("show");
 					}else{
 						if(!$scope.myreg.test($scope.obj.dianhua)){

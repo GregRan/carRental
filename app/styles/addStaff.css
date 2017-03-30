@@ -99,6 +99,7 @@
 	outline: none;
 	border: 0;
 	border-bottom: 1px solid black;
+	border-radius: 0;
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	font-size: 0.8rem;
@@ -122,6 +123,7 @@
 	float: left;
 }
 .r_addStaff_center_right_staff>input{
+	border-radius: 0;
 	float: left;
 	width: 4rem;
 	outline: none;
@@ -151,6 +153,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_time>input{
+	border-radius: 0;
 	width: 8rem;
 	padding-bottom: 0.1rem;
 	padding-top: 0.1rem;
@@ -170,6 +173,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_phone>input{
+	border-radius: 0;
 	float: left;
 	width: 8rem;
 	padding-bottom: 0.1rem;
@@ -191,6 +195,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_phone_jin>input{
+	border-radius: 0;
 	background: #e3f7f8;
 	float: left;
 	width: 8rem;
@@ -211,6 +216,7 @@
 	float: left;
 }
 .r_addStaff_center_bottom_phone_ji>input{
+	border-radius: 0;
 	background: #e3f7f8;
 	float: left;
 	width: 8rem;
