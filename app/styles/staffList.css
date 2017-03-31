@@ -68,26 +68,42 @@
 	margin-left: 0.3rem;
 	float: left;
 }
-.r_search_value{
-	width: 9.2rem;
-	height: 1.4rem;
+/*1*/
+.staff_xiala {
+	float: left;
+	width: 3rem;
+	height: 1.5rem;
 	font-size: 0.6rem;
-	line-height: 1.4rem;
+}
+/*2*/
+.r_search_value{
+	width: 8.8rem;
+	padding: 0.32rem 0;
+	font-size: 0.6rem;
+	line-height: 0.6rem;
 	border: 0;
-	margin-top: 0.3rem;
 	float: left;
 	outline: none;
 	text-indent: 0.5rem;
-	border-radius: 0 0.2rem 0.2rem 0;
+	margin-left: 0.3rem;
+	border-radius: 0.2rem;
+}
+/*3*/
+.r_search_wra{
+	float: left;
+	width: 12.2rem;
+	height: 1.5rem;
+	margin-top: 0.3rem;
+	margin-left: 0.3rem;
 }
 .r_search_search{
 	width: 3rem;
-	height: 1.5rem;
+	height: 1.45rem;
 	float: left;
 	margin-top: 0.28rem;
 	margin-left: 0.2rem;
 	background: white;
-	border-radius: 0.3rem;
+	border-radius: 0.2rem;
 	font-size: 0.6rem;
 	border: 0;
 	outline: none;
@@ -204,19 +220,11 @@
 	color: #666;
 	margin-top: 1rem;
 }
-.staff_xiala {
-	float: left;
-	width: 3rem;
-	height: 1.5rem;
-	font-size: 0.6rem;
-	margin-top: 0.25rem;
-	margin-left: 0.3rem;
-}
 .staff_xiala_btn{
 	width: 3rem;
 	height: 1.5rem;
 	font-size: 0.6rem;
-	border-radius: 0.2rem 0 0 0.2rem;
+	border-radius: 0.2rem;
 }
 .staff_xiala_sanjiao{
 	border-top: 0.2rem dashed;

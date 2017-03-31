@@ -41,6 +41,7 @@
 	line-height: 2rem;
 }
 .addcar_img{
+	display: block;
 	width: 15rem;
 	height: 11rem;
 	margin:0.4rem auto 0;

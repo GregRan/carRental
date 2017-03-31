@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "dd-icon";
+  font-family: "dd-icon/fonts";
   src:url("../dd-icon/fonts/dd-icon.eot");
   src:url("../dd-icon/fonts/dd-icon.eot?#iefix") format("embedded-opentype"),
     url("../dd-icon/fonts/dd-icon.woff") format("woff"),

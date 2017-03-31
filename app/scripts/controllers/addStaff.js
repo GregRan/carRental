@@ -14,14 +14,32 @@ angular.module('appApp')
     		$state.go('staffList')
     	}
     	$scope.obj={};
-    	
+    	var cvs=document.getElementsByClassName("cvs")[0];
     	$('.bb')[0].addEventListener('change',function(){
     		var file = this.files[0];
+    		var fileType = file.type;
     		var reader = new FileReader();
     		reader.readAsDataURL(file);
     		reader.onload = function(){
-    			$scope.obj.touxiang=this.result
-    			$('.addimg').html('<img src="'+this.result+'">')
+    			var url=this.result;
+	    		var image = new Image();
+	    		image.src=url;
+	    		image.onload = function() {
+					var scale = 1;    
+	                if(this.width > 100 || this.height > 100){
+		                if(this.width > this.height){    
+		                    scale = 100 / this.width;  
+		                }else{    
+		                    scale = 100 / this.height;    
+		                }  
+	                }
+	                cvs.width = this.width*scale;    
+	                cvs.height = this.height*scale;
+	                var ctx = cvs.getContext('2d');    
+	                ctx.drawImage(this, 0, 0, cvs.width, cvs.height);     
+	                var newImageData = cvs.toDataURL(fileType, 0.5);
+	                $scope.obj.touxiang=newImageData
+				}
     		}
     		$('.aa').hide();
     	},false);
