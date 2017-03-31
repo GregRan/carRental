@@ -18,7 +18,6 @@ angular.module('appApp')
 			"read":1
 		}
   	}).then(function(e){
-		console.log(e)
     	$scope.staffList_jiazai=false;
     	$scope.staffList_content=true;
   		$scope.t=e.data;

@@ -16,41 +16,54 @@ angular.module('appApp').controller('loginCtrl',["$scope","$http","$state",funct
   	$scope.blur=function(){
   		if(!$scope.nameReg.test($scope.updata.userName)){
   			$('.modal').modal('show')
+  			$scope.login_msg="账户输入不正确！"
   		}
   	}
   	$scope.blur2=function(){
   		if(!$scope.passReg.test($scope.updata.passWord)){
   			$('.modal').modal('show')
+  			$scope.login_msg="密码输入不正确！"
   		}
   	}
     $scope.login=function(){
-    	if(!$scope.nameReg.test($scope.updata.userName)||!$scope.passReg.test($scope.updata.passWord)){
-  			$('.modal').modal('show')
-  		}else {
-	    	$http({
-		    	url:urlId+"/users/login",
-		    	method:"post",
-		    	data:{"username":$scope.updata.userName,"password":$scope.updata.passWord}
-		    }).then(function(e){
-		    	sessionStorage.setItem("uid",e.data.uid);
-		    	$http({
-			    	url:urlId+"/users/"+sessionStorage.uid,
-			    	method:"get",
-			    }).then(function(event){
-			    	sessionStorage.setItem("staffId",event.data.id);
-			    	console.log(event)
-			    	sessionStorage.setItem("level",event.data.level);
-			    	sessionStorage.setItem("user",event.data.username);
-			    	sessionStorage.setItem("gonghao",event.data.gonghao);
-					if(event.data.level=="0"){
-						$state.go("staffHomepage");
-					}else{
-						$state.go("bossHomepage");
-					}
-			    })
-		    },function(e){
-		    	$('.modal').modal('show')
-		    })
-	   	}
+    	if($scope.passReg.test($scope.updata.passWord)){
+    		$http({
+				url:urlId+"/users/?username="+$scope.updata.userName,
+				method:"get"
+			}).then(function(data){
+				if(data.data.length==0){
+					$('.modal').modal('show')
+					$scope.login_msg="账户不存在！"
+				}else {
+			    	$http({
+				    	url:urlId+"/users/login",
+				    	method:"post",
+				    	data:{"username":$scope.updata.userName,"password":$scope.updata.passWord}
+				    }).then(function(e){
+				    	sessionStorage.setItem("uid",e.data.uid);
+				    	$http({
+					    	url:urlId+"/users/"+sessionStorage.uid,
+					    	method:"get"
+					    }).then(function(event){
+					    	sessionStorage.setItem("staffId",event.data.id);
+					    	sessionStorage.setItem("level",event.data.level);
+					    	sessionStorage.setItem("user",event.data.username);
+					    	sessionStorage.setItem("gonghao",event.data.gonghao);
+							if(event.data.level=="0"){
+								$state.go("staffHomepage");
+							}else{
+								$state.go("bossHomepage");
+							}
+					    })
+					    },function(e){
+					    	$('.modal').modal('show')
+					    	$scope.login_msg="密码输入错误！"
+					    })
+			   	}
+			})
+    	}else {
+    		$('.modal').modal('show')
+  			$scope.login_msg="密码输入不正确！"
+    	}
     }
 }]);

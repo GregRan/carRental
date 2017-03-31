@@ -48,7 +48,6 @@
 	width: 15rem;
 	height: 11rem;
 	margin:0.6rem auto;
-	/*background: pink;*/
 }
 .carDetails_wra>.carDetails_con>.car_img>img{
 	width: 15rem;
@@ -59,7 +58,6 @@
 	margin: auto;
 	background: white;
 	line-height: 1.6rem;
-	/*border-bottom: 1px solid #BBBBBB;*/
 	font-size: 1rem;
 	color: #3C3C3C;
 }
@@ -182,16 +180,3 @@
 	float: right;
 	margin-right: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -3,17 +3,12 @@
 	padding-top: 0.1rem;
 }
 .addCar_header{
-	position: fixed;
-	top:0;
-	left: 0;
 	width: 100%;
 	background: #68cefb;
 	color: white;
 	font-size: 1rem;
-	z-index: 1;
 	height: 2.2rem;
 }
-
 .addcar_alert{
 	width: 10rem;
 	height: 5rem;
@@ -40,27 +35,22 @@
 	margin-left: 0.7rem;
 	line-height: 2rem;
 }
-
 .addCar_header>p{
 	float: left;
 	margin-left: 4rem;
 	line-height: 2rem;
 }
-
-
 .addcar_img{
+	display: block;
 	width: 15rem;
 	height: 11rem;
-	margin:2.6rem auto 0;
+	margin:0.4rem auto 0;
 	border: 1px solid #777777;
-	/*background: pink;*/
 }
 .addcar_img>img{
 	width: 15rem;
 	height: 11rem;
 }
-
-
 .addcars_img{
 	display: block;
 	width: 60%;
@@ -71,8 +61,6 @@
 	line-height: 0.8rem;
 	text-align: center;
 }
-
-
 .addcars_img>input{
 	width: 100%;
 	font-size: 0.5rem;
@@ -83,17 +71,14 @@
 	top: 0;
 	left: 0;
 }
-
-
 .addcar_msg{
 	width: 90%;
 	height: 1.8rem;
 	margin:0 auto 0.2rem;
-	/*border-bottom: 1px solid #C0C0C0;*/
+	border-bottom: 1px solid #C0C0C0;
 	overflow: hidden;
 }
 .addcar_msg>p{
-	/*width: 20%;*/
 	line-height: 1.8rem;
 	font-size: 0.7rem;
 	color: #333;
@@ -138,8 +123,6 @@
 	color: white;
 	margin: 0.6rem 0;
 }
-
-
 .addcar_msg>.d{
 	float: right;
 	font-size: 0.7rem;
@@ -154,15 +137,6 @@
 	width: 0.7rem;
 	height: 0.7rem;
 }
-
-
-
-
-
-
-
-
-
 .addbutton{
 	width: 100%;
 	line-height: 1.4rem;
@@ -171,12 +145,4 @@
 	position: relative;
 	bottom: 0;
 	left: 0;
-	background: #68cefb;
 }
-
-
-
-
-
-
-

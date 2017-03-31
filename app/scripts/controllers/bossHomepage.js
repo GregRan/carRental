@@ -16,26 +16,25 @@ angular.module('appApp').controller('bossHomepageCtrl',["$scope","$state",functi
 		}else{
 			$scope.b=true;
 		}
-		console.log($scope.b)
 	}
   	$scope.BH_details=function(){
-		$state.go("carList");//车辆信息
+		$state.go("carList");
   	}
   	$scope.BH_staff=function(){
-		$state.go("staffList");//员工列表
+		$state.go("staffList");
   	}
   	$scope.BH_release=function(){
-		$state.go("release");//发布公告
+		$state.go("release");
   	}
   	$scope.BH_cancel=function(){
   		sessionStorage.clear()
-		$state.go("login");//退出登录
+		$state.go("login");
   	}
   	$scope.BH_addcar=function(){
-		$state.go("addCar");//添加车辆
+		$state.go("addCar");
   	}
   	$scope.BH_releaseList=function(){
-		$state.go("noticeList");//查看公告
+		$state.go("noticeList");
   	}
 	}else{
 		$state.go("login");

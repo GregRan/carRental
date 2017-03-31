@@ -31,21 +31,41 @@ angular.module('appApp')
 			    			url:urlId+"/car",
 			    			data:$scope.obj
 			    		}).then(function(e){
-			    			console.log(e.data)
 			    			$state.go('carList')
 			    		})
 					}
 				}
 	    	}
+	    	//2017-3-30 19:40
+	    	var cvs=document.getElementsByClassName("a")[0];
 	    	$('.b')[0].addEventListener('change',function(){
 	    		var file = this.files[0];
+	    		var fileType = file.type;
 	    		var reader = new FileReader();
 	    		reader.readAsDataURL(file);
 	    		reader.onload = function(){
-	    			$scope.obj.pic=this.result
-	    			$('.a').html('<img src="'+this.result+'">')
+	    			var url=this.result;
+	    			var image = new Image();
+	    			image.src=url;
+	    			image.onload = function() {
+						var scale = 1;    
+	                    if(this.width > 300 || this.height > 300){
+		                    if(this.width > this.height){    
+		                        scale = 300 / this.width;  
+		                    }else{    
+		                        scale = 300 / this.height;    
+		                    }  
+	                    }
+	                    cvs.width = this.width*scale;    
+	                    cvs.height = this.height*scale;
+	                    var ctx = cvs.getContext('2d');    
+	                    ctx.drawImage(this, 0, 0, cvs.width, cvs.height);     
+	                    var newImageData = cvs.toDataURL(fileType, 0.5);
+	                    $scope.obj.pic=newImageData
+					}
 	    		}
-	    		$('.addCar_add').hide();
+	    		
+//	    		$('.addCar_add').hide();
 	    	},false);
 	    	$scope.addCar_back = function(){
 	    		$state.go('bossHomepage')

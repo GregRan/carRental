@@ -16,7 +16,6 @@ angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$stat
 				$state.go("searchCar")
 			}
 		}
-		console.log(sessionStorage.id)
 		$scope.staffList_jiazai=true;
 		$http({
 			url: urlId+"/car",
@@ -35,7 +34,6 @@ angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$stat
 				method: "delete"
 			}).then(function(e) {
 				$state.go("carList");
-				//			console.log(e)
 			})
 		}
 		$scope.revise = function() {
@@ -47,7 +45,6 @@ angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$stat
 		} else {
 			$scope.a = false;
 		}
-		console.log($scope.a)
 	} else {
 		$state.go("login");
 	}

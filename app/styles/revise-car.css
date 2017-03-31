@@ -59,7 +59,6 @@ html,body{
 	overflow: hidden;
 }
 .revisecar_wra>.reviseCar_con>.car_msg>p{
-	/*width: 20%;*/
 	line-height: 1.8rem;
 	font-size: 0.7rem;
 	color: #333;
@@ -134,10 +133,6 @@ html,body{
 	top: 0;
 	left: 0;
 }
-
-
-
-
 .car_msg>.d{
 	float: right;
 	font-size: 0.7rem;
@@ -152,28 +147,3 @@ html,body{
 	width: 0.7rem;
 	height: 0.7rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

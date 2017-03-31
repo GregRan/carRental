@@ -1,28 +1,3 @@
-//$scope.pppp=false;
-//			$scope.erro=false;
-//			$scope.carList_search = function() {
-//				if($scope.search) {
-//					$http({
-//						method: 'get',
-//						url: 'http://47.88.16.225:407/car/?pinpai=' + $scope.search
-//					}).then(function(e) {
-//						document.querySelector(".next").setAttribute("disabled", "disabled")
-////						sessionStorage.count = e.data.length;
-//						$scope.data = e.data
-//						if(e.data.length==0){
-//							$scope.pppp=true
-//						}else {
-//							$scope.pppp=false
-//						}
-//					})
-//				} else {
-//					$scope.erro=true;
-//				}
-//				$scope.hide = function(){
-//					$scope.erro=false;
-//				}
-//			}
-
 'use strict';
 
 /**
@@ -43,7 +18,7 @@ angular.module('appApp')
 		$scope.back = function() {
 			$state.go('carList')
 		}
-		//2017-3-28-23:20
+		
 		$scope.noresult=true
 		$scope.staffList_jiazai=false
 		$scope.pubSearch=function(){
@@ -52,7 +27,6 @@ angular.module('appApp')
 				method: 'get',
 				url: urlId+"/car/?pinpai=" + $scope.keyword
 			}).then(function(e) {
-				console.log(e.data.length)
 				$scope.data = e.data
 				$scope.staffList_jiazai=false
 				if(e.data.length==0){

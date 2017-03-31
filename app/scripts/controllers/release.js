@@ -26,7 +26,6 @@ angular.module('appApp')
 							"read":0
 						}
 					}).then(function(e) {
-						console.log(e.data)
 						$scope.Mtext = '';
 						$state.go("noticeList");
 					})

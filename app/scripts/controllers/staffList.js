@@ -18,7 +18,6 @@ angular.module('appApp')
     		$scope.data=e.data;
     		$scope.staffList_jiazai=false;
     		$scope.staffList_content=true;
-    		console.log(e.data)
     	})	
     	if(sessionStorage.level=="0"){
 				$scope.mmShow = false
@@ -49,7 +48,7 @@ angular.module('appApp')
 		$scope.staffList_search = function(){
 			var str = /^[A-Z]\d{5}/;
 			var str2 = /^[\u4e00-\u9fa5]{1,}$/;
-			if($scope.input_search){
+			if($scope.input_search&&$('.staff_xuanze').text()=="姓名"||$('.staff_xuanze').text()=="工号"){
 				if($('.staff_xuanze').text()=="姓名"){
 					if(str2.test($scope.input_search)){
 						$http({
@@ -88,8 +87,6 @@ angular.module('appApp')
 			}
 		}
 		
-		
-		//***************************
 		$scope.pleaseSelect="选择"
 		$scope.bind_name="姓名"
 		$scope.bind_gonghao="工号"
