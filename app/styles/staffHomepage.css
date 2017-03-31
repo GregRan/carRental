@@ -48,6 +48,12 @@
 	text-align: center;
 	box-sizing: border-box;
 }
+.staffHomepage_wra>.details_list>.car_details,.release{
+	padding-left: 0.6rem;
+}
+.staffHomepage_wra>.details_list>.my,.cancel{
+	padding-right:0.6rem;
+}
 .staffHomepage_wra>.details_list>.release,.cancel{
 	padding-top: 0rem;
 }
