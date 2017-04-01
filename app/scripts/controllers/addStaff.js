@@ -26,11 +26,11 @@ angular.module('appApp')
 	    		image.src=url;
 	    		image.onload = function() {
 					var scale = 1;    
-	                if(this.width > 100 || this.height > 100){
+	                if(this.width > 200 || this.height > 200){
 		                if(this.width > this.height){    
-		                    scale = 100 / this.width;  
+		                    scale = 200 / this.width;  
 		                }else{    
-		                    scale = 100 / this.height;    
+		                    scale = 200 / this.height;    
 		                }  
 	                }
 	                cvs.width = this.width*scale;    
