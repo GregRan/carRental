@@ -24,9 +24,9 @@ angular.module('appApp').controller('carDetailsCtrl', ["$scope", "$http", "$stat
 				id: sessionStorage.id
 			}
 		}).then(function(e) {
-			$scope.data = e.data;
     		$scope.staffList_jiazai=false;
     		$scope.staffList_content=true;
+			$scope.data = e.data;
 		})
 		$scope.del = function() {
 			$http({
