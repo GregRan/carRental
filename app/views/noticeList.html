@@ -9,7 +9,7 @@
 	<ul class="Mcontent" ng-show='staffList_content'>
 		<li class="Mtext" ng-repeat="t in data |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}} ng-class="{'unread':t.read=='0'}">
 			<p>{{t.name}}</p>
-			<div class="Mtime">{{t.time|date:'yyyy-MM-dd'}}</div>
+			<div class="Mtime">{{t.time|date:'yyyy-MM-dd  HH:mm:ss'}}</div>
 			<div class="del" data-target=".bs-example-modal-sm" ng-click="del_notice($event,$index)">删除</div>
 		</li>
 		<li class="Mtext" ng-repeat="t in dataa |orderBy:'-time'" ng-click="sub(t)" set-del={{t.id}} ng-class="{'unread':t.read=='0'}">
